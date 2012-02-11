@@ -1,0 +1,106 @@
+Dados da Primeira reunião do projeto final:
+duração: 9:30 às 15hs
+participantes: Igor Lanes e Vagner Zampieri
+descrição: Foi definido algumas ferramentas de gerenciamento do projeto, qual o caminho que o projeto seguirá, foi visto algumas coisas sobre o usuário e como marcar consultas e exames.
+dúvidas: Sobre histórico e algumas coisas sobre o usuário.
+conclusão: Foi proveitosa a reunião, vimos bastantes coisas que temos que pensar antes de gerar os códigos, criaremos vários testes antes da implementação de fato, irá ser criado um layout fácil e com suporte a múltiplas plataformas.
+
+1- Gems
+
+- Tomar cuidado com as versões de gems usadas por causa do jruby, que utiliza o ruby 1.8
+
+2- Ferramentas que serão utilizadas:
+
+As ferramentas abaixo, serão explicadas para as pessoas que não conehecerem e irão aprender como utiliza. A marcação de reuniões será pela agenda do grupo no Google, então quem não tiver gmail, arrume. Essas medidas não são para ser chato, são para controle do projeto.
+
+- Repositório GIT no github(github.com).
+- StarTrack(http://startrack.herokuapp.com/) para o gerenciamento das tarefas.
+- Heroku(http://www.heroku.com/) como servidor.
+- JRuby(http://jruby.org/) como linguagem de programação.
+- Rails(https://github.com/rails/rails) 3.1 como framework.
+- Agenda do google para compartilhar as datas das reuniões.
+
+3- Usuário
+
+- Ao inves de se implementar permissionamento, será utilizado o CANCAN(testar para ver se funciona em jruby, http://rubygems.org/gems/cancan)
+- Podera se cadastrar normalmente no sistema ou com a conta do facebook ou a conta do google.
+- O usuário nessecitara de um minimo de informações básicas sobre ele preenchidas para que possa marcar uma consulta ou um exame.
+
+- Primeira entrada do usuário no sistema:
+___________________
+|cadastrar no site|  -> 3 opções -> sistema, google (e facebook)
+___|__    __|___
+|          |
+|marcar|_ |marcar|                                          v          v
+|consulta||exame |                                  Vai usar a    Talvez usar a
+\           /                                           agenda            agenda
+__\____/__
+|  Gravar  |
+|  agenda  |
+_____|_____
+|   agenda  |
+|   externa |
+
+- Campos do usuário para entrar no sistema: name, email, password, login e account_id. + authlogic
+- Campos do perfil do usuário: born, cep address, neighborhood, locality, state, number, complement, cpf, health_plan_id(particular, dix, assim, amil, unimed e etc), product_id, sex e card-carrying(carteirinha).
+- Campos do plano de saúde: name e enabled.
+- Campos do produto(só pode se relacionar a um plano de saúde): name, health_plan_id e enabled.
+- Campos do tipo de contato: name e enabled.
+- Campos do tipo de contato no perfil do usuário: account_id e contact_id.
+- Campos do tipo de telefone: name e enabled.
+- Campos do tipo de telefone no perfil do usuário: account_id e telephone_id.
+
+4- Tabela estado
+
+- Possuira os campos: name, uf e enabled.
+
+5- Especialidade
+
+- Possuira os campos: name e enabled.
+
+6- Região
+
+- Possuira os campos: name e enabled.
+
+7- Unidade
+
+- Local do consultório.
+- Possuira os campos: name e enabled.
+
+8- Procedimento
+
+- Tipo de consulta que será marcada.
+- Possuira os campos: name e enabled.
+
+9- Profissional
+
+- Exemplo: nome do médico.
+- Possuira os campos: name e enabled.
+
+10- Tabela dias da semana
+
+- Possuira os campos: name.
+
+11- Status
+
+- Possuira os campos: name e enabled.
+
+12- Consulta
+
+- Possuira os campos: state_id, specialty_id, region_id, unit_id, procedure_id, professional_id, days_week_id, date, time, user_id, status_id
+
+
+13- Exame
+
+- Possuira os campos: state_id, region_id, unit_id, type_exam_id, days_week_id, date, time, user_id, status_id
+
+14- Histórico(em aberto)
+
+-
+- Possuira várias entradas para cada vez que o paciente for em uma consulta, o médico ira descrever o que aconteceu nessa entrada.
+
+14-1- Entradas
+
+- Possuira os campos: description, weight, height, cardiac_pressure.
+
+15- Tipos de usuário(admin, médico e atendente)(em aberto, é preciso testar o CANCAN)

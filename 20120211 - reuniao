@@ -1,0 +1,5 @@
+Tema: Sistema único de controle do paciente.
+
+Criar uma API para acesso ao Sistema por uma Clínica, Hospital, Laboratório e Plano de Saúde.
+
+O Sistema será colocado em um servidor para acesso único de todos. Ele não será vendido para alguém específico, será acessado pelas empresas que quiserem o projeto.
