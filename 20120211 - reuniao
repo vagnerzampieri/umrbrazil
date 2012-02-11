@@ -2,4 +2,6 @@ Tema: Sistema único de controle do paciente.
 
 Criar uma API para acesso ao Sistema por uma Clínica, Hospital, Laboratório e Plano de Saúde.
 
-O Sistema será colocado em um servidor para acesso único de todos. Ele não será vendido para alguém específico, será acessado pelas empresas que quiserem o projeto.
+O Sistema será colocado em um servidor para acesso único de todos. Ele não será vendido para alguém específico, será acessado pelas empresas que quiserem o projeto. Serão cadastrados médicos, clínicas, laboratórios, planos de saúde, entre outros dados que servirão para alimentar a base de buscas e o usuário irá poder escolher o melhor local que se encaixa com o que ele quer. Todas as informações do usuário irá ficar em um histórico, sendo assim irá ser fácil o acesso por qualquer médico cadastrado no sistema, ou pelo próprio paciente. Esse acesso em um único lugar será importante no caso do paciente querer mudar de plano, ou de médico, ou de clínica, não irá precisar pedir o histórico, por que continuará na mesma base.
+
+Ver com o professor os arquivos e artigos que ele recomenda para a gente ler.
