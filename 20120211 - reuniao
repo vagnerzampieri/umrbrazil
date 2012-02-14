@@ -1,4 +1,4 @@
-Tema: Sistema único de controle do paciente(Sistema centralizado para pacientes).
+Tema: Sistema único de controle de paciente(Sistema centralizado para pacientes).
 
 Atualmente a área médica carece de um sistema centralizado virtual para identificar e manter registros de todo o histórico de um paciente. Nem todos os pacientes acabam tendo um histórico de exames e consultas bem detalhados, sendo que isso é de vital importância em caso de emergência, evitando erros de diagnóstico e eventuais demoras no procedimento a ser realizado. Outra dificuldade é a marcação de consultas e exames de forma rápida e eficiente por qualquer dispositivo móvel, ou não. Vendo este problema de integridade de informações, foi desenvolvido um sistema para gerenciar esses dados de forma confiável e segura para a utilização de qualquer tipo de empresa, tanto particular, quanto privada na área médica.
 
