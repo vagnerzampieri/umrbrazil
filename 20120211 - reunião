@@ -6,14 +6,14 @@ As pessoas que não tem um plano de saúde, não tem a possibilidade de marcaç�
 
 Com este problema de integridade de informações e a falta de centralização dos dados reunidos ao longo dos anos pelas unidades de saúde e privada, será desenvolvido um sistema para gerenciar esses dados de forma confiável e segura para a utilização de qualquer tipo de organização, tanto pública, quanto privada na área médica. O acesso em um único ponto pelas empresas que quiserem o projeto é um diferêncial para mostrar centralização de informações. É importante uma API para acesso ao Sistema por qualquer outro sistema autorizado, ela servirá para facilitar a inserção de dados existentes de pacientes pelas empresas que adotarem o sistema. Serão cadastrados médicos, clínicas, laboratórios, planos de saúde, entre outros dados que servirão para alimentar uma base de buscas, assim o usuário irá poder escolher o melhor local que ele quer ser consultado, ou marcar um exame. Todas as informações do usuário irão ficar em um histórico, com um fácil acesso por qualquer médico cadastrado no sistema, instituição, ou pelo próprio paciente. Esse acesso em um único lugar será importante no caso do paciente querer mudar de plano, de médico, ou de clínica, não irá precisar pedir o histórico antigo, por que continuará na mesma base. O acesso do histórico será desde a entrada de uma consulta, incluso todos os procedimentos que foram feitos em um hospital, até o acesso a exames. O histórico terá status para mostrar quais foram os casos mais importantes daquele paciente, assim sinalando para um médico aonde ele tem que dar prioridade em uma leitura.
 
-Ver com o professor os arquivos e artigos que ele recomenda para a gente ler.
-
-Procurar trabalhos sobre gestão de clínicas, vetinária, ou administrativa.
-
-IMPORTANTE: Tem que ser visto que em 10 anos entrará um novo registro chamado RIC, no qual terá gravados todos os nossos dados, ele será um registro único que poderá ser usado através de um Certificado Digital RIC.
-
 Pessoas que nasceram antes do sistema:
 Se usuário já estiver usando o novo Registro de Identidade Civil(RIC) deve ser utilizado esse registro como cadastro. Um paciente poderá pelo cadastrado pelo plano de saúde. Se o paciente tiver cadastro no SUS, ele poderá ser cadastrado pelo SUS. Se o paciente não tiver nenhum cadastro, ele será feito pela Clínica, ou Hospital que ele for, e receberá o dado no qual foi cadastrado. Para um paciente não ser duplicado, será feita várias verificações, nome, identidade, cpf, certidão de nascimento, data de nascimento, qualquer dados relevante para esse cadastro.
 
 Pessoas que estão nascendo:
 Todas as crianças que nascerem depois que o sistema estiver funcionando, irão ser cadastradas no sistema através dos seus dados de número da certidão de nascimento e outros dados relevantes.
+
+IMPORTANTE: Ver com o professor os arquivos e artigos que ele recomenda para a gente ler.
+
+IMPORTANTE: Procurar trabalhos sobre gestão de clínicas, vetinária, ou administrativa.
+
+IMPORTANTE: Tem que ser visto que em 10 anos entrará um novo registro chamado RIC, no qual terá gravados todos os nossos dados, ele será um registro único que poderá ser usado através de um Certificado Digital RIC.
