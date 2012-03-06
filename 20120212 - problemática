@@ -1,3 +1,5 @@
 1. Problemática
 1.1 Contexto
-
+  Existem muitas empresas que atuam na área da saúde, cada uma tem sua forma de guardar dados dos pacientes e oferecer serviços como consultas e exames. Porém, esses sistemas não são integrados, deixando assim um histórico dos pacientes comprometido. Essas informações são de vital importância em caso de emergência, evitando erros de diagnóstico e eventuais demoras no procedimento a ser realizado. A forma como a informação é trabalhada, obitida e exibida deve ser objetivo de uma profunda análise para que se evite o risco de que no momento em que a mesma seja necessária obtenha-se apenas ruído (FREITAS et al., 1997).
+  Segundo Verhagen (1998), “A qualidade é um conjunto de itens no planejamento e na condução de uma pesquisa que se reflete a validade da variável analisada, relacionada com a validade interna, a validade externa e o modelo estatístico utilizado”. A validade interna neste caso pode ser chamada apenas como validade, a validade externa como aplicabilidade e a análise estatística como a importância.
+  Mesmo as empresas mais famosas pela aplicação de sistemas de informação específicos costumam  contar com ambientes informacionais internos pobres  (Davenport, 2002). Sendo assim a TI sozinha não irá garantir a qualidade da informação trabalhada nem sua utilização.
