@@ -1,0 +1,11 @@
+Construção da API:
+
+  Gerar consumer key e consumer secret para ser utilizado no envio.
+  Enviar os dados através de XML, JSON, pela URL?
+  Imagens precisam ser enviadasi através do FTP em lote.
+
+Referências:
+
+  http://www.salesforce.com/us/developer/docs/api_asynch/
+  http://brenelz.com/blog/how-to-create-a-simple-api-with-php-and-mysql/
+  https://github.com/phurni/authlogic_api
