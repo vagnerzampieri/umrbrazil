@@ -4,6 +4,8 @@ Construção da API:
   Enviar os dados através de XML, JSON, pela URL?
   Imagens precisam ser enviadasi através do FTP em lote.
 
+Pesquisa: RESTful, http://www.rubyonbr.org/forums/1/topics/440
+
 Referências:
 
   http://www.salesforce.com/us/developer/docs/api_asynch/
