@@ -1,13 +1,19 @@
 Construção da API:
 
-  Gerar consumer key e consumer secret para ser utilizado no envio.
-  Enviar os dados através de XML, JSON, pela URL?
-  Imagens precisam ser enviadasi através do FTP em lote.
+  Uma aplicação REST são utilizados os métodos Path.
+
+  Como será a autenticação?
+    Gerar consumer key e consumer secret para ser utilizado no envio.
+
+  Como será enviado os dados?
+  Como será o envio de imagens?
 
 Pesquisa: RESTful, http://www.rubyonbr.org/forums/1/topics/440
 
 Referências:
 
+  http://wiki.cercomp.ufg.br/@api/deki/pages/368/pdf
+  https://github.com/rails/rails/blob/efd557a60cd976ac17be9e238111a551599caeb5/railties/guides/source/api_app.textile
   http://www.salesforce.com/us/developer/docs/api_asynch/
   http://brenelz.com/blog/how-to-create-a-simple-api-with-php-and-mysql/
   https://github.com/phurni/authlogic_api
