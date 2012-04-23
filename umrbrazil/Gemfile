@@ -11,6 +11,7 @@ gem 'jruby-openssl'
 
 # Login and auth
 gem 'authlogic'
+gem 'cancan'
 gem 'rails3-generators'
 
 # Gems used only for assets and not required
@@ -28,6 +29,7 @@ gem 'json'
 gem 'pg'
 gem 'execjs'
 gem 'therubyrhino'
+gem 'zscaffold_admin'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
