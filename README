@@ -1,3 +1,13 @@
-TCC
+TCC - UMRBrazil(Universal Medical Records Brazil)
 
-UMRBrazil(Universal Medical Records Brazil)
+Dependencies:
+
+Jruby 1.6.7(1.9.2)
+PostgreSQL(> 9)
+
+Initialize:
+
+bundle
+jruby -S rake db:create
+jruby -S rake db:migrate
+rails s
