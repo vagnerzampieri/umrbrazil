@@ -1,3 +1,8 @@
+PATH
+  remote: /home/vagner/project/rails3/zscaffold_admin
+  specs:
+    zscaffold_admin (0.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -53,7 +58,6 @@ GEM
     erubis (2.7.0)
     execjs (1.3.0)
       multi_json (~> 1.0)
-    ffi (1.0.11)
     ffi (1.0.11-java)
     globalize3 (0.2.0)
       activemodel (>= 3.0.0)
@@ -68,10 +72,7 @@ GEM
       thor (~> 0.14)
     jruby-openssl (0.7.6.1)
       bouncy-castle-java (>= 1.5.0146.1)
-    json (1.6.6)
     json (1.6.6-java)
-    launchy (2.0.5)
-      addressable (~> 2.2.6)
     launchy (2.0.5-java)
       addressable (~> 2.2.6)
       ffi (~> 1.0.9)
@@ -84,7 +85,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     multi_json (1.3.2)
-    nokogiri (1.5.2)
     nokogiri (1.5.2-java)
     paper_trail (2.6.3)
       activerecord (~> 3.0)
@@ -126,9 +126,6 @@ GEM
       multi_json (~> 1.0)
       rubyzip
     shoulda (2.11.3)
-    simple_form (2.0.1)
-      actionpack (~> 3.0)
-      activemodel (~> 3.0)
     simple_presenter (0.1.3)
     spoon (0.0.1)
     sprockets (2.1.2)
@@ -149,7 +146,6 @@ GEM
       multi_json (>= 1.0.2)
     xpath (0.1.4)
       nokogiri (~> 1.3)
-    zscaffold_admin (0.0.3)
 
 PLATFORMS
   java
@@ -169,9 +165,8 @@ DEPENDENCIES
   rails (= 3.2.2)
   rails3-generators
   shoulda (= 2.11.3)
-  simple_form
   simple_presenter
   therubyrhino
   turn (= 0.8.2)
   uglifier (>= 1.0.3)
-  zscaffold_admin
+  zscaffold_admin!

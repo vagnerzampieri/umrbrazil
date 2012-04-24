@@ -24,12 +24,11 @@ end
 
 gem 'jquery-rails'
 gem 'simple_presenter'
-gem 'simple_form'
 gem 'json'
 gem 'pg'
 gem 'execjs'
 gem 'therubyrhino'
-gem 'zscaffold_admin'
+gem 'zscaffold_admin', :path => '/home/vagner/project/rails3/zscaffold_admin'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
