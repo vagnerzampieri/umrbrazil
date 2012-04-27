@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  published: false
+  enabled: false
+  published_at: 2012-04-27 19:42:35
+  deleted_at: 2012-04-27 19:42:35
+
+two:
+  name: MyString
+  published: false
+  enabled: false
+  published_at: 2012-04-27 19:42:35
+  deleted_at: 2012-04-27 19:42:35
