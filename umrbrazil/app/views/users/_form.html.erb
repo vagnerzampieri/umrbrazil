@@ -1,0 +1,38 @@
+<%= form_for(@user) do |f| %>
+<div class="module_content">
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h4 class='alert_error'><%= pluralize(@user.errors.count, "error") %> prohibited this category from being saved:</h4>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <fieldset>
+    <label><b><%= I18n.t :name %></b></label>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :login %></b></label>
+    <%= f.text_field :login %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :email %></b></label>
+    <%= f.text_field :email %>
+  </fieldset>
+</div>
+<footer>
+  <div class="submit_link">
+    <%= f.submit %>
+    <input type="reset" value="Reset">
+    <%= link_to image_tag("/assets/icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back)), users_path %>
+    <% if params[:action] == 'edit' %>
+      <%= link_to image_tag("/assets/icn_folder.png", :alt => I18n.t(:show), :title => I18n.t(:show)), @user %>
+    <% end %>
+  </div>
+</footer>
+<% end %>

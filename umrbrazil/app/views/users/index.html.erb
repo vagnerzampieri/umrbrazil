@@ -1,0 +1,43 @@
+<article class="module width_3_quarter">
+  <header>
+    <h3 class="tabs_involved"><%= I18n.t :listing_users %></h3>
+  </header>
+
+  <div class="tab_container">
+	  <div id="tab1" class="tab_content">
+      <table class="tablesorter" cellspacing="0">
+        <thead>
+          <tr>
+            <th></th>
+ 
+            <th><%= I18n.t :name %></th>
+ 
+            <th><%= I18n.t :login %></th>
+ 
+            <th><%= I18n.t :email %></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td></td>
+            <td><%= user.name %></td>
+            <td><%= user.login %></td>
+            <td><%= user.email %></td>
+            <td><%= link_to image_tag("/assets/icn_folder.png", :alt => I18n.t(:show), :title => I18n.t(:show)), user %></td>
+            <td><%= link_to image_tag("/assets/icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit)), edit_user_path(user) %></td>
+            <td><%= button_to I18n.t(:delete), { :action => "destroy", :id => user.id }, :confirm => I18n.t(:are_you_sure), :method => :delete %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <br />
+
+  <%= link_to I18n.t(:new_user), new_user_path %>
+</article>
