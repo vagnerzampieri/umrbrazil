@@ -8,6 +8,8 @@ class CreateTypeTelephones < ActiveRecord::Migration
       t.timestamps
     end
 
-    w%[Residêncial Celular Trabalho]
+    %w[Residêncial Celular Trabalho].each do |type|
+      TyepeTelephone.create(:name => type)
+    end
   end
 end

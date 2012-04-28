@@ -1,3 +1,3 @@
 class TypeTelephone < ActiveRecord::Base
- belongs_to :telephone
+  has_many :telephones
 end
