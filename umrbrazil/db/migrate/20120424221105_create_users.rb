@@ -23,12 +23,14 @@ class CreateUsers < ActiveRecord::Migration
     add_index :users, ["email"], :name => "index_users_on_email", :unique => true
     add_index :users, ["persistence_token"], :name => "index_users_on_persistence_token", :unique => true
 
+    account = Account.create
+
     User.create(:login => 'Admin',
       :name => 'Admin',
       :email => 'admin@umrbrazil.com',
       :password => 'adminumrbrazil',
       :password_confirmation => 'adminumrbrazil',
-      :account_id => 1,
+      :account_id => account.id,
       :type_user_id => 1
     )
 
