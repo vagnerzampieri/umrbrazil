@@ -9,7 +9,7 @@ class CreateTypeTelephones < ActiveRecord::Migration
     end
 
     %w[Residêncial Celular Trabalho].each do |type|
-      TyepeTelephone.create(:name => type)
+      TyepeTelephone.create(:name => type, :enabled => true)
     end
   end
 end
