@@ -1,4 +1,4 @@
-# enconding: UTF-8
+# encoding: UTF-8
 class CreateTypeTelephones < ActiveRecord::Migration
   def change
     create_table :type_telephones do |t|
@@ -9,7 +9,7 @@ class CreateTypeTelephones < ActiveRecord::Migration
     end
 
     %w[Residêncial Celular Trabalho].each do |type|
-      TyepeTelephone.create(:name => type, :enabled => true)
+      TypeTelephone.create(:name => type, :enabled => true)
     end
   end
 end
