@@ -1,7 +1,8 @@
 Umrbrazil::Application.routes.draw do
-  resources :accounts
-
-  resources :users
+  scope 'admin' do
+    resources :accounts
+    resources :users
+  end
 
   root :to => 'home#index'
 end
