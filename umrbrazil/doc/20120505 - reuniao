@@ -1,0 +1,31 @@
+Anamnese do paciente será um pequeno histórico, ele irá constar as principais doenças, tipo sanguíneo, alergias,  cirurgias, peso, altura, pressão arterial, fumante, drogas, fator RH.
+
+Poderemos linkar a anamnese do paciente com as entradas do histórico através de links, isso servirá para saber a constância da doença.
+
+1 - usuário paciente:
+
+Terá acesso a página principal, se logará através dos campos "login" e "senha" no canto superior direito do site.
+
+No menu da administração ele terá acesso somente ao perfil, histórico, exame e anamnese.
+
+No conteúdo da página inicial da administração possuirá uma lista com as últimas alterações em ordem descendente.
+
+O submenu do link perfil será o "minha conta", que possuirá um formulário para edição dos dados pessoais do paciente chamado "GERAL" e outro para se trocar a senha de acesso. Será necessário colocar mais campos além dos que já estão implementados: sexo, RG, certidão, RIC, Idade e data de nascimento, nome da mãe, naturalidade, estado civil(ver fotos tiradas).
+
+No submenu de histórico terá um link chamado "Visualizar", aonde possuirá uma lista com todos os registros do histórico(mas serão algumas informações básicas e terão um link para a visualização de todos os dados do registro em especifico), mas esses registros serão limitados por uma paginação que listar um determinado numero por vez(decidir se será páginação normal ou lista infinita como no twitter). Acima da lista haverá 3 campos diferentes para busca de registros: organização, especialidade e data.
+
+Na visualização do registro teram os campos organização, especialidade, data-entrada, data-saída, descrição, médico, medicamentos receitados, uma lista com os exames relacionados ao registro e no final possuirá dois botões um para impressão e outro para download do registro.
+
+No submenu da anamnese terá o link "Visualizar", com os campos comentádos no inicio desse arquivo.
+
+No submenu do exame terá o link "Visualizar", na indice serão listas todas as imagens dos exames em ordem descendante, ao clicar em uma imagem vai abrir um lightbox, se clicar no link vai para um show com as seguintes informações nome do exame, titulo, descrição, data, médico, PDF relacionado e no final um botão para download do arquivo pdf.
+
+
+2 - usuário médico:
+
+Terá acesso a página principal, se logará através dos campos "login" e "senha" no canto superior direito do site.
+
+No menu da administração ele terá acesso somente ao perfil, pacientes.
+
+No submenu de pacientes haverá o link "buscar", na página haveram campos para buscar o paciente: nome, organização, CPF, certidão, RG, RIC e nascimento(Será feito por ajax). Após feita a busca será retornada uma lista com os pacientes com mostrando os campos selecionados para busca.
+
