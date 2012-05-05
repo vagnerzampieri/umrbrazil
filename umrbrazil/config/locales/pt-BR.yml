@@ -14,11 +14,11 @@ pt-br:
         header_format_date: "%B de %Y"
         edition_format_date: "%B/%Y"
 
-      day_names: [Domingo, Segunda-feira, Terça-feira, Quarta-feira, Quinta-feira, Sexta-feira, Sábado]
-      abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
-      month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
-      abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
-      order: [ :day, :month, :year ]
+#      day_names: [Domingo, Segunda-feira, Terça-feira, Quarta-feira, Quinta-feira, Sexta-feira, Sábado]
+#      abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+#      month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+#      abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+#      order: [ :day, :month, :year ]
 
     time:
       formats:
