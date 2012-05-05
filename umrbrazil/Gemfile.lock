@@ -1,11 +1,7 @@
-PATH
-  remote: /home/vagner/project/rails3/zscaffold_admin
-  specs:
-    zscaffold_admin (0.0.3)
-
 GEM
   remote: http://rubygems.org/
   specs:
+    ZenTest (4.8.0)
     actionmailer (3.2.2)
       actionpack (= 3.2.2)
       mail (~> 2.4.0)
@@ -37,27 +33,25 @@ GEM
     activesupport (3.2.2)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    addressable (2.2.7)
-    ansi (1.4.2)
+    addressable (2.2.8)
     arel (3.0.2)
     authlogic (3.1.0)
       activerecord (>= 3.0.7)
       activerecord (>= 3.0.7)
+    autotest (4.4.6)
+      ZenTest (>= 4.4.1)
     bouncy-castle-java (1.5.0146.1)
     builder (3.0.0)
     cancan (1.6.7)
-    capybara (1.1.1)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 0.1.4)
-    childprocess (0.3.2)
-      ffi (~> 1.0.6)
+    diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.3.0)
       multi_json (~> 1.0)
+    factory_girl (3.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (3.2.0)
+      factory_girl (~> 3.2.0)
+      railties (>= 3.0.0)
     ffi (1.0.11-java)
     globalize3 (0.2.0)
       activemodel (>= 3.0.0)
@@ -73,12 +67,10 @@ GEM
     jruby-openssl (0.7.6.1)
       bouncy-castle-java (>= 1.5.0146.1)
     json (1.6.6-java)
-    launchy (2.0.5-java)
+    launchy (2.1.0-java)
       addressable (~> 2.2.6)
       ffi (~> 1.0.9)
       spoon (~> 0.0.1)
-    libwebsocket (0.1.3)
-      addressable
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -119,15 +111,25 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
-    rubyzip (0.9.7)
-    selenium-webdriver (2.21.2)
-      childprocess (>= 0.2.5)
-      ffi (~> 1.0)
-      libwebsocket (~> 0.1.3)
-      multi_json (~> 1.0)
-      rubyzip
-    shoulda (2.11.3)
+    rspec (2.9.0)
+      rspec-core (~> 2.9.0)
+      rspec-expectations (~> 2.9.0)
+      rspec-mocks (~> 2.9.0)
+    rspec-core (2.9.0)
+    rspec-expectations (2.9.1)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.9.0)
+    rspec-rails (2.9.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.9.0)
+    shoulda-matchers (1.0.0)
     simple_presenter (0.1.3)
+    simplecov (0.6.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.5.3)
+    simplecov-html (0.5.3)
     spoon (0.0.1)
     sprockets (2.1.2)
       hike (~> 1.2)
@@ -139,36 +141,40 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    turn (0.8.2)
-      ansi (>= 1.2.2)
     tzinfo (0.3.33)
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    xpath (0.1.4)
-      nokogiri (~> 1.3)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
+    zscaffold_admin (0.0.3)
 
 PLATFORMS
   java
 
 DEPENDENCIES
-  activerecord-jdbcpostgresql-adapter
-  authlogic
-  cancan
-  capybara (= 1.1.1)
-  execjs
-  globalize3
-  jquery-rails
-  jruby-openssl
-  json
-  launchy (= 2.0.5)
-  pg
-  railroady
+  activerecord-jdbcpostgresql-adapter (= 1.2.2)
+  authlogic (= 3.1.0)
+  autotest (= 4.4.6)
+  cancan (= 1.6.7)
+  execjs (= 1.3.0)
+  factory_girl_rails (= 3.2.0)
+  globalize3 (= 0.2.0)
+  jquery-rails (= 2.0.2)
+  jruby-openssl (= 0.7.6.1)
+  json (= 1.6.6)
+  launchy (= 2.1.0)
+  pg (= 0.13.2)
+  railroady (= 1.0.7)
   rails (= 3.2.2)
-  rails3-generators
-  shoulda (= 2.11.3)
-  simple_presenter
-  therubyrhino
-  turn (= 0.8.2)
+  rails3-generators (= 0.17.4)
+  rspec-rails (= 2.9.0)
+  shoulda-matchers (= 1.0.0)
+  simple_presenter (= 0.1.3)
+  simplecov (= 0.6.1)
+  therubyrhino (= 1.73.2)
   uglifier (>= 1.0.3)
-  zscaffold_admin!
+  webrat (= 0.7.3)
+  zscaffold_admin (= 0.0.3)
