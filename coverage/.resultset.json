@@ -1,40 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/helpers/users_helper.rb": [
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/helpers/accounts_helper.rb": [
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/config/initializers/wrap_parameters.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/models/type_telephone.rb": [
         1,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/models/user.rb": [
-        1,
-        1,
-        1,
-        null,
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/models/accounts_telephone.rb": [
-        1,
-        1,
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/config/routes.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/config/routes.rb": [
         1,
         1,
         1,
@@ -43,26 +14,26 @@
         null,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/config/environment.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/helpers/users_helper.rb": [
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/config/initializers/secret_token.rb": [
         null,
-        1,
         null,
         null,
+        null,
+        null,
+        null,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/models/type_telephone.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/models/account.rb": [
+        1,
+        1,
+        1,
         1,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/models/telephone.rb": [
-        1,
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/controllers/application_controller.rb": [
-        1,
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/controllers/users_controller.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/controllers/accounts_controller.rb": [
         1,
         null,
         1,
@@ -118,113 +89,14 @@
         null,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/config/application.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/models/user.rb": [
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/config/boot.rb": [
-        1,
-        null,
-        null,
         1,
         null,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/controllers/home_controller.rb": [
-        1,
-        null,
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/config/initializers/session_store.rb": [
-        null,
-        null,
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/config/environments/test.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/spec/spec_helper.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/spec/spec_helper.rb": [
         null,
         null,
         null,
@@ -262,12 +134,113 @@
         null,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/spec/models/user_spec.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/spec/models/user_spec.rb": [
         null,
         null,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/config/initializers/secret_token.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/controllers/home_controller.rb": [
+        1,
+        null,
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/helpers/application_helper.rb": [
+        1,
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/config/environments/test.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
         null,
         null,
         null,
@@ -276,34 +249,27 @@
         null,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/controllers/accounts_controller.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/models/accounts_telephone.rb": [
+        1,
+        1,
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/helpers/accounts_helper.rb": [
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/config/application.rb": [
         1,
         null,
         1,
         null,
         1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
         null,
         1,
         null,
         null,
         null,
         null,
-        null,
         1,
-        null,
-        null,
-        null,
         1,
         null,
         null,
@@ -313,9 +279,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        1,
         null,
         null,
         null,
@@ -328,23 +291,65 @@
         null,
         null,
         null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
         null,
         null,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/models/account.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/models/type_user.rb": [
         1,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/helpers/application_helper.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/config/initializers/wrap_parameters.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         1,
         1
       ],
-      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/SUCP/umrbrazil/app/models/type_user.rb": [
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/config/environment.rb": [
+        null,
         1,
+        null,
+        null,
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/models/telephone.rb": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/app/controllers/application_controller.rb": [
+        1,
+        1
+      ],
+      "/home/vagner/Desktop/Vagner Zampieri/Faculdade/Faculdade 8/Projeto Final 1/umrbrazil/config/boot.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
         1
       ]
     },
-    "timestamp": 1336230383
+    "timestamp": 1336249954
   }
 }
