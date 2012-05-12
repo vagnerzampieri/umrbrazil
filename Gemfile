@@ -44,7 +44,7 @@ group :development, :test do
   gem 'rspec-rails', '2.9.0'
   gem 'autotest', '4.4.6'
   gem 'shoulda-matchers', '1.0.0'
-  gem 'factory_girl_rails', '3.2.0'
+  #gem 'factory_girl_rails', '3.2.0'
   gem 'launchy', '2.1.0'
   gem 'simplecov', '0.6.1'
   gem 'webrat', '0.7.3'
