@@ -1,0 +1,69 @@
+  <%= outgoing_menssage %>
+  <article class="module width_full">
+	  <header><h3><%= I18n.t :showing %></h3></header>
+    <div class="tab_container">
+		  <div id="tab1" class="tab_content">
+			  <table class="tablesorter" cellspacing="0">
+          <tr> 
+            <td><b><%= I18n.t :name %></b></th>
+            <td><%= @company.name %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :brand_name %></b></th>
+            <td><%= @company.brand_name %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :cnpj %></b></th>
+            <td><%= @company.cnpj %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :state_inscription %></b></th>
+            <td><%= @company.state_inscription %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :municipal_inscription %></b></th>
+            <td><%= @company.municipal_inscription %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :address %></b></th>
+            <td><%= @company.address %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :number %></b></th>
+            <td><%= @company.number %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :complement %></b></th>
+            <td><%= @company.complement %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :neighborhood %></b></th>
+            <td><%= @company.neighborhood %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :city %></b></th>
+            <td><%= @company.city %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :state %></b></th>
+            <td><%= @company.state %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :country %></b></th>
+            <td><%= @company.country %></td>            
+			    </tr>
+          <tr> 
+            <td><b><%= I18n.t :site %></b></th>
+            <td><%= @company.site %></td>            
+			    </tr>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <div class="submit_link">
+        <%= link_to image_tag("/assets/icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit)), edit_company_path(@company) %> 
+        <%= link_to image_tag("/assets/icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back)), companies_path %>
+      </div>
+    </footer>
+  </article>

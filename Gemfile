@@ -9,7 +9,8 @@ gem 'jquery-rails', '2.0.2'
 gem 'json', '1.6.6'
 gem 'execjs', '1.3.0'
 gem 'therubyrhino', '1.73.2'
-gem 'zscaffold_admin', '0.0.3'
+#gem 'zscaffold_admin', '0.0.3'
+gem 'zscaffold_admin', :path => "/home/vagner/project/rails3/zscaffold_admin/"
 # Login and auth
 gem 'authlogic', '3.1.0'
 gem 'cancan', '1.6.7'

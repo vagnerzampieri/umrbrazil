@@ -1,0 +1,73 @@
+<article class="module width_3_quarter">
+  <header>
+    <h3 class="tabs_involved"><%= I18n.t :listing_companies %></h3>
+  </header>
+
+  <div class="tab_container">
+	  <div id="tab1" class="tab_content">
+      <table class="tablesorter" cellspacing="0">
+        <thead>
+          <tr>
+            <th></th>
+ 
+            <th><%= I18n.t :name %></th>
+ 
+            <th><%= I18n.t :brand_name %></th>
+ 
+            <th><%= I18n.t :cnpj %></th>
+ 
+            <th><%= I18n.t :state_inscription %></th>
+ 
+            <th><%= I18n.t :municipal_inscription %></th>
+ 
+            <th><%= I18n.t :address %></th>
+ 
+            <th><%= I18n.t :number %></th>
+ 
+            <th><%= I18n.t :complement %></th>
+ 
+            <th><%= I18n.t :neighborhood %></th>
+ 
+            <th><%= I18n.t :city %></th>
+ 
+            <th><%= I18n.t :state %></th>
+ 
+            <th><%= I18n.t :country %></th>
+ 
+            <th><%= I18n.t :site %></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @companies.each do |company| %>
+          <tr>
+            <td></td>
+            <td><%= company.name %></td>
+            <td><%= company.brand_name %></td>
+            <td><%= company.cnpj %></td>
+            <td><%= company.state_inscription %></td>
+            <td><%= company.municipal_inscription %></td>
+            <td><%= company.address %></td>
+            <td><%= company.number %></td>
+            <td><%= company.complement %></td>
+            <td><%= company.neighborhood %></td>
+            <td><%= company.city %></td>
+            <td><%= company.state %></td>
+            <td><%= company.country %></td>
+            <td><%= company.site %></td>
+            <td><%= link_to image_tag("/assets/icn_folder.png", :alt => I18n.t(:show), :title => I18n.t(:show)), company %></td>
+            <td><%= link_to image_tag("/assets/icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit)), edit_company_path(company) %></td>
+            <td><%= button_to I18n.t(:delete), { :action => "destroy", :id => company.id }, :confirm => I18n.t(:are_you_sure), :method => :delete %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <br />
+
+  <%= link_to I18n.t(:new_company), new_company_path %>
+</article>

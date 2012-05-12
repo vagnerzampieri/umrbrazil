@@ -1,0 +1,78 @@
+<%= form_for(@company) do |f| %>
+<div class="module_content">
+  <% if @company.errors.any? %>
+    <div id="error_explanation">
+      <h4 class='alert_error'><%= pluralize(@company.errors.count, "error") %> prohibited this category from being saved:</h4>
+
+      <ul>
+      <% @company.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <fieldset>
+    <label><b><%= I18n.t :name %></b></label>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :brand_name %></b></label>
+    <%= f.text_field :brand_name %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :cnpj %></b></label>
+    <%= f.text_field :cnpj %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :state_inscription %></b></label>
+    <%= f.text_field :state_inscription %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :municipal_inscription %></b></label>
+    <%= f.text_field :municipal_inscription %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :address %></b></label>
+    <%= f.text_field :address %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :number %></b></label>
+    <%= f.number_field :number %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :complement %></b></label>
+    <%= f.text_field :complement %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :neighborhood %></b></label>
+    <%= f.text_field :neighborhood %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :city %></b></label>
+    <%= f.text_field :city %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :state %></b></label>
+    <%= f.text_field :state %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :country %></b></label>
+    <%= f.text_field :country %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= I18n.t :site %></b></label>
+    <%= f.text_field :site %>
+  </fieldset>
+</div>
+<footer>
+  <div class="submit_link">
+    <%= f.submit %>
+    <input type="reset" value="Reset">
+    <%= link_to image_tag("/assets/icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back)), companies_path %>
+    <% if params[:action] == 'edit' %>
+      <%= link_to image_tag("/assets/icn_folder.png", :alt => I18n.t(:show), :title => I18n.t(:show)), @company %>
+    <% end %>
+  </div>
+</footer>
+<% end %>
