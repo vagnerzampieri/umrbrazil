@@ -1,0 +1,54 @@
+1- Criação de empresa
+
+Após entrar com o usuário admin, se clicará no link "Empresa" no menu.
+
+Os sublinks de Empresa seram: visualizar e criar.
+
+Na opção de criar os campos no formulário para cadastro da empresa são: nome, razão social, cnpj, inscrição estadual, inscrição municipal, endereço, número, complemento, bairro, cidade, estado, país, site, ativar, imagem, telefones e contatos.
+
+Na opção de visualizar aparecerá uma tabela listando as empresas e mostrando os seguintes campos: Razão Social, cnpj, editar e deletar. Possuirá uma busca simples e páginação. Ao clicar para visualizar haverá um botão para relacionar o usuário a empresa.
+
+Apos clicar no botão para relacionar usuário na empresa, será redirecionado para uma página com os seguintes campos de busca para se encontrar o usuário que se quer criar um relacionamento com aquela empresa: estado, cidade, bairro, usuário(nome do usuário), cpf, certidão, ric, rg, login e e-mail. Apos clicar para buscar será mostrada uma lista mostrando os campos comentados anteriormente com os usuários encontrados e um botão para relacionar o usuário.
+--------//--------
+
+2- Criação de usuário
+
+O login e a senha seram criados automaticamente.
+Account(Perfil) será relacionada automaticamente.
+Dependendo do tipo de usuário será enviado para um perfil de acordo.
+
+Após se clicar no link Usuários no menu apareceram os seguintes sublinks: visualizar e criar.
+
+Em criar haverá os seguintes campos: nome e e-mail.
+--------//--------
+
+3- Perfil do médico
+
+Além dos mesmos campos do paciente tem que se adicionar os campos: crm, especialidade(adicionar com virgula) e convênio(adicionar com virgula).
+-------//--------
+
+4- Relacionar o usuário com a empresa
+
+Como admin na opção usuários, apos se clicar em um usuário em especifico haverá na página de visualização um botão para relacionar um usuário a empresa que após ser clicado irá redirecionar para uma página com os seguintes campos de busca: nome, razão social e cnpj. Apos efetuada a busca será mostrada uma lista dos seguintes campos citados anteriormente com as empresas encontradas e com um botão para relacionar o usuário a ela.
+-------//--------
+
+5- Recepcionista
+
+Tudo em relação ao usuário paciente(criação, exclusão, impressão, download e visualização) pode ser mexido pela recepcionista. Ao cadastrar o usuário só poderá fazer com o tipo paciente.
+-------//--------
+
+6- Técnico
+
+Inserir exames, alterar o exame, impressão do exame, buscar o paciente e visualizar paciente.
+
+7- Enfermeiro
+
+Visualizar histórico, visualizar anamnese, buscar o paciente e visualizar paciente.
+
+8- Admin
+
+Tudo, com exceção de envio de lotes para o servidor.
+
+9- Organização
+
+Tudo, será relacionado com empresa e será a posição 1, sendo assim o usuário a ser usado para a utilização da API.
