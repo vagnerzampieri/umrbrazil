@@ -20,4 +20,5 @@ db/schema.rb
 *~
 
 # Ignore Simplecov
-coverage/
+coverage/*
+coverage/.*
