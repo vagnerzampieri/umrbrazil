@@ -14,7 +14,7 @@ gem 'zscaffold_admin', :path => "/home/vagner/project/rails3/zscaffold_admin/"
 # Login and auth
 gem 'authlogic', '3.1.0'
 gem 'cancan', '1.6.7'
-gem 'rails3-generators', '0.17.4'
+#gem 'rails3-generators', '0.17.4'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -44,7 +44,7 @@ group :development, :test do
   gem 'rspec-rails', '2.9.0'
   gem 'autotest', '4.4.6'
   gem 'shoulda-matchers', '1.0.0'
-  #gem 'factory_girl_rails', '3.2.0'
+  gem 'factory_girl_rails', '3.2.0'
   gem 'launchy', '2.1.0'
   gem 'simplecov', '0.6.1'
   gem 'webrat', '0.7.3'

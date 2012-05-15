@@ -10,7 +10,4 @@ class AddingIndexesToAccounts < ActiveRecord::Migration
     add_index :accounts, :place_of_birth
     add_index :accounts, :civil_status
   end
-
-  def down
-  end
 end
