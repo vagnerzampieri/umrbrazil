@@ -5,8 +5,9 @@ class Telephone < ActiveRecord::Base
 
   attr_accessible :ddd, :tel, :type_telephone_id, :branch_line, :published
 
-  validates :ddd, :presence => true
-  validates :tel, :presence => true
+  validates :ddd, :presence => true, :length => {:is => 2}
+  validates :tel, :presence => true, :length => {:is => 8}
+  validates :branch_line, :length => {:is => 4}, :unless => lambda {self.branch_line.blank?}
   validates :type_telephone_id, :presence => true
 
 end
