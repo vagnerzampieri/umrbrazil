@@ -1,6 +1,6 @@
 <article class="module width_3_quarter">
   <header>
-    <h3 class="tabs_involved"><%%= I18n.t :listing_<%= plural_name %> %></h3>
+    <h3 class="tabs_involved"><%%= t :listing_<%= plural_name %> %></h3>
   </header>
 
   <div class="tab_container">
@@ -9,8 +9,8 @@
         <thead>
           <tr>
             <th></th>
-            <%- model_attributes.each do |attribute| -%> 
-            <th><%%= I18n.t :<%= attribute.name %> %></th>
+            <%- model_attributes.each do |attribute| -%>
+            <th><%%= t :<%= attribute.name %> %></th>
             <%- end -%>
             <th></th>
             <th></th>
@@ -24,9 +24,9 @@
             <%- model_attributes.each do |attribute| -%>
             <td><%%= <%= singular_name %>.<%= attribute.name %> %></td>
             <%- end -%>
-            <td><%%= link_to image_tag("/assets/icn_folder.png", :alt => I18n.t(:show), :title => I18n.t(:show)), <%= singular_name %> %></td>
-            <td><%%= link_to image_tag("/assets/icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit)), edit_<%= singular_name %>_path(<%= singular_name %>) %></td>
-            <td><%%= button_to I18n.t(:delete), { :action => "destroy", :id => <%= singular_name %>.id }, :confirm => I18n.t(:are_you_sure), :method => :delete %></td>
+            <td><%%= link_to image_tag("icn_folder.png", alt: t(:show), title: t(:show)), <%= singular_name %> %></td>
+            <td><%%= link_to image_tag("icn_edit_article.png", alt: t(:edit), title: I18n.t(:edit)), edit_<%= singular_name %>_path(<%= singular_name %>) %></td>
+            <td><%%= button_to t(:delete), { action: :destroy, id: <%= singular_name %>.id }, confirm: t(:are_you_sure), method: :delete %></td>
           </tr>
         <%% end %>
         </tbody>

@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  before_filter :init, :only => [:show, :edit, :update, :destroy]
-
   layout 'admin'
   respond_to :html, :js, :json
 
@@ -12,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = get_register(params[:id])
     respond_with @user
   end
 
@@ -22,6 +21,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = get_register(params[:id])
     respond_with @user
   end
 
@@ -37,6 +37,8 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = get_register(params[:id])
+
     if @user.update_attributes params[:user]
       flash[:notice] = I18n.t :user_updated
       respond_with @user
@@ -46,13 +48,15 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = get_register(params[:id])
     @user.destroy
 
     respond_with @user
   end
 
-  def init
-    @user = User.find(params[:id])
-  end
+  private
+    def get_register(id)
+      @user = User.find(id)
+    end
 
 end

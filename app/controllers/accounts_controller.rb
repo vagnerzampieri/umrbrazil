@@ -1,7 +1,5 @@
 class AccountsController < ApplicationController
 
-  before_filter :init, :only => [:show, :edit, :update, :destroy]
-
   layout 'admin'
   respond_to :html, :js, :json
 
@@ -12,6 +10,7 @@ class AccountsController < ApplicationController
   end
 
   def show
+    @account = get_register(params[:id])
     respond_with @account
   end
 
@@ -22,6 +21,7 @@ class AccountsController < ApplicationController
   end
 
   def edit
+    @account = get_register(params[:id])
     respond_with @account
   end
 
@@ -37,6 +37,8 @@ class AccountsController < ApplicationController
   end
 
   def update
+    @account = get_register(params[:id])
+
     if @account.update_attributes params[:account]
       flash[:notice] = I18n.t :account_updated
       respond_with @account
@@ -46,13 +48,15 @@ class AccountsController < ApplicationController
   end
 
   def destroy
+    @account = get_register(params[:id])
     @account.destroy
 
     respond_with @account
   end
 
-  def init
-    @account = Account.find(params[:id])
-  end
+  private
+    def get_register(id)
+      Account.find(id)
+    end
 
 end

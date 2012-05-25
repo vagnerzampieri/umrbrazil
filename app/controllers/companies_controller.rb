@@ -1,7 +1,5 @@
 class CompaniesController < ApplicationController
 
-  before_filter :init, :only => [:show, :edit, :update, :destroy]
-
   layout 'admin'
   respond_to :html, :js, :json
 
@@ -12,6 +10,7 @@ class CompaniesController < ApplicationController
   end
 
   def show
+    @company = get_register(params[:id])
     respond_with @company
   end
 
@@ -22,6 +21,7 @@ class CompaniesController < ApplicationController
   end
 
   def edit
+    @company = get_register(params[:id])
     respond_with @company
   end
 
@@ -37,6 +37,8 @@ class CompaniesController < ApplicationController
   end
 
   def update
+    @company = get_register(params[:id])
+
     if @company.update_attributes params[:company]
       flash[:notice] = I18n.t :company_updated
       respond_with @company
@@ -46,13 +48,14 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
+    @company = get_register(params[:id])
     @company.destroy
 
     respond_with @company
   end
 
-  def init
-    @company = Company.find(params[:id])
+  def get_register(id)
+    Company.find(id)
   end
 
 end
