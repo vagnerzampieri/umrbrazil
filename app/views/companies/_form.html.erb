@@ -11,57 +11,57 @@
       </ul>
     </div>
   <% end %>
-  
+
   <fieldset>
-    <label><b><%= I18n.t :name %></b></label>
+    <label><b><%= t :name %></b></label>
     <%= f.text_field :name %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :brand_name %></b></label>
+    <label><b><%= t :brand_name %></b></label>
     <%= f.text_field :brand_name %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :cnpj %></b></label>
+    <label><b><%= t :cnpj %></b></label>
     <%= f.text_field :cnpj %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :state_inscription %></b></label>
+    <label><b><%= t :state_inscription %></b></label>
     <%= f.text_field :state_inscription %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :municipal_inscription %></b></label>
+    <label><b><%= t :municipal_inscription %></b></label>
     <%= f.text_field :municipal_inscription %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :address %></b></label>
+    <label><b><%= t :address %></b></label>
     <%= f.text_field :address %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :number %></b></label>
+    <label><b><%= t :number %></b></label>
     <%= f.number_field :number %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :complement %></b></label>
+    <label><b><%= t :complement %></b></label>
     <%= f.text_field :complement %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :neighborhood %></b></label>
+    <label><b><%= t :neighborhood %></b></label>
     <%= f.text_field :neighborhood %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :city %></b></label>
+    <label><b><%= t :city %></b></label>
     <%= f.text_field :city %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :state %></b></label>
+    <label><b><%= t :state %></b></label>
     <%= f.text_field :state %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :country %></b></label>
+    <label><b><%= t :country %></b></label>
     <%= f.text_field :country %>
   </fieldset>
   <fieldset>
-    <label><b><%= I18n.t :site %></b></label>
+    <label><b><%= t :site %></b></label>
     <%= f.text_field :site %>
   </fieldset>
 </div>
@@ -69,9 +69,9 @@
   <div class="submit_link">
     <%= f.submit %>
     <input type="reset" value="Reset">
-    <%= link_to image_tag("/assets/icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back)), companies_path %>
+    <%= link_to image_tag("/assets/icn_jump_back.png", alt: t(:back), title: t(:back)), companies_path %>
     <% if params[:action] == 'edit' %>
-      <%= link_to image_tag("/assets/icn_folder.png", :alt => I18n.t(:show), :title => I18n.t(:show)), @company %>
+      <%= link_to image_tag("/assets/icn_folder.png", alt: t(:show), title: t(:show)), @company %>
     <% end %>
   </div>
 </footer>

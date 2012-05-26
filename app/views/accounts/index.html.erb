@@ -1,6 +1,6 @@
 <article class="module width_3_quarter">
   <header>
-    <h3 class="tabs_involved"><%= I18n.t :listing_accounts %></h3>
+    <h3 class="tabs_involved"><%= t :listing_accounts %></h3>
   </header>
 
   <div class="tab_container">
@@ -9,14 +9,14 @@
         <thead>
           <tr>
             <th></th>
-            <th><%= I18n.t :cpf %></th>
-            <th><%= I18n.t :address %></th>
-            <th><%= I18n.t :number %></th>
-            <th><%= I18n.t :complement %></th>
-            <th><%= I18n.t :neighborhood %></th>
-            <th><%= I18n.t :city %></th>
-            <th><%= I18n.t :state %></th>
-            <th><%= I18n.t :country %></th>
+            <th><%= t :cpf %></th>
+            <th><%= t :address %></th>
+            <th><%= t :number %></th>
+            <th><%= t :complement %></th>
+            <th><%= t :neighborhood %></th>
+            <th><%= t :city %></th>
+            <th><%= t :state %></th>
+            <th><%= t :country %></th>
             <th></th>
             <th></th>
             <th></th>
@@ -34,9 +34,9 @@
             <td><%= account.city %></td>
             <td><%= account.state %></td>
             <td><%= account.country %></td>
-            <td><%= link_to image_tag("/assets/icn_folder.png", :alt => I18n.t(:show), :title => I18n.t(:show)), account %></td>
-            <td><%= link_to image_tag("/assets/icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit)), edit_account_path(account) %></td>
-            <td><%= button_to I18n.t(:delete), { :action => "destroy", :id => account.id }, :confirm => I18n.t(:are_you_sure), :method => :delete %></td>
+            <td><%= link_to image_tag("/assets/icn_folder.png", alt: t(:show), title: t(:show)), account %></td>
+            <td><%= link_to image_tag("/assets/icn_edit_article.png", alt: t(:edit), title: t(:edit)), edit_account_path(account) %></td>
+            <td><%= button_to t(:delete), { action: :destroy, id: account.id }, confirm: t(:are_you_sure), method: :delete %></td>
           </tr>
         <% end %>
         </tbody>

@@ -1,49 +1,49 @@
   <%= outgoing_menssage %>
   <article class="module width_full">
-	  <header><h3><%= I18n.t :showing %></h3></header>
+    <header><h3><%= t :showing %></h3></header>
     <div class="tab_container">
-		  <div id="tab1" class="tab_content">
-			  <table class="tablesorter" cellspacing="0">
+      <div id="tab1" class="tab_content">
+        <table class="tablesorter" cellspacing="0">
           <tr>
-            <td><b><%= I18n.t :cpf %></b></th>
+            <td><b><%= t :cpf %></b></th>
             <td><%= @account.cpf %></td>
-			    </tr>
+	  </tr>
           <tr>
-            <td><b><%= I18n.t :address %></b></th>
+            <td><b><%= t :address %></b></th>
             <td><%= @account.address %></td>
-			    </tr>
+	  </tr>
           <tr>
-            <td><b><%= I18n.t :number %></b></th>
+            <td><b><%= t :number %></b></th>
             <td><%= @account.number %></td>
-			    </tr>
+	  </tr>
           <tr>
-            <td><b><%= I18n.t :complement %></b></th>
+            <td><b><%= t :complement %></b></th>
             <td><%= @account.complement %></td>
-			    </tr>
+	  </tr>
           <tr>
-            <td><b><%= I18n.t :neighborhood %></b></th>
+            <td><b><%= t :neighborhood %></b></th>
             <td><%= @account.neighborhood %></td>
-			    </tr>
+	  </tr>
           <tr>
-            <td><b><%= I18n.t :city %></b></th>
+            <td><b><%= t :city %></b></th>
             <td><%= @account.city %></td>
-			    </tr>
+	  </tr>
           <tr>
-            <td><b><%= I18n.t :state %></b></th>
+            <td><b><%= t :state %></b></th>
             <td><%= @account.state %></td>
-			    </tr>
+	  </tr>
           <tr>
-            <td><b><%= I18n.t :country %></b></th>
+            <td><b><%= t :country %></b></th>
             <td><%= @account.country %></td>
-			    </tr>
+	  </tr>
         </table>
       </div>
     </div>
 
     <footer>
       <div class="submit_link">
-        <%= link_to image_tag("/assets/icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit)), edit_account_path(@account) %>
-        <%= link_to image_tag("/assets/icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back)), accounts_path %>
+        <%= link_to image_tag("/assets/icn_edit_article.png", alt: t(:edit), title: t(:edit)), edit_account_path(@account) %>
+        <%= link_to image_tag("/assets/icn_jump_back.png", alt: t(:back), title: t(:back)), accounts_path %>
       </div>
     </footer>
   </article>
