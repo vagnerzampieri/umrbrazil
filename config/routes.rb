@@ -1,4 +1,10 @@
 Umrbrazil::Application.routes.draw do
+  resources :anamneses
+
+  resources :exams
+
+  resources :histories
+
   resources :companies
 
   scope 'admin' do

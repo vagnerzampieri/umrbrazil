@@ -11,10 +11,20 @@ gem 'execjs', '1.3.0'
 gem 'therubyrhino', '1.73.2'
 #gem 'zscaffold_admin', '0.0.3'
 gem 'zscaffold_admin', :path => "/home/vagner/project/rails3/zscaffold_admin/"
+gem 'acts-as-taggable-on', '~> 2.3.1'
+gem "paperclip", "~> 3.0"
+
 # Login and auth
 gem 'authlogic', '3.1.0'
 gem 'cancan', '1.6.7'
 #gem 'rails3-generators', '0.17.4'
+
+# i18n
+gem 'globalize3', '0.2.0'
+
+##Dragonfly
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.12'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,9 +43,6 @@ end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
-# i18n
-gem 'globalize3', '0.2.0'
 
 group :development, :test do
   # generates UML diagrams

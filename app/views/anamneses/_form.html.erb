@@ -1,0 +1,54 @@
+<%= form_for(@anamnesis) do |f| %>
+<div class="module_content">
+  <% if @anamnesis.errors.any? %>
+    <div id="error_explanation">
+      <h4 class='alert_error'><%= pluralize(@anamnesis.errors.count, "error") %> prohibited this category from being saved:</h4>
+
+      <ul>
+      <% @anamnesis.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+    <label><b><%= t :blood_type %></b></label>
+    <%= f.text_field :blood_type %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= t :rh_factor %></b></label>
+    <%= f.text_field :rh_factor %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= t :weight %></b></label>
+    <%= f.text_field :weight %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= t :height %></b></label>
+    <%= f.text_field :height %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= t :sex %></b></label>
+    <%= f.text_field :sex %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= t :blood_pressure %></b></label>
+    <%= f.text_field :blood_pressure %>
+  </fieldset>
+  <fieldset>
+    <label><b><%= t :smoking %></b></label>
+    <%= f.check_box :smoking %>
+  </fieldset>
+</div>
+<footer>
+  <div class="submit_link">
+    <%= f.submit %>
+    <input type="reset" value="Reset">
+    <%= link_to image_tag("icn_jump_back.png", alt: t(:back), title: t(:back)), anamneses_path %>
+    <% if params[:action] == 'edit' %>
+      <%= link_to image_tag("icn_folder.png", alt: t(:show), title: t(:show)), @anamnesis %>
+    <% end %>
+  </div>
+</footer>
+<% end %>

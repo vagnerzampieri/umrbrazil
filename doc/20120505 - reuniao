@@ -14,7 +14,7 @@ O submenu do link perfil será o "minha conta", que possuirá um formulário par
 
 No submenu de histórico terá um link chamado "Visualizar", aonde possuirá uma lista com todos os registros do histórico(mas serão algumas informações básicas e terão um link para a visualização de todos os dados do registro em especifico), mas esses registros serão limitados por uma paginação que listar um determinado numero por vez(decidir se será páginação normal ou lista infinita como no twitter). Acima da lista haverá 3 campos diferentes para busca de registros: organização, especialidade e data.
 
-Na visualização do registro teram os campos organização, especialidade, data-entrada, data-saída, descrição, médico, medicamentos receitados, uma lista com os exames relacionados ao registro e no final possuirá dois botões um para impressão e outro para download do registro.
+Na visualização do registro teram os campos organização, especialidade(tags), data-entrada, data-saída, descrição, médico, crm do médico, medicamentos receitados, uma lista com os exames relacionados ao registro e no final possuirá dois botões um para impressão e outro para download do registro.
 
 No submenu da anamnese terá o link "Visualizar", com os campos comentádos no inicio desse arquivo.
 

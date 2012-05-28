@@ -1,0 +1,37 @@
+  <%= outgoing_menssage %>
+  <article class="module width_full">
+    <header><h3><%= t :showing %></h3></header>
+    <div class="tab_container">
+      <div id="tab1" class="tab_content">
+        <table class="tablesorter" cellspacing="0">
+          <tr>
+            <td><b><%= t :company %></b></td>
+            <td><%= @history.company %></td>
+	  </tr>
+          <tr>
+            <td><b><%= t :entry_date %></b></td>
+            <td><%= @history.entry_date %></td>
+	  </tr>
+          <tr>
+            <td><b><%= t :exit_date %></b></td>
+            <td><%= @history.exit_date %></td>
+	  </tr>
+          <tr>
+            <td><b><%= t :description %></b></td>
+            <td><%= @history.description %></td>
+	  </tr>
+          <tr>
+            <td><b><%= t :prescription_drugs %></b></td>
+            <td><%= @history.prescription_drugs %></td>
+	  </tr>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <div class="submit_link">
+        <%= link_to image_tag("icn_edit_article.png", alt: t(:edit), title: t(:edit)), edit_history_path(@history) %>
+        <%= link_to image_tag("icn_jump_back.png", alt: t(:back), title: t(:back)), histories_path %>
+      </div>
+    </footer>
+  </article>
