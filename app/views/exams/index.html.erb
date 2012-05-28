@@ -1,0 +1,46 @@
+<article class="module width_3_quarter">
+  <header>
+    <h3 class="tabs_involved"><%= t :listing_exams %></h3>
+  </header>
+
+  <div class="tab_container">
+	  <div id="tab1" class="tab_content">
+      <table class="tablesorter" cellspacing="0">
+        <thead>
+          <tr>
+            <th></th>
+            <th><%= t :title %></th>
+            <th><%= t :description %></th>
+            <th><%= t :emission %></th>
+            <th><%= t :user %></th>
+            <th><%= t :doctor %></th>
+            <th><%= t :crm %></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @exams.each do |exam| %>
+          <tr>
+            <td></td>
+            <td><%= exam.title %></td>
+            <td><%= exam.description %></td>
+            <td><%= exam.emission %></td>
+            <td><%= exam.user %></td>
+            <td><%= exam.doctor %></td>
+            <td><%= exam.crm %></td>
+            <td><%= link_to image_tag("icn_folder.png", alt: t(:show), title: t(:show)), exam %></td>
+            <td><%= link_to image_tag("icn_edit_article.png", alt: t(:edit), title: I18n.t(:edit)), edit_exam_path(exam) %></td>
+            <td><%= button_to t(:delete), { action: :destroy, id: exam.id }, confirm: t(:are_you_sure), method: :delete %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <br />
+
+  <%= link_to I18n.t(:new_exam), new_exam_path %>
+</article>
