@@ -1,23 +1,29 @@
 FactoryGirl.define do
-  factory :type_telephone do |t|
-    t.name "Trabalho"
-    t.enabled true
+  factory :type_telephone do
+    name "Trabalho"
+    enabled true
   end
 
-  factory :telephone do |t|
-    t.ddd "21"
-    t.tel "38383838"
-    t.type_telephone FactoryGirl.create(:type_telephone)
+  factory :telephone do
+    ddd "21"
+    tel "38383838"
+    association :type_telephone
   end
 
   factory :account
 
-  factory :user do |u|
-    u.name "Homer Simpson"
-    u.login "homersimpson"
-    u.email "homer@simpsons.com"
-    u.password "senha123"
-    u.password_confirmation "senha123"
-    u.account FactoryGirl.create(:account)
+  factory :type_user do
+    name "Admin"
+    enabled true
+  end
+
+  factory :user do
+    name "Homer Simpson"
+    login "homersimpson"
+    email "homer@simpsons.com"
+    password "senha123"
+    password_confirmation "senha123"
+    association :account
+    association :type_user
   end
 end
