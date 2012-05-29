@@ -26,7 +26,7 @@ class CreateUsers < ActiveRecord::Migration
     type_user = TypeUser.find 1
     account = Account.create
 
-    User.new(:login => 'admin',
+    user = User.new(:login => 'admin',
       :name => 'Admin',
       :email => 'admin@umrbrazil.com',
       :password => 'adminumrbrazil',
@@ -34,6 +34,7 @@ class CreateUsers < ActiveRecord::Migration
       :account_id => account.id,
       :type_user_id => type_user.id
     )
+    user.save
 
   end
 
