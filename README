@@ -11,3 +11,13 @@ bundle
 jruby -S rake db:create
 jruby -S rake db:migrate
 jruby -S rails s
+
+---------------------------------------------------------------
+from 2012.05.28
+
+rake aborted!
+An error has occurred, this and all later migrations canceled:
+
+undefined method `cover_image_uid' for #<Account:0x163f4c24>
+
+models/account.rb Comment on "image_accessor :cover_image" and ", :cover_image" on "attr_accessible".
