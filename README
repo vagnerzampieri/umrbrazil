@@ -10,6 +10,7 @@ Initialize:
 bundle
 jruby -S rake db:create
 jruby -S rake db:migrate
+jruby -S rake db:seed
 jruby -S rails s
 
 ---------------------------------------------------------------
