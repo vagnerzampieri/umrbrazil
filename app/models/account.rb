@@ -5,9 +5,10 @@ class Account < ActiveRecord::Base
 
   has_one :user
   has_one :anamnesis
+
+  has_many :telephones
+  has_many :histories
+
   has_many :accounts_companies
   has_many :companies, through: :accounts_companies
-
-  has_many :accounts_telephones
-  has_many :telephones, through: :accounts_telephones
 end

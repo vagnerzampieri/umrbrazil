@@ -22,20 +22,6 @@ class CreateUsers < ActiveRecord::Migration
     add_index :users, ["login"], :name => "index_users_on_login", :unique => true
     add_index :users, ["email"], :name => "index_users_on_email", :unique => true
     add_index :users, ["persistence_token"], :name => "index_users_on_persistence_token", :unique => true
-
-    type_user = TypeUser.find 1
-    account = Account.create
-
-    user = User.new(:login => 'admin',
-      :name => 'Admin',
-      :email => 'admin@umrbrazil.com',
-      :password => 'adminumrbrazil',
-      :password_confirmation => 'adminumrbrazil',
-      :account_id => account.id,
-      :type_user_id => type_user.id
-    )
-    user.save
-
   end
 
   def self.down

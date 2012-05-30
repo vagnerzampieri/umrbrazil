@@ -7,9 +7,5 @@ class CreateTypeUsers < ActiveRecord::Migration
 
       t.timestamps
     end
-
-    %w[Admin Médico Paciente Enfermeiro Setor].each do |type|
-      TypeUser.create(:name => type, :enabled => true)
-    end
   end
 end

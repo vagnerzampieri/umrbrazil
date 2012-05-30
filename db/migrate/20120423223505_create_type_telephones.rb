@@ -7,9 +7,5 @@ class CreateTypeTelephones < ActiveRecord::Migration
 
       t.timestamps
     end
-
-    %w[Residêncial Celular Trabalho].each do |type|
-      TypeTelephone.create(:name => type, :enabled => true)
-    end
   end
 end
