@@ -1,0 +1,259 @@
+                                        Table "public.exams"
+      Column      |            Type             |                     Modifiers
+------------------+-----------------------------+----------------------------------------------------
+ id               | integer                     | not null default nextval('exams_id_seq'::regclass)
+ user_id          | integer                     |
+ title            | character varying(255)      |
+ description      | text                        |
+ emission         | timestamp without time zone |
+ doctor           | character varying(255)      |
+ crm              | character varying(255)      |
+ pdf_file_name    | character varying(255)      |
+ pdf_content_type | character varying(255)      |
+ pdf_file_size    | integer                     |
+ pdf_updated_at   | timestamp without time zone |
+ created_at       | timestamp without time zone | not null
+ updated_at       | timestamp without time zone | not null
+ history_id       | integer                     |
+ account_id       | integer                     |
+ company_id       | integer                     |
+Indexes:
+    "exams_pkey" PRIMARY KEY, btree (id)
+    "index_exams_on_account_id" btree (account_id)
+    "index_exams_on_company_id" btree (company_id)
+    "index_exams_on_crm" btree (crm)
+    "index_exams_on_doctor" btree (doctor)
+    "index_exams_on_emission" btree (emission)
+    "index_exams_on_history_id" btree (history_id)
+    "index_exams_on_title" btree (title)
+    "index_exams_on_user_id" btree (user_id)
+
+
+                                         Table "public.accounts"
+      Column       |            Type             |                       Modifiers
+-------------------+-----------------------------+-------------------------------------------------------
+ id                | integer                     | not null default nextval('accounts_id_seq'::regclass)
+ cpf               | character varying(255)      |
+ address           | character varying(255)      |
+ number            | character varying(255)      |
+ complement        | character varying(255)      |
+ neighborhood      | character varying(255)      |
+ city              | character varying(255)      |
+ state             | character varying(255)      |
+ country           | character varying(255)      |
+ created_at        | timestamp without time zone | not null
+ updated_at        | timestamp without time zone | not null
+ sex               | character varying(255)      |
+ rg                | character varying(255)      |
+ birth_certificate | character varying(255)      |
+ ric               | character varying(255)      |
+ age               | integer                     |
+ birth             | date                        |
+ mother_name       | character varying(255)      |
+ place_of_birth    | character varying(255)      |
+ civil_status      | character varying(255)      |
+ cover_image_uid   | character varying(255)      |
+ cover_image_name  | character varying(255)      |
+ anamnesis_id      | integer                     |
+Indexes:
+    "accounts_pkey" PRIMARY KEY, btree (id)
+    "index_accounts_on_address" btree (address)
+    "index_accounts_on_age" btree (age)
+    "index_accounts_on_anamnesis_id" btree (anamnesis_id)
+    "index_accounts_on_birth" btree (birth)
+    "index_accounts_on_birth_certificate" btree (birth_certificate)
+    "index_accounts_on_city" btree (city)
+    "index_accounts_on_civil_status" btree (civil_status)
+    "index_accounts_on_complement" btree (complement)
+    "index_accounts_on_country" btree (country)
+    "index_accounts_on_cpf" btree (cpf)
+    "index_accounts_on_mother_name" btree (mother_name)
+    "index_accounts_on_neighborhood" btree (neighborhood)
+    "index_accounts_on_number" btree (number)
+    "index_accounts_on_place_of_birth" btree (place_of_birth)
+    "index_accounts_on_rg" btree (rg)
+    "index_accounts_on_ric" btree (ric)
+    "index_accounts_on_sex" btree (sex)
+    "index_accounts_on_state" btree (state)
+
+                                    Table "public.accounts_companies"
+   Column   |            Type             |                          Modifiers
+------------+-----------------------------+--------------------------------------------------------------
+ id         | integer                     | not null default nextval('users_companies_id_seq'::regclass)
+ account_id | integer                     |
+ company_id | integer                     |
+ created_at | timestamp without time zone | not null
+ updated_at | timestamp without time zone | not null
+Indexes:
+    "users_companies_pkey" PRIMARY KEY, btree (id)
+    "index_accounts_companies_on_company_id" btree (company_id)
+    "index_users_companies_on_user_id" btree (account_id)
+
+
+                                       Table "public.anamneses"
+     Column     |            Type             |                       Modifiers
+----------------+-----------------------------+--------------------------------------------------------
+ id             | integer                     | not null default nextval('anamneses_id_seq'::regclass)
+ blood_type     | character varying(255)      |
+ rh_factor      | character varying(255)      |
+ weight         | numeric                     |
+ height         | numeric                     |
+ sex            | character varying(255)      |
+ blood_pressure | character varying(255)      |
+ smoking        | boolean                     |
+ created_at     | timestamp without time zone | not null
+ updated_at     | timestamp without time zone | not null
+ user_id        | integer                     |
+Indexes:
+    "anamneses_pkey" PRIMARY KEY, btree (id)
+    "index_anamneses_on_user_id" btree (user_id)
+
+
+                                           Table "public.companies"
+        Column         |            Type             |                       Modifiers
+-----------------------+-----------------------------+--------------------------------------------------------
+ id                    | integer                     | not null default nextval('companies_id_seq'::regclass)
+ name                  | character varying(255)      |
+ brand_name            | character varying(255)      |
+ cnpj                  | character varying(255)      |
+ state_inscription     | character varying(255)      |
+ municipal_inscription | character varying(255)      |
+ address               | character varying(255)      |
+ number                | integer                     |
+ complement            | character varying(255)      |
+ neighborhood          | character varying(255)      |
+ city                  | character varying(255)      |
+ state                 | character varying(255)      |
+ country               | character varying(255)      |
+ site                  | character varying(255)      |
+ published             | boolean                     |
+ published_at          | timestamp without time zone |
+ enabled               | boolean                     |
+ deleted_at            | timestamp without time zone |
+ created_at            | timestamp without time zone | not null
+ updated_at            | timestamp without time zone | not null
+ cover_image_uid       | character varying(255)      |
+ cover_image_name      | character varying(255)      |
+Indexes:
+    "companies_pkey" PRIMARY KEY, btree (id)
+    "index_companies_on_address" btree (address)
+    "index_companies_on_brand_name" btree (brand_name)
+    "index_companies_on_city" btree (city)
+    "index_companies_on_cnpj" btree (cnpj)
+    "index_companies_on_complement" btree (complement)
+    "index_companies_on_country" btree (country)
+    "index_companies_on_deleted_at" btree (deleted_at)
+    "index_companies_on_enabled" btree (enabled)
+    "index_companies_on_municipal_inscription" btree (municipal_inscription)
+    "index_companies_on_name" btree (name)
+    "index_companies_on_neighborhood" btree (neighborhood)
+    "index_companies_on_number" btree (number)
+    "index_companies_on_site" btree (site)
+    "index_companies_on_state" btree (state)
+    "index_companies_on_state_inscription" btree (state_inscription)
+
+
+                                         Table "public.histories"
+       Column       |            Type             |                       Modifiers
+--------------------+-----------------------------+--------------------------------------------------------
+ id                 | integer                     | not null default nextval('histories_id_seq'::regclass)
+ company_id         | integer                     |
+ user_id            | integer                     |
+ entry_date         | timestamp without time zone |
+ exit_date          | timestamp without time zone |
+ description        | text                        |
+ prescription_drugs | text                        |
+ created_at         | timestamp without time zone | not null
+ updated_at         | timestamp without time zone | not null
+Indexes:
+    "histories_pkey" PRIMARY KEY, btree (id)
+    "index_histories_on_company_id" btree (company_id)
+    "index_histories_on_entry_date" btree (entry_date)
+    "index_histories_on_exit_date" btree (exit_date)
+    "index_histories_on_user_id" btree (user_id)
+
+
+                                         Table "public.telephones"
+      Column       |            Type             |                        Modifiers
+-------------------+-----------------------------+---------------------------------------------------------
+ id                | integer                     | not null default nextval('telephones_id_seq'::regclass)
+ ddd               | character varying(255)      |
+ tel               | character varying(255)      |
+ type_telephone_id | integer                     |
+ branch_line       | character varying(255)      |
+ published         | boolean                     |
+ enabled           | boolean                     |
+ published_at      | timestamp without time zone |
+ deleted_at        | timestamp without time zone |
+ created_at        | timestamp without time zone | not null
+ updated_at        | timestamp without time zone | not null
+ account_id        | integer                     |
+ company_id        | integer                     |
+Indexes:
+    "telephones_pkey" PRIMARY KEY, btree (id)
+    "index_telephones_on_account_id" btree (account_id)
+    "index_telephones_on_branch_line" btree (branch_line)
+    "index_telephones_on_company_id" btree (company_id)
+    "index_telephones_on_ddd" btree (ddd)
+    "index_telephones_on_deleted_at" btree (deleted_at)
+    "index_telephones_on_enabled" btree (enabled)
+    "index_telephones_on_published" btree (published)
+    "index_telephones_on_published_at" btree (published_at)
+    "index_telephones_on_tel" btree (tel)
+    "index_telephones_on_type_telephone_id" btree (type_telephone_id)
+
+
+                                     Table "public.type_telephones"
+   Column   |            Type             |                          Modifiers
+------------+-----------------------------+--------------------------------------------------------------
+ id         | integer                     | not null default nextval('type_telephones_id_seq'::regclass)
+ name       | character varying(255)      |
+ enabled    | boolean                     |
+ created_at | timestamp without time zone | not null
+ updated_at | timestamp without time zone | not null
+Indexes:
+    "type_telephones_pkey" PRIMARY KEY, btree (id)
+    "index_type_telephones_on_enabled" btree (enabled)
+    "index_type_telephones_on_name" btree (name)
+
+
+                                     Table "public.type_users"
+   Column   |            Type             |                        Modifiers
+------------+-----------------------------+---------------------------------------------------------
+ id         | integer                     | not null default nextval('type_users_id_seq'::regclass)
+ name       | character varying(255)      |
+ enabled    | boolean                     |
+ created_at | timestamp without time zone | not null
+ updated_at | timestamp without time zone | not null
+Indexes:
+    "type_users_pkey" PRIMARY KEY, btree (id)
+    "index_type_users_on_enabled" btree (enabled)
+    "index_type_users_on_name" btree (name)
+
+
+                                         Table "public.users"
+       Column       |            Type             |                     Modifiers
+--------------------+-----------------------------+----------------------------------------------------
+ id                 | integer                     | not null default nextval('users_id_seq'::regclass)
+ name               | character varying(255)      |
+ login              | character varying(255)      |
+ email              | character varying(255)      |
+ crypted_password   | character varying(255)      | not null
+ password_salt      | character varying(255)      | not null
+ persistence_token  | character varying(255)      | not null
+ login_count        | integer                     | not null default 0
+ failed_login_count | integer                     | not null default 0
+ last_request_at    | timestamp without time zone |
+ current_login_at   | timestamp without time zone |
+ last_login_at      | timestamp without time zone |
+ current_login_ip   | character varying(255)      |
+ last_login_ip      | character varying(255)      |
+ account_id         | integer                     |
+ type_user_id       | integer                     |
+ created_at         | timestamp without time zone | not null
+ updated_at         | timestamp without time zone | not null
+Indexes:
+    "users_pkey" PRIMARY KEY, btree (id)
+    "index_users_on_email" UNIQUE, btree (email)
+    "index_users_on_login" UNIQUE, btree (login)
+    "index_users_on_persistence_token" UNIQUE, btree (persistence_token)

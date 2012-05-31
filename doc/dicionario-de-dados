@@ -1,0 +1,175 @@
+                                        Tabela Exams
+      Coluna      |            Tipo de dado             |                     Requerido
+------------------+-------------------------------------+--------------------------------------------------------
+ id               | integer                             | sim
+ user_id          | integer                             |
+ title            | character varying(255)              |
+ description      | text                                |
+ emission         | timestamp without time zone         |
+ doctor           | character varying(255)              |
+ crm              | character varying(255)              |
+ pdf_file_name    | character varying(255)              |
+ pdf_content_type | character varying(255)              |
+ pdf_file_size    | integer                             |
+ pdf_updated_at   | timestamp without time zone         |
+ created_at       | timestamp without time zone         |
+ updated_at       | timestamp without time zone         |
+ history_id       | integer                             |
+ account_id       | integer                             |
+ company_id       | integer                             |
+
+
+                                         Tabela Accounts
+      Coluna       |            Tipo de dado             |                       Requerido
+-------------------+-------------------------------------+-------------------------------------------------------
+ id                | integer                             |
+ cpf               | character varying(255)              |
+ address           | character varying(255)              |
+ number            | character varying(255)              |
+ complement        | character varying(255)              |
+ neighborhood      | character varying(255)              |
+ city              | character varying(255)              |
+ state             | character varying(255)              |
+ country           | character varying(255)              |
+ created_at        | timestamp without time zone         |
+ updated_at        | timestamp without time zone         |
+ sex               | character varying(255)              |
+ rg                | character varying(255)              |
+ birth_certificate | character varying(255)              |
+ ric               | character varying(255)              |
+ age               | integer                             |
+ birth             | date                                |
+ mother_name       | character varying(255)              |
+ place_of_birth    | character varying(255)              |
+ civil_status      | character varying(255)              |
+ cover_image_uid   | character varying(255)              |
+ cover_image_name  | character varying(255)              |
+ anamnesis_id      | integer                             |
+
+
+                                    Tabela Accounts Companies
+   Coluna   |            Tipo de dado             |                          Requerido
+------------+-------------------------------------+--------------------------------------------------------------
+ id         | integer                             |
+ account_id | integer                             |
+ company_id | integer                             |
+ created_at | timestamp without time zone         |
+ updated_at | timestamp without time zone         |
+
+
+                                       Tabela Anamneses
+     Coluna     |            Tipo de dado             |                       Requerido
+----------------+-------------------------------------+----------------------------------------------------------
+ id             | integer                             |
+ blood_type     | character varying(255)              |
+ rh_factor      | character varying(255)              |
+ weight         | numeric                             |
+ height         | numeric                             |
+ sex            | character varying(255)              |
+ blood_pressure | character varying(255)              |
+ smoking        | boolean                             |
+ created_at     | timestamp without time zone         |
+ updated_at     | timestamp without time zone         |
+ user_id        | integer                             |
+
+
+                                           Tabela Companies
+        Coluna         |            Tipo de dado             |                       Requerido
+-----------------------+-------------------------------------+---------------------------------------------------
+ id                    | integer                             |
+ name                  | character varying(255)              |
+ brand_name            | character varying(255)              |
+ cnpj                  | character varying(255)              |
+ state_inscription     | character varying(255)              |
+ municipal_inscription | character varying(255)              |
+ address               | character varying(255)              |
+ number                | integer                             |
+ complement            | character varying(255)              |
+ neighborhood          | character varying(255)              |
+ city                  | character varying(255)              |
+ state                 | character varying(255)              |
+ country               | character varying(255)              |
+ site                  | character varying(255)              |
+ published             | boolean                             |
+ published_at          | timestamp without time zone         |
+ enabled               | boolean                             |
+ deleted_at            | timestamp without time zone         |
+ created_at            | timestamp without time zone         |
+ updated_at            | timestamp without time zone         |
+ cover_image_uid       | character varying(255)              |
+ cover_image_name      | character varying(255)              |
+
+
+                                         Tabela Histories
+       Coluna       |            Tipo de dado             |                       Requerido
+--------------------+-------------------------------------+------------------------------------------------------
+ id                 | integer                             |
+ company_id         | integer                             |
+ user_id            | integer                             |
+ entry_date         | timestamp without time zone         |
+ exit_date          | timestamp without time zone         |
+ description        | text                                |
+ prescription_drugs | text                                |
+ created_at         | timestamp without time zone         |
+ updated_at         | timestamp without time zone         |
+
+
+                                         Tabela Telephones
+      Coluna       |            Tipo de dado             |                        Requerido
+-------------------+-------------------------------------+--------------------------------------------------------
+ id                | integer                             |
+ ddd               | character varying(255)              |
+ tel               | character varying(255)              |
+ type_telephone_id | integer                             |
+ branch_line       | character varying(255)              |
+ published         | boolean                             |
+ enabled           | boolean                             |
+ published_at      | timestamp without time zone         |
+ deleted_at        | timestamp without time zone         |
+ created_at        | timestamp without time zone         |
+ updated_at        | timestamp without time zone         |
+ account_id        | integer                             |
+ company_id        | integer                             |
+
+
+                                     Tabela Type Telephones
+   Coluna   |            Tipo de dado             |                          Requerido
+------------+-------------------------------------+--------------------------------------------------------------
+ id         | integer                             |
+ name       | character varying(255)              |
+ enabled    | boolean                             |
+ created_at | timestamp without time zone         |
+ updated_at | timestamp without time zone         |
+
+
+                                     Tabela Type Users
+   Coluna   |            Tipo de dado             |                        Requerido
+------------+-------------------------------------+---------------------------------------------------------
+ id         | integer                             |
+ name       | character varying(255)              |
+ enabled    | boolean                             |
+ created_at | timestamp without time zone         |
+ updated_at | timestamp without time zone         |
+
+
+                                         Tabela Users
+       Coluna       |            Tipo de dado             |                     Requerido
+--------------------+-------------------------------------+----------------------------------------------------
+ id                 | integer                             |
+ name               | character varying(255)              |
+ login              | character varying(255)              |
+ email              | character varying(255)              |
+ crypted_password   | character varying(255)              |
+ password_salt      | character varying(255)              |
+ persistence_token  | character varying(255)              |
+ login_count        | integer                             |
+ failed_login_count | integer                             |
+ last_request_at    | timestamp without time zone         |
+ current_login_at   | timestamp without time zone         |
+ last_login_at      | timestamp without time zone         |
+ current_login_ip   | character varying(255)              |
+ last_login_ip      | character varying(255)              |
+ account_id         | integer                             |
+ type_user_id       | integer                             |
+ created_at         | timestamp without time zone         |
+ updated_at         | timestamp without time zone         |
