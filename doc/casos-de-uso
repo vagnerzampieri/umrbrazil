@@ -1,11 +1,110 @@
-Ilustração 1 - Caso de uso acesso a home
+Ilustração  -
 
-O usuário será informado brevemente de como o sistema funciona, informações úteis para utilização dele.
+Identificação do Caso de Uso:
 
-Ilustração 2 - Caso de uso acessar dashboard
+Ator(es) envolvido(s): Organização, Admin, Médico, Paciente, Recepcionista, Enfermeiro e Técnico.
 
-Depois de logado, cada tipo de usuário terá um acesso a sistema personalizado, dashboard terá informações e últimas movimentações daquele usuário que estará acessando.
+Descrição/justificativa:
 
-Ilustração 3 - Caso de uso manter usuário
+Pré-condições:
+
+Pós-condições:
+
+Sequência lógicas de ações(fluxo principal):
+
+Fluxo alternativo:
+
+Fluxo de exceção 1:
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Ilustração 1 - Caso de uso acessar dashboard.
+
+Identificação do Caso de Uso: Acessar dashboard.
+
+Ator(es) envolvido(s): Organização, Admin, Médico, Paciente, Recepcionista, Enfermeiro e Técnico.
+
+Descrição/justificativa: Depois de logado, cada tipo de usuário terá um acesso a sistema personalizado, dashboard terá informações e últimas movimentações daquele usuário que estará acessando.
+
+Pré-condições: O usuário precisa estar autenticado no sistema.
+
+Pós-condições: Poderá acessar outras áreas do sistema, desde que tenha permissão.
+
+Sequência lógicas de ações(fluxo principal):
+1 - Usuário acessa o sistema.
+2 - Clica no botão "login", irá abrir um lightbox.
+3 - Ele preenche os campos login e senha, confirma os dados (botão "entrar").
+4 - O sistema faz a validação e autentica o usário, redireciona para o dashboard do sistema, de acordo com o seu perfil.
+5 - Visualização de menus, informações e últimas movimentações.
+
+Fluxo alternativo:
+1 - Caso o usuário não preencha um dos campoe, o sistema não será acessado e aparecerá uma mensagem de aviso "Login e senha inválidos.".
+
+Fluxo de exceção 1:
+Passo 2 do fluxo principal: login ou senha incorreto.
+1 - O sistema exibe uma mensagem de aviso "Login ou senha inválidos.".
+
+--------------------------------------------------------------------------------
+Ilustração 2 - Caso de uso manter usuário.
+
+Identificação do Caso de Uso: Manter usuário.
+
+Ator(es) envolvido(s): Organização, Admin e Recepcionista.
+
+Descrição/justificativa: Trata o cadastro de usuário do sistema. Ele ocorrerá quando inserir, ou editar um usuário no sistema.
+
+Pré-condições: Somente usuários com um dos tipos "Organização", "Admin" e "Recepcionista" poderão criar ou alterar esses dados.
+
+Pós-condições: O cadastro, ou alteração do usuário estará efetuado.
+
+Sequência lógicas de ações(fluxo principal):
+1 - Acessa o menu "Usuários".
+2 - Um menu com submenus para serem acessados, ao clicar em "Criar", o sistema abrirá a página "Cadastro de Usuário".
+3 - O usuário deverá preencher os campos necessários e clicar em "Criar".
+4 - O sistema exibe a mensagem de aviso "Usuário criado com sucesso", mostrando abaixo os dados cadastrados.
+
+Fluxo alternativo 1:
+Caso queira atualizar um usuário em específico.
+
+1 - Acessa o menu "lista usuários".
+2 - Deverá ser buscado o usuário desejado, através de uma "Busca avançada", ou das páginas, os usuários serão mostrados em ordem crescente por nome.
+3 - Ao clicar em "Editar", do lado do usuário que será alterado.
+4 - Irá para uma página de edição para alterar aquele usuário.
+5 - O usuário faz as alterações necessárias e clica em "Atualizar".
+6 - O sistema exibe a mensagem de aviso "Usuário editado com sucesso", mostrando abaixo os dados cadastrados.
+
+Fluxo de exceção 1:
+Passo 3 do fluxo principal: CPF já cadastrado no sistema.
+1 - O sistema irá informar que o CPF já tem cadastro no sistema.
+
+Fluxo de exceção 2:
+Passo 3 do fluxo principal: CPF incorreto.
+1 - O sistema irá informar que o CPF está incorreto.
+
+Fluxo de exceção 3:
+Passo 3 do fluxo principal: Número da Certidão de Nascimento já cadastrado no sistema.
+1 - O sistema irá informar que o Número da Certidão de Nascimento já tem cadastro no sistema.
+
+Fluxo de exceção 4:
+Passo 3 do fluxo principal: Número de Certidão de Nascimento incorreto.
+1 - O sistema irá informar que o Número de Certidão de Nascimento está incorreto.
+
+Fluxo de exceção 5:
+Passo 3 do fluxo principal: Registro de Identidade Civil(RIC) já cadastrado no sistema.
+1 - O sistema irá informar que o Registro de Identidade Civil(RIC) já tem cadastro no sistema.
+
+Fluxo de exceção 6:
+Passo 3 do fluxo principal: Registro de Identidade Civil(RIC) incorreto.
+1 - O sistema irá informar que o Registro de Identidade Civil(RIC) está incorreto.
+
+Fluxo de exceção 7:
+Passo 3 do fluxo principal: Registro Geral(RG) já cadastrado no sistema.
+1 - O sistema irá informar que o Registro Geral(RG) já tem cadastro no sistema.
+
+Fluxo de exceção 8:
+Passo 3 do fluxo principal: Registro Geral(RG) incorreto.
+1 - O sistema irá informar que o Registro Geral(RG) está incorreto.
+
+--------------------------------------------------------------------------------
+Ilustração 3 -
 
 
