@@ -105,6 +105,91 @@ Passo 3 do fluxo principal: Registro Geral(RG) incorreto.
 1 - O sistema irá informar que o Registro Geral(RG) está incorreto.
 
 --------------------------------------------------------------------------------
-Ilustração 3 -
+Ilustração 3 - Caso de uso minha conta.
 
+Identificação do Caso de Uso: Minha conta.
 
+Ator(es) envolvido(s): Organização, Admin, Médico, Paciente, Recepcionista, Enfermeiro e Técnico.
+
+Descrição/justificativa: O usuário que não tem permissão de "Admin", "Organização", ou "Recepcionista", poderá apenas editar a conta dele através do menu "Minha Conta".
+
+Pré-condições: O usuário precisa estar autenticado no sistema.
+
+Pós-condições: Alteração de usuário estará efetuada.
+
+Sequência lógicas de ações(fluxo principal):
+1 - Acessa o menu "Minha conta".
+2 - Irá para uma página de edição para alterar aquele usuário.
+3 - O usuário faz as alterações necessárias e clica em "Atualizar".
+4 - O sistema exibe a mensagem de aviso "Usuário editado com sucesso", mostrando abaixo os dados cadastrados.
+
+Fluxo de exceção 1:
+Passo 3 do fluxo principal: CPF incorreto.
+1 - O sistema irá informar que o CPF está incorreto.
+
+Fluxo de exceção 2:
+Passo 3 do fluxo principal: Número de Certidão de Nascimento incorreto.
+1 - O sistema irá informar que o Número de Certidão de Nascimento está incorreto.
+
+Fluxo de exceção 3:
+Passo 3 do fluxo principal: Registro de Identidade Civil(RIC) incorreto.
+1 - O sistema irá informar que o Registro de Identidade Civil(RIC) está incorreto.
+
+Fluxo de exceção 4:
+Passo 3 do fluxo principal: Registro Geral(RG) incorreto.
+1 - O sistema irá informar que o Registro Geral(RG) está incorreto.
+
+--------------------------------------------------------------------------------
+Ilustração 4 - Caso de uso manter histórico.
+
+Identificação do Caso de Uso: Manter histórico.
+
+Ator(es) envolvido(s): Organização, Admin e Recepcionista.
+
+Descrição/justificativa: Trata o cadastro de uma entrada no histórico de um paciente em específico do sistema. Ela ocorrerá quando inserir, ou editar um histórico no sistema.
+
+Pré-condições: Somente usuários com um dos tipos "Organização", "Admin", "Médico", "Técnico" e "Enfermeiro" poderão criar ou alterar esses dados.
+
+Pós-condições: O cadastro, ou alteração de uma entrada no histórico estará efetuado.
+
+Sequência lógicas de ações(fluxo principal):
+1 - Acessa o menu "Usuários".
+2 - Deverá ser buscado o usuário desejado, através de uma "Busca avançada", ou das páginas, os usuários serão mostrados em ordem crescente por nome.
+3 - Deve ser clicado no link "Historico", mostrará uma página com todo o histórico do paciente.
+4 - Ao clicar em "Criar entrada", abrirá a página "Criar entrada no histórico".
+5 - O usuário deverá preencher os campos necessários e clicar em "Criar".
+6 - O sistema exibe a mensagem de aviso "Uma entrada foi criada no histórico com sucesso", mostrando abaixo os dados cadastrados.
+
+Fluxo alternativo 1:
+1 - Acessa o menu "Usuários".
+2 - Deverá ser buscado o usuário desejado, através de uma "Busca avançada", ou das páginas, os usuários serão mostrados em ordem crescente por nome.
+3 - Deve ser clicado no link "Historico", mostrará uma página com todo o histórico do paciente.
+4 - Deverá ser buscado o histórico desejado, através de uma "Busca avançada", ou das páginas, os históricos serão mostrados em ordem crescente por nome.
+5 - Ao clicar em "Editar", do lado do histórico que será alterado.
+6 - Irá para uma página de edição para alterar aquele histórico.
+7 - O histórico faz as alterações necessárias e clica em "Atualizar".
+8 - O sistema exibe a mensagem de aviso "Uma entrada foi criada no histórico com sucesso", mostrando abaixo os dados cadastrados.
+
+Fluxo de exceção 1:
+Passo 3 do fluxo principal: Organização não foi selecionada.
+1 - O sistema irá informar que a organização não foi selecionada.
+
+Fluxo de exceção 2:
+Passo 3 do fluxo principal: Especialidade não foi selecionada.
+1 - O sistema irá informar que a especialidade não foi selecionada.
+
+Fluxo de exceção 3:
+Passo 3 do fluxo principal: Médico não foi colocado.
+1 - O sistema irá informar que a médico não foi colocado.
+
+Fluxo de exceção 4:
+Passo 3 do fluxo principal: Descrição não foi feita.
+1 - O sistema irá informar que a descrição não foi feita.
+
+Fluxo de exceção 5:
+Passo 3 do fluxo principal: Entrada não foi colocada.
+1 - O sistema irá informar que a entrada não foi colocada.
+
+Fluxo de exceção 6:
+Passo 3 do fluxo principal: Saída não foi colocada.
+1 - O sistema irá informar que a saída não foi colocada.
