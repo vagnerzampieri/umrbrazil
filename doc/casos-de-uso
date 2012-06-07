@@ -146,9 +146,9 @@ Identificação do Caso de Uso: Manter histórico.
 
 Ator(es) envolvido(s): Organização, Admin e Recepcionista.
 
-Descrição/justificativa: Trata o cadastro de uma entrada no histórico de um paciente em específico do sistema. Ela ocorrerá quando inserir, ou editar um histórico no sistema.
+Descrição/justificativa: Trata o cadastro de uma entrada no histórico de um paciente em específico do sistema. Ela ocorrerá quando criar, ou editar uma entrada no histórico, ou visualizar uma entrada.
 
-Pré-condições: Somente usuários com um dos tipos "Organização", "Admin", "Médico", "Técnico" e "Enfermeiro" poderão criar ou alterar esses dados.
+Pré-condições: Somente usuários com um dos tipos "Organização", "Admin", "Médico", "Técnico" e "Enfermeiro" poderão fazer ações nesta área do sistema.
 
 Pós-condições: O cadastro, ou alteração de uma entrada no histórico estará efetuado.
 
@@ -160,14 +160,16 @@ Sequência lógicas de ações(fluxo principal):
 5 - O usuário deverá preencher os campos necessários e clicar em "Criar".
 6 - O sistema exibe a mensagem de aviso "Uma entrada foi criada no histórico com sucesso", mostrando abaixo os dados cadastrados.
 
-Fluxo alternativo 1:
+Fluxo alternativo:
+Caso queira visualizar um histórico específico.
+
 1 - Acessa o menu "Usuários".
 2 - Deverá ser buscado o usuário desejado, através de uma "Busca avançada", ou das páginas, os usuários serão mostrados em ordem crescente por nome.
 3 - Deve ser clicado no link "Historico", mostrará uma página com todo o histórico do paciente.
 4 - Deverá ser buscado o histórico desejado, através de uma "Busca avançada", ou das páginas, os históricos serão mostrados em ordem crescente por nome.
 5 - Ao clicar em "Editar", do lado do histórico que será alterado.
 6 - Irá para uma página de edição para alterar aquele histórico.
-7 - O histórico faz as alterações necessárias e clica em "Atualizar".
+7 - O usuário faz as alterações necessárias e clica em "Atualizar".
 8 - O sistema exibe a mensagem de aviso "Uma entrada foi criada no histórico com sucesso", mostrando abaixo os dados cadastrados.
 
 Fluxo de exceção 1:
@@ -193,3 +195,148 @@ Passo 3 do fluxo principal: Entrada não foi colocada.
 Fluxo de exceção 6:
 Passo 3 do fluxo principal: Saída não foi colocada.
 1 - O sistema irá informar que a saída não foi colocada.
+
+--------------------------------------------------------------------------------
+Ilustração 5 - Caso de uso manter anamnese.
+
+Identificação do Caso de Uso: Manter anamnese.
+
+Ator(es) envolvido(s): Organização, Admin, Médico, Paciente, Enfermeiro e Técnico.
+
+Descrição/justificativa: Área para edição e visualização da anamnese do Paciente, sendo que apenas "Organização", "Admin" e "Médico" poderão editar. "Paciente", "Enfermeiro" e "Técnico" somente visualizarão os dados. A criação da anamnese acontece ao criar um usuário novo.
+
+Pré-condições: Somente usuários logados com um dos tipos "Organização", "Admin", "Médico", "Paciente", "Enfermeiro" e "Técnico" poderão efetuar as ações nesta área.
+
+Pós-condições: Alteração da anamnese estará efetuado, ou sua visualização.
+
+Sequência lógicas de ações(fluxo principal):
+1 - É feito uma busca de usuário.
+2 - O retorno é uma lista de usuários do sistema.
+3 - Acesso ao link "Editar anamnese", que estará ao lado do usuário escolhido.
+4 - Abrirá o formulário para edição do usuário.
+5 - O usuário fará as alterações necessárias e vai clicar em "Alterar"
+6 - O sistema mostrará uma mensagem de aviso "Os dados de anamnese foram alterados com sucesso.", abaixo os dados alterados.
+
+Fluxo alternativo:
+Caso queira visualizar a anamnese.
+
+1 - É feito uma busca de usuário.
+2 - O retorno é uma lista de usuários do sistema.
+3 - Acesso ao link "Visualizar anamnese", que estará ao lado do usuário escolhido.
+4 - O sistema mostrará a anamnese daquele Paciente.
+
+--------------------------------------------------------------------------------
+Ilustração 6 - Caso de uso manter exames.
+
+Identificação do Caso de Uso: Manter exames.
+
+Ator(es) envolvido(s): Organização, Admin, Médico, Paciente, Recepcionista, Enfermeiro e Técnico.
+
+Descrição/justificativa: Área de criação, edição e visualização dos exames de um Paciente. Os usuário "Organização", "Admin", "Médico" e "Técnico" poderão efetuar todas as ações nesta área. "Paciente", "Enfermeiro" e "Recepcionista" só poderão visualizar.
+
+Pré-condições: Somente usuários logados poderão visualizar essa parte.
+
+Pós-condições: Criação, ou alteração estará efetuado, ou sua visualização.
+
+Sequência lógicas de ações(fluxo principal):
+1 - Acesso ao link "Inserir exame".
+2 - Abrirá o formulário para a criação de usuário.
+3 - O usuário irá inserir os dados e clicar em "Criar".
+4 - O sistema mostrará uma mensagem de aviso "Os dados do exame foram inseridos com sucesso.", abaixo os dados criados.
+
+Fluxo alternativo 1:
+Caso queira editar o exame.
+
+1 - É feito uma busca de usuário.
+2 - O retorno é uma lista de usuários do sistema.
+3 - Acesso ao link "Editar exame".
+4 - O usuário irá alterar os dados e clicar em "Editar".
+5 - O sistema mostrará uma mensagem de aviso "Os dados do exame foram alterados com sucesso.", abaixo os dados alterados.
+
+Fluxo alternativo 2:
+Caso queira visualizar a exame.
+
+1 - É feito uma busca de usuário.
+2 - O retorno é uma lista de usuários do sistema.
+3 - Acesso ao link "Visualizar exame", que estará ao lado do usuário escolhido.
+4 - O sistema mostrará o exame daquele Paciente.
+
+Fluxo de exceção 1:
+Passo 3 do fluxo principal: Título não foi colocado.
+1 - O sistama irá informar que o Título não foi colocado.
+
+Fluxo de exceção 2:
+Passo 3 do fluxo principal: Imagem ou PDF não adicionados.
+1 - O sistema irá informar que nenhuma imagem, ou PDF foi adicionado.
+
+--------------------------------------------------------------------------------
+Ilustração 7 - Caso de uso envio em lote
+
+Identificação do Caso de Uso: Envio em lote
+
+Ator(es) envolvido(s): Organização.
+
+Descrição/justificativa: Enviado para o servidor principal os dados dos pacientes em lote, esses dados são gerados em outros sistemas proprietários.
+
+Pré-condições: Usuário com o tipo "Organização".
+
+Pós-condições: Base de dados atualizada.
+
+Sequência lógicas de ações(fluxo principal):
+1 - Através de uma API o usuário loga no sistema.
+2 - Envia os dados em lote.
+3 - Sistema retorna uma mensagem "Envio em lote concluído de forma correta."
+
+Fluxo de exceção 1:
+Passo 2 do fluxo principal: Falha no envio.
+1 - O sistema mostrará a falha que ocorreu e continuará daquele ponto.
+
+--------------------------------------------------------------------------------
+Ilustração 8 - Manter empresa
+
+Identificação do Caso de Uso: Caso de uso manter empresa.
+
+Ator(es) envolvido(s): Admin.
+
+Descrição/justificativa: Este caso de uso trata a criação, edição e visualização de dados de uma empresa.
+
+Pré-condições: Usuário logado como "Admin".
+
+Pós-condições: Cadastro de empresa criado, ou editado com sucesso, ou visualização do conteúdo listada.
+
+Sequência lógicas de ações(fluxo principal):
+1 - Acesso a menu "Criar empresa"
+2 - Abrirá o formulário para a criação da empresa.
+3 - Formulário será preenchido e clicado no botão de "Criar".
+4 - O sistema mostrará uma mensagem "A empresa foi criado com sucesso", abaixo os dados criados.
+
+Fluxo alternativo 1:
+Caso queira editar a empresa.
+
+1 - Acesso ao menu "Editar empresa".
+2 - Abrirá o formulário para edição da empresa.
+3 - O usuário irá alterar a empresa e depois clicar em "Alterar".
+4 - O sistema mostrará uma mensagem "A empresa foi alterada com sucesso", abaixo os dados alterados.
+
+Fluxo alternativo 2:
+Caso queira visualizar a empresa.
+
+1 - Acesso ao menu "Visualizar empresa".
+2 - O sistema mostrará os dados da empresa.
+
+Fluxo alternativo 3:
+Caso para relacionar empresa com usuário.
+
+1 - Acesso ao link "Relacionar usuários"
+2 - Abrirá uma página para fazer busca de usuário.
+3 - Ao efetuar uma busca o usuário o retorno é uma lista com usuários a serem relacionados com aquela empresa.
+4 - Ao clicar no check box "relacionar" e depois salvar.
+5 - Aparecerá uma mensagem "Usuários relacionados com a empresa com sucesso", abaixo os dados gravados.
+
+Fluxo de exceção 1:
+
+Passo 3 do fluxo principal: Nome não adicionado.
+1 - O sistema informará que nome não foi colocado
+
+Passo 3 do fluxo principal: CNPJ não adicionado.
+1 - O sistema informará que CNPJ não foi colocado
