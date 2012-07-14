@@ -13,6 +13,9 @@
 # Ignore schema
 db/schema.rb
 
+# Ignore seeds
+db/seeds.rb
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
