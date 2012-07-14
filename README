@@ -4,6 +4,7 @@ Dependencies:
 
 Jruby 1.6.7(1.9.2)
 PostgreSQL(> 9)
+Nodejs(sudo apt-get install nodejs)
 
 Initialize:
 
