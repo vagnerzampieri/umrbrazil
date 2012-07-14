@@ -1,5 +1,5 @@
 PATH
-  remote: /home/vagner/project/rails3/zscaffold_admin
+  remote: /home/vagner/projects/rails/3++/gems/zscaffold_admin
   specs:
     zscaffold_admin (0.0.3)
 
