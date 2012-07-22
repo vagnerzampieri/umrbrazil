@@ -19,15 +19,34 @@
   </head>
 
   <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="50">
+    <!-- Navbar
+      ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to 'Login', '#', class: 'brand' %>
+        </div>
+      </div>
+    </div>
 
-    <%= yield %>
+    <div class="container">
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", "bootstrap.min.js", "app.js", "bootswatch.js" %>
+      <%= yield %>
 
+      <!-- Le javascript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
+      <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", "bootstrap.min.js", "app.js", "bootswatch.js" %>
+
+      <br><br><br><br>
+      <!-- Footer
+      ================================================== -->
+      <footer class="footer">
+        <center><p>UMRBrazil - 2012 - Trabalho de conclusão de curso</a></p></center>
+      </footer>
+
+    </div><!-- /container -->
 
   </body>
 </html>
