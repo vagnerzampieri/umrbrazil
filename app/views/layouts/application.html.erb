@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Umrbrasil</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>UMRBrazil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UMRBrazil é um local para centralizar o histórico de um paciente">
+    <meta name="keywords" content="umrbrazil, hospital, clínica, ambulatório, exames, históricos, histórico centralizado">
 
-<%= yield %>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js" %>
+    <![endif]-->
 
-</body>
+    <!-- Le styles -->
+    <%= stylesheet_link_tag "bootstrap.css", "bootstrap-responsive.css", "docs.css" %>
+    <%= csrf_meta_tags %>
+
+  </head>
+
+  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="50">
+
+    <%= yield %>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", "bootstrap.min.js", "app.js", "bootswatch.js" %>
+
+
+  </body>
 </html>
