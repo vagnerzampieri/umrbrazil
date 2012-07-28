@@ -9,7 +9,7 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <%= javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js" %>
+      <%= javascript_include_tag "html5.js" %>
     <![endif]-->
 
     <!-- Le styles -->
@@ -35,12 +35,13 @@
       <header class="jumbotron subhead" id="overview">
         <div class="subnav">
           <ul class="nav nav-pills">
-            <li><a href="javascript: void();">Home</a></li>
+            <!--<li><a href="javascript: void();">Home</a></li>
             <li><a href="javascript: void();">Histórico</a></li>
             <li><a href="javascript: void();">Exames</a></li>
             <li><a href="javascript: void();">Anamnese</a></li>
             <li><a href="javascript: void();">Organização</a></li>
-            <li><a href="javascript: void();">Usuários</a></li>
+            <li><a href="/admin/users">Usuários</a></li>-->
+            <%= menu %>
           </ul>
         </div>
       </header>
@@ -50,8 +51,7 @@
       <!-- Le javascript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
-      <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-      <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", "bootstrap.min.js", "app.js", "bootswatch.js" %>
+      <%= javascript_include_tag "jquery-1.7.2.min.js", "bootstrap.min.js", "app.js", "bootswatch.js" %>
 
       <!-- Footer
       ================================================== -->

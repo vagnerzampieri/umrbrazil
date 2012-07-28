@@ -1,38 +1,31 @@
 <%= form_for(@user) do |f| %>
-<div class="module_content">
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h4 class='alert_error'><%= pluralize(@user.errors.count, "error") %> prohibited this category from being saved:</h4>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <fieldset>
-    <label><b><%= t :name %></b></label>
-    <%= f.text_field :name %>
-  </fieldset>
-  <fieldset>
-    <label><b><%= t :login %></b></label>
-    <%= f.text_field :login %>
-  </fieldset>
-  <fieldset>
-    <label><b><%= t :email %></b></label>
-    <%= f.text_field :email %>
-  </fieldset>
-</div>
-<footer>
-  <div class="submit_link">
-    <%= f.submit %>
-    <input type="reset" value="Reset">
-    <%= link_to image_tag("/assets/icn_jump_back.png", alt: t(:back), title: t(:back)), users_path %>
-    <% if params[:action] == 'edit' %>
-      <%= link_to image_tag("/assets/icn_folder.png", alt: t(:show), title: t(:show)), @user %>
+  <div class="module_content">
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h4 class='alert_error'><%= pluralize(@user.errors.count, "error") %> prohibited this category from being saved:</h4>
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     <% end %>
+
+    <div class='field'>
+      <label><b><%= t :name %></b></label>
+      <%= f.text_field :name %>
+    </div>
+    <div class='field'>
+      <label><b><%= t :login %></b></label>
+      <%= f.text_field :login %>
+    </div>
+    <div class='field'>
+      <label><b><%= t :email %></b></label>
+      <%= f.email_field :email %>
+    </div>
   </div>
-</footer>
+  <%= link_to arrow_left, users_path %>
+  <%= submit_link(f) %>
+  <%= submit_tag(I18n.t(:clear), class: 'btn btn-inverse', type: "reset" ) %>
+  <%= link_to(I18n.t(:show), @user, class: 'btn') if params[:action] == 'edit' %>
 <% end %>

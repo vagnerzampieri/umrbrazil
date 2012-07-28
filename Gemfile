@@ -13,6 +13,7 @@ gem 'therubyrhino', '1.73.2'
 gem 'zscaffold_admin', :path => "/home/vagner/projects/rails/3++/gems/zscaffold_admin/"
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem "paperclip", "~> 3.0"
+gem 'will_paginate', '~> 3.0.0'
 
 # Login and auth
 gem 'authlogic', '3.1.0'

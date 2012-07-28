@@ -1,114 +1,86 @@
-# encoding: UTF-8
 en:
-    date:
-      formats:
-        default: "%m/%d/%Y"
-        short: "%B %d"
-        long: "%B %d, %Y"
-        custom: "%m/%d/%Y"
-        edition_format_date: "%B/%Y"
-        only_day: "%d"
-        only_weekday: "%A"
-        month_complete: "%B"
-        month_abv: "%b"
-        header_format_date: "%B %Y"
+  # admin
 
-#      day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
-#      abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
-#      month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
-#      abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
-#      order: [ :month, :day, :year ]
+  create: "Create"
+  update: "Update"
+  clear: "Limpar"
 
-    time:
-      formats:
-        default: "%A, %d %B %Y, %H:%M %S %z"
-        short: "%m/%d, %H:%M"
-        long: "%B %d, %Y %H:%M"
-        custom: "%d/%m/%Y"
-        edition_format_date: "%B/%Y"
-        only_day: "%d"
-        only_weekday: "%A"
-        month_complete: "%B"
-        month_abv: "%b"
-        header_format_date: "%B de %Y"
-        comment_format_date: "%B %d, %Y at %H:%M a.m."
-      am: am
-      pm: pm
+  # admin/user
 
-  # date helper distance in words
-    datetime:
-    distance_in_words:
-      half_a_minute: 'half minute'
-      less_than_x_seconds:
-        one: 'less than 1 second'
-        other: 'than a {{count}} seconds'
+  name: "Name"
+  login: "Login"
+  email: "Email"
+  show: "Show"
+  edit: "Edit"
+  delete: "Delete"
+  showing: "Showing"
+  listing_users: "Listing users"
+  new_user: "New user"
+  editing_user: "Editing user"
+  previous: "Previous"
+  next: "Next"
+  user_created: "User created successfully"
+  user_updated: "User updated successfully"
 
-      x_seconds:
-        one: '1 second'
-        other: '{{count}} seconds'
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
 
-      less_than_x_minutes:
-        one: 'less than a minute'
-        other: 'than a {{count}} minutes'
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
 
-      x_minutes:
-        one: '1 minute'
-        other: '{{count}} minutes'
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    order:
+      - :year
+      - :month
+      - :day
 
-      about_x_hours:
-        one: 'about 1 hour'
-        other: 'about {{count}} hours'
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
 
-      x_days:
-        one: '1 day'
-        other: '{{count}} days'
+    select:
+      prompt: "Please select"
 
-      about_x_months:
-        one: 'about 1 month'
-        other: 'about {{count}} months'
-
-      x_months:
-        one: '1 month'
-        other: '{{count}} months'
-
-      about_x_years:
-        one: 'about 1 year'
-        other: 'about {{count}} years'
-
-      over_x_years:
-        one: 'more than 1 year'
-        other: 'more than {{count}} years'
-    prompts:
-      year:   "Year"
-      month:  "Month"
-      day:    "Day"
-      hour:   "Hour"
-      minute: "Minute"
-      second: "Second"
-
-   # numeros
-    number:
+  number:
     format:
+      separator: "."
+      delimiter: ","
       precision: 3
-      separator: ','
-      delimiter: '.'
+      significant: false
+      strip_insignificant_zeros: false
+
     currency:
       format:
-        unit: 'U$'
+        format: "%u%n"
+        unit: "$"
+        separator: "."
+        delimiter: ","
         precision: 2
-        format: '%u %n'
-        separator: ','
-        delimiter: '.'
+        significant: false
+        strip_insignificant_zeros: false
+
     percentage:
       format:
-        delimiter: '.'
+        delimiter: ""
+
     precision:
       format:
-        delimiter: '.'
+        delimiter: ""
+
     human:
       format:
-        precision: 1
-        delimiter: '.'
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
       storage_units:
         format: "%n %u"
         units:
@@ -119,40 +91,105 @@ en:
           mb: "MB"
           gb: "GB"
           tb: "TB"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: Thousand
+          million: Million
+          billion: Billion
+          trillion: Trillion
+          quadrillion: Quadrillion
 
-# Used in array.to_sentence.
-    support:
-    array:
-      words_connector: ", "
-      two_words_connector: " e "
-      last_word_connector: " e "
+  datetime:
+    distance_in_words:
+      half_a_minute: "half a minute"
+      less_than_x_seconds:
+        one: "less than 1 second"
+        other: "less than %{count} seconds"
+      x_seconds:
+        one: "1 second"
+        other: "%{count} seconds"
+      less_than_x_minutes:
+        one: "less than a minute"
+        other: "less than %{count} minutes"
+      x_minutes:
+        one: "1 minute"
+        other: "%{count} minutes"
+      about_x_hours:
+        one: "about 1 hour"
+        other: "about %{count} hours"
+      x_days:
+        one: "1 day"
+        other: "%{count} days"
+      about_x_months:
+        one: "about 1 month"
+        other: "about %{count} months"
+      x_months:
+        one: "1 month"
+        other: "%{count} months"
+      about_x_years:
+        one: "about 1 year"
+        other: "about %{count} years"
+      over_x_years:
+        one: "over 1 year"
+        other: "over %{count} years"
+      almost_x_years:
+        one: "almost 1 year"
+        other: "almost %{count} years"
+    prompts:
+      year: "Year"
+      month: "Month"
+      day: "Day"
+      hour: "Hour"
+      minute: "Minute"
+      second: "Seconds"
 
-# Active Record
-    activerecord:
-      errors:
-        template:
-          header:
-            one: "Unable to write {{model}}: 1 error"
-            other: "Unable to write {{model}}: {{count}} errors."
-          body: "Please check (the) following field(s):"
-        messages:
-          inclusion: "is not included in the list"
-          exclusion: "Unavailable"
-          invalid: "not valid"
-          confirmation: "not agree with the confirmation"
-          accepted: "be accepted"
-          empty: "can not be empty"
-          blank: "can not be blank"
-          too_long: "is too long (maximum: {{count}} characters)"
-          too_short: "is very short (minimum: {{count}} characters)"
-          wrong_length: "não possui o tamanho esperado ({{count}} characters)"
-          taken: "is already in use"
-          not_a_number: "not a number"
-          greater_than: "must be greater than {{count}}"
-          greater_than_or_equal_to: "must be greater than or equal to {{count}}"
-          equal_to: "must be equal to {{count}}"
-          less_than: "must be less than {{count}}"
-          less_than_or_equal_to: "must be less than or equal to {{count}}"
-          odd: "be odd"
-          even: "be aware"
+  helpers:
+    select:
+      prompt: "Please select"
 
+    submit:
+      create: 'Create %{model}'
+      update: 'Update %{model}'
+      submit: 'Save %{model}'
+
+  errors:
+    format: "%{attribute} %{message}"
+
+    messages: &errors_messages
+      inclusion: "is not included in the list"
+      exclusion: "is reserved"
+      invalid: "is invalid"
+      confirmation: "doesn't match confirmation"
+      accepted: "must be accepted"
+      empty: "can't be empty"
+      blank: "can't be blank"
+      too_long: "is too long (maximum is %{count} characters)"
+      too_short: "is too short (minimum is %{count} characters)"
+      wrong_length: "is the wrong length (should be %{count} characters)"
+      not_a_number: "is not a number"
+      not_an_integer: "must be an integer"
+      greater_than: "must be greater than %{count}"
+      greater_than_or_equal_to: "must be greater than or equal to %{count}"
+      equal_to: "must be equal to %{count}"
+      less_than: "must be less than %{count}"
+      less_than_or_equal_to: "must be less than or equal to %{count}"
+      odd: "must be odd"
+      even: "must be even"
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "1 error prohibited this %{model} from being saved"
+          other: "%{count} errors prohibited this %{model} from being saved"
+        body: "There were problems with the following fields:"
+
+      messages:
+        taken: "has already been taken"
+        record_invalid: "Validation failed: %{errors}"
+        <<: *errors_messages
+
+      full_messages:
+        format: "%{attribute}%{message}"

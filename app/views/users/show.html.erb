@@ -1,29 +1,25 @@
   <%= outgoing_menssage %>
-  <article class="module width_full">
-	  <header><h3><%= I18n.t :showing %></h3></header>
-    <div class="tab_container">
-		  <div id="tab1" class="tab_content">
-			  <table class="tablesorter" cellspacing="0">
-          <tr> 
-            <td><b><%= I18n.t :name %></b></th>
-            <td><%= @user.name %></td>            
-			    </tr>
-          <tr> 
-            <td><b><%= I18n.t :login %></b></th>
-            <td><%= @user.login %></td>            
-			    </tr>
-          <tr> 
-            <td><b><%= I18n.t :email %></b></th>
-            <td><%= @user.email %></td>            
-			    </tr>
-        </table>
-      </div>
-    </div>
+  <div class="page-header">
+    <h2><%= I18n.t :showing %></h2>
+  </div>
+  <table class="table table-bordered table-striped">
+    <tr>
+      <td><b><%= I18n.t :name %></b></th>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <td><b><%= I18n.t :login %></b></th>
+      <td><%= @user.login %></td>
+    </tr>
+    <tr>
+      <td><b><%= I18n.t :email %></b></th>
+      <td><%= @user.email %></td>
+    </tr>
+  </table>
 
-    <footer>
-      <div class="submit_link">
-        <%= link_to image_tag("/assets/icn_edit_article.png", :alt => I18n.t(:edit), :title => I18n.t(:edit)), edit_user_path(@user) %> 
-        <%= link_to image_tag("/assets/icn_jump_back.png", :alt => I18n.t(:back), :title => I18n.t(:back)), users_path %>
-      </div>
-    </footer>
-  </article>
+  <footer>
+    <div class="submit_link">
+      <%= link_to arrow_left, :back %>
+      <%= link_to I18n.t(:edit), edit_user_path(@user), class: 'btn btn-primary' %>
+    </div>
+  </footer>

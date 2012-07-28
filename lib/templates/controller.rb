@@ -31,23 +31,15 @@ class <%= plural_class %>Controller < ApplicationController
   def create
     @<%= singular_name %> = <%= class_name %>.new params[:<%= singular_name %>]
 
-    if @<%= singular_name %>.save
-      flash[:notice] = t :<%= singular_name %>_created
-      respond_with @<%= singular_name %>
-    else
-      render :action => :new
-    end
+    flash[:notice] = t :<%= singular_name %>_created if @<%= singular_name %>.save
+    respond_with @<%= singular_name %>
   end
 
   def update
     @<%= singular_name %> = get_register(params[:id])
 
-    if @<%= singular_name %>.update_attributes params[:<%= singular_name %>]
-      flash[:notice] = t :<%= singular_name %>_updated
-      respond_with @<%= singular_name %>
-    else
-      render :action => :edit
-    end
+    flash[:notice] = t :<%= singular_name %>_updated if @<%= singular_name %>.update_attributes params[:<%= singular_name %>]
+    respond_with @<%= singular_name %>
   end
 
   def destroy

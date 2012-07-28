@@ -9,7 +9,7 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <%= javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js" %>
+      <%= javascript_include_tag "html5.js" %>
     <![endif]-->
 
     <!-- Le styles -->
@@ -23,8 +23,15 @@
       ================================================== -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container">
-          <%= link_to 'Login', '#', class: 'brand-right' %>
+        <div class="container-menu">
+          <%= link_to 'Login', '#brand-right', class: 'brand-right' %>
+          <div id="login_form">
+            <form>
+              Login:<br /><%= text_field :user, :login, size: 10 %><br>
+              Senha:<br /><%= password_field :user, :password, size: 10 %><br>
+              <p><%= check_box :user_session, :remember_me %> Lembre-me <span></span></p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -37,7 +44,7 @@
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
       <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-      <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", "bootstrap.min.js", "app.js", "bootswatch.js" %>
+      <%= javascript_include_tag "jquery-1.7.2.min.js", "bootstrap.min.js", "app.js", "bootswatch.js", "jquery.easing.1.3.js", "login.js" %>
 
       <!-- Footer
       ================================================== -->

@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1><%= I18n.t :listing_users %></h1>
+  <h2><%= I18n.t :listing_users %> - <%= link_to I18n.t(:new_user), new_user_path, class: 'btn btn-success' %></h2>
 </div>
 
 <table class="table table-bordered table-striped">
@@ -27,7 +27,7 @@
   <% end %>
   </tbody>
 </table>
-
+<%= will_paginate @users, previous_label: I18n.t(:previous), next_label: I18n.t(:next) %>
 <br />
 
-<%= link_to I18n.t(:new_user), new_user_path %>
+<%= link_to I18n.t(:new_user), new_user_path, class: 'btn btn-success' %>

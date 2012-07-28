@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
 
   layout 'admin'
-  respond_to :html, :js, :json
+  respond_to :html, :json
 
   def index
-    @users = User.order 'created_at DESC'
+    @users = User.paginate(page: params[:page], per_page: 10).order('created_at DESC')
 
     respond_with @users
   end
@@ -28,23 +28,15 @@ class UsersController < ApplicationController
   def create
     @user = User.new params[:user]
 
-    if @user.save
-      flash[:notice] = I18n.t :user_created
-      respond_with @user
-    else
-      render :action => :new
-    end
+    flash[:notice] = I18n.t :user_created if @user.save
+    respond_with @user
   end
 
   def update
     @user = get_register(params[:id])
 
-    if @user.update_attributes params[:user]
-      flash[:notice] = I18n.t :user_updated
-      respond_with @user
-    else
-      render :action => :edit
-    end
+    flash[:notice] = I18n.t :user_updated if @user.update_attributes params[:user]
+    respond_with @user
   end
 
   def destroy
