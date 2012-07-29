@@ -10,7 +10,7 @@ gem 'json', '1.6.6'
 gem 'execjs', '1.3.0'
 gem 'therubyrhino', '1.73.2'
 #gem 'zscaffold_admin', '0.0.3'
-gem 'zscaffold_admin', :path => "/home/vagner/projects/rails/3++/gems/zscaffold_admin/"
+gem 'zscaffold_admin', :path => "~/projects/rails/3++/gems/zscaffold_admin/"
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem "paperclip", "~> 3.0"
 gem 'will_paginate', '~> 3.0.0'

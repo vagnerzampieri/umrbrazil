@@ -17,9 +17,5 @@
     </tr>
   </table>
 
-  <footer>
-    <div class="submit_link">
-      <%= link_to arrow_left, :back %>
-      <%= link_to I18n.t(:edit), edit_user_path(@user), class: 'btn btn-primary' %>
-    </div>
-  </footer>
+  <%= link_to arrow_left, :back %>
+  <%= link_to I18n.t(:edit), edit_user_path(@user), class: 'btn btn-primary' %>
