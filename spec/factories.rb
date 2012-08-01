@@ -18,7 +18,6 @@ FactoryGirl.define do
   end
 
   factory :user do
-    name "Homer Simpson"
     login "homersimpson"
     email "homer@simpsons.com"
     password "senha123"
