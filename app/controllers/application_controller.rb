@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+=begin
   helper_method :current_user_session, :current_user
   before_filter :new_user_session
   private
@@ -16,7 +17,6 @@ class ApplicationController < ActionController::Base
   def new_user_session
     @new_user_session = UserSession.new
   end
-=begin
   rescue_from CanCan::AccessDenied do |exception|
     flash[:notice] = "Access denied!"
     if current_user
