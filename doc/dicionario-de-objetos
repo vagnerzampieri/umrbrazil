@@ -1,0 +1,179 @@
+                                        Tabela Exams
+      Coluna      |            Tipo de dado             |                     Requerido
+------------------+-------------------------------------+--------------------------------------------------------
+ id               | integer                             | sim
+ user_id          | integer                             | sim
+ title            | character varying(255)              | sim
+ description      | text                                | não
+ emission         | timestamp without time zone         | sim
+ doctor           | character varying(255)              | sim
+ crm              | character varying(255)              | sim
+ pdf_file_name    | character varying(255)              | sim
+ pdf_content_type | character varying(255)              | sim
+ pdf_file_size    | integer                             | sim
+ pdf_updated_at   | timestamp without time zone         | sim
+ created_at       | timestamp without time zone         | sim
+ updated_at       | timestamp without time zone         | sim
+ history_id       | integer                             | sim
+ account_id       | integer                             | sim
+ company_id       | integer                             | sim
+
+objeto: Guarda os exames feitos por um paciente
+nome: Exam
+tipo:
+acesso: leitura e escrita
+
+
+                                         Tabela Accounts
+      Coluna       |            Tipo de dado             |                       Requerido
+-------------------+-------------------------------------+-------------------------------------------------------
+ id                | integer                             | sim
+ cpf               | character varying(255)              | não
+ address           | character varying(255)              | não
+ number            | character varying(255)              | não
+ complement        | character varying(255)              | não
+ neighborhood      | character varying(255)              | não
+ city              | character varying(255)              | não
+ state             | character varying(255)              | não
+ country           | character varying(255)              | não
+ created_at        | timestamp without time zone         | sim
+ updated_at        | timestamp without time zone         | sim
+ rg                | character varying(255)              | não
+ birth_certificate | character varying(255)              | não
+ ric               | character varying(255)              | não
+ age               | integer                             | não
+ birth             | date                                | não
+ mother_name       | character varying(255)              | não
+ place_of_birth    | character varying(255)              | não
+ civil_status      | character varying(255)              | não
+ cover_image_uid   | character varying(255)              | não
+ cover_image_name  | character varying(255)              | não
+ anamnesis_id      | integer                             | sim
+
+
+                                    Tabela Accounts Companies
+   Coluna   |            Tipo de dado             |                          Requerido
+------------+-------------------------------------+--------------------------------------------------------------
+ id         | integer                             | sim
+ account_id | integer                             | sim
+ company_id | integer                             | sim
+ created_at | timestamp without time zone         | sim
+ updated_at | timestamp without time zone         | sim
+
+
+                                       Tabela Anamneses
+     Coluna     |            Tipo de dado             |                       Requerido
+----------------+-------------------------------------+----------------------------------------------------------
+ id             | integer                             | sim
+ blood_type     | character varying(255)              | não
+ rh_factor      | character varying(255)              | não
+ weight         | numeric                             | não
+ height         | numeric                             | não
+ sex            | character varying(255)              | sim
+ blood_pressure | character varying(255)              | não
+ smoking        | boolean                             | não
+ created_at     | timestamp without time zone         | não
+ updated_at     | timestamp without time zone         | não
+ user_id        | integer                             | sim
+
+
+                                           Tabela Companies
+        Coluna         |            Tipo de dado             |                       Requerido
+-----------------------+-------------------------------------+---------------------------------------------------
+ id                    | integer                             | sim
+ name                  | character varying(255)              | sim
+ brand_name            | character varying(255)              | sim
+ cnpj                  | character varying(255)              | sim
+ state_inscription     | character varying(255)              | não
+ municipal_inscription | character varying(255)              | não
+ address               | character varying(255)              | sim
+ number                | integer                             | sim
+ complement            | character varying(255)              | não
+ neighborhood          | character varying(255)              | sim
+ city                  | character varying(255)              | sim
+ state                 | character varying(255)              | sim
+ country               | character varying(255)              | sim
+ site                  | character varying(255)              | não
+ published             | boolean                             | sim
+ published_at          | timestamp without time zone         | não
+ enabled               | boolean                             | sim
+ deleted_at            | timestamp without time zone         | não
+ created_at            | timestamp without time zone         | sim
+ updated_at            | timestamp without time zone         | sim
+ cover_image_uid       | character varying(255)              | não
+ cover_image_name      | character varying(255)              | não
+
+
+                                         Tabela Histories
+       Coluna       |            Tipo de dado             |                       Requerido
+--------------------+-------------------------------------+------------------------------------------------------
+ id                 | integer                             | sim
+ company_id         | integer                             | sim
+ user_id            | integer                             | sim
+ entry_date         | timestamp without time zone         | sim
+ exit_date          | timestamp without time zone         | não
+ description        | text                                | não
+ prescription_drugs | text                                | não
+ created_at         | timestamp without time zone         | sim
+ updated_at         | timestamp without time zone         | sim
+
+
+                                         Tabela Telephones
+      Coluna       |            Tipo de dado             |                        Requerido
+-------------------+-------------------------------------+--------------------------------------------------------
+ id                | integer                             | sim
+ ddd               | character varying(255)              | sim
+ tel               | character varying(255)              | sim
+ type_telephone_id | integer                             | sim
+ branch_line       | character varying(255)              | não
+ published         | boolean                             | sim
+ enabled           | boolean                             | sim
+ published_at      | timestamp without time zone         | não
+ deleted_at        | timestamp without time zone         | não
+ created_at        | timestamp without time zone         | sim
+ updated_at        | timestamp without time zone         | sim
+ account_id        | integer                             | não
+ company_id        | integer                             | não
+
+
+                                     Tabela Type Telephones
+   Coluna   |            Tipo de dado             |                          Requerido
+------------+-------------------------------------+--------------------------------------------------------------
+ id         | integer                             | sim
+ name       | character varying(255)              | sim
+ enabled    | boolean                             | não
+ created_at | timestamp without time zone         | sim
+ updated_at | timestamp without time zone         | sim
+
+
+                                     Tabela Type Users
+   Coluna   |            Tipo de dado             |                        Requerido
+------------+-------------------------------------+---------------------------------------------------------
+ id         | integer                             | sim
+ name       | character varying(255)              | sim
+ enabled    | boolean                             | sim
+ created_at | timestamp without time zone         | sim
+ updated_at | timestamp without time zone         | sim
+
+
+                                         Tabela Users
+       Coluna       |            Tipo de dado             |                     Requerido
+--------------------+-------------------------------------+----------------------------------------------------
+ id                 | integer                             | sim
+ name               | character varying(255)              | sim
+ login              | character varying(255)              | sim
+ email              | character varying(255)              | sim
+ crypted_password   | character varying(255)              | sim
+ password_salt      | character varying(255)              | sim
+ persistence_token  | character varying(255)              | sim
+ login_count        | integer                             | não
+ failed_login_count | integer                             | não
+ last_request_at    | timestamp without time zone         | não
+ current_login_at   | timestamp without time zone         | não
+ last_login_at      | timestamp without time zone         | não
+ current_login_ip   | character varying(255)              | não
+ last_login_ip      | character varying(255)              | não
+ account_id         | integer                             | sim
+ type_user_id       | integer                             | sim
+ created_at         | timestamp without time zone         | sim
+ updated_at         | timestamp without time zone         | sim
