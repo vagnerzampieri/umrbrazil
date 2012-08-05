@@ -50,47 +50,128 @@ Plano de teste
       - Verificar se usuários não estão acessando dados de outros usuários do sistema.
 
   Tipos de teste:
-    Teste de integridade de dados e do banco de dados:
-      Objetivo do teste =>
-      Técnica =>
-      Critério de finalização =>
-      Considerações finais =>
+    Teste de Integridade de Dados e do Banco de Dados
 
-    Teste de função:
-      Objetivo do teste =>
-      Técnica =>
-      Critério de finalização =>
-      Considerações finais =>
+      Objetivo do teste:
+        Garantir que os métodos e processos de acesso ao banco de dados funcionam apropriadamente e sem corrupção dos dados.
 
-    Teste de interface do usuário:
-      Objetivo do teste =>
-      Técnica =>
-      Critério de finalização =>
-      Considerações finais =>
+      Técnica:
+        Invocar cada método e processo de acesso ao banco de dados, alimentando cada um com dados ou requisições de dados válidos e inválidos. Inspecionar o banco de dados para garantir que os dados foram populados como pretendido e que todos os eventos do banco de dados ocorreram apropriadamente, ou revisar os dados retornados para garantir que os dados corretos foram recuperados pelas razões corretas.
 
-    Teste de performace:
-      Objetivo do teste =>
-      Técnica =>
-      Critério de finalização =>
-      Considerações finais =>
+      Critério de finalização:
+        Todos os métodos e processos de acesso à base de dados funcionam como projetados e sem nenhuma corrupção de dados.
 
-    Teste de carga:
-      Objetivo do teste =>
-      Técnica =>
-      Critério de finalização =>
-      Considerações finais =>
+      Considerações especiais:
+        O teste irá necessitar de um ambiente de teste para inserir ou modificar os dados diretamente nas base de dados. Processos devem ser invocados manualmente. Com bases de dados minimizadas.
 
-    Teste de segurança e controle de acesso:
-      Objetivo do teste =>
-      Técnica =>
-      Critério de finalização =>
-      Considerações finais =>
 
-    Teste de instalação:
-      Objetivo do teste =>
-      Técnica =>
-      Critério de finalização =>
-      Considerações finais =>
+    Teste de Função
+
+      Objetivo do Teste:
+        Garantir a funcionalidade apropriada do alvo do teste, incluindo navegação, entrada de dados, processamento, e recuperação.
+
+      Técnica:
+        Executar cada caso de uso, fluxo de caso de uso, usando dados válidos e inválidos, para verificar o seguinte:
+          Os resultados esperados ocorrem quando dados válidos são usados. As mensagens de erro ou aviso apropriadas são exibidas quando dados inválidos são usados. Cada regra de negócio é aplicada apropriadamente.
+
+      Critério de Finalização:
+        Todos os testes planejados foram executados. Todos os defeitos identificados foram tratados.
+
+      Considerações Especiais:
+        Nenhum.
+
+
+    Teste da Interface do Usuário
+
+      Objetivo do Teste:
+        Verificar o seguinte:
+          A navegação através das telas de teste reflete as funções e os requisitos do negócio apropriadamente, incluindo janela-a-janela, campo-a-campo, e o uso de métodos de acesso (tecla tab, movimentos do mouse, teclas aceleradoras).
+          Objetos e características da janela, tais como menus, tamanho, posição, estado e foco conformam-se aos padrões.
+
+      Técnica:
+        Criar ou modificar os testes para cada janela para verificar a navegação e os estados de objeto apropriados para cada janela e objetos da aplicação.
+
+      Critério de Finalização:
+        É verificado que cada janela permanece consistente com a versão de comparação ou dentro de padrões aceitáveis.
+
+      Considerações Especiais:
+        Nenhum.
+
+
+    Teste de Performance
+
+      Objetivo do Teste:
+        Verificar que os comportamentos de performance para as transações designadas ou funções de negócio sob as seguintes condições:
+          Carga de trabalho normal antecipada
+          Carga de trabalho no pior caso antecipada
+
+      Técnica:
+        Usar Procedimentos de Teste desenvolvidos para Teste da Função ou Ciclo de Negócio
+
+      Critério de Finalização:
+        Único usuário ou transação:
+          Finalização com sucesso dos scripts de testes sem nenhuma falha e dentro da alocação de tempo por transação esperada ou requisitada.
+        Múltiplas transações ou usuários:
+          Finalização bem sucedida dos scripts de teste sem qualquer falha e dentro da alocação de tempo aceitável.
+
+      Considerações Especiais:
+        Um teste abrangente de performance inclui ter uma carga de trabalho no servidor.
+        Há vários métodos que podem ser usados para executar isso, incluindo:
+          Criar carga de usuário “virtual” para simular muitos clientes, normalmente várias centenas. Essa técnica também pode ser usada para carregar uma rede com “tráfego”.
+          O teste de performance deve ser executado em uma máquina dedicada ou em um tempo dedicado. Isso permite controle total e mensuração precisa.
+          As bases de dados usadas para o Teste de Performance devem ser ou do tamanho real ou proporcionalmente iguais.
+
+
+    Teste de Carga
+
+      Objetivo do Teste:
+        Verifique o tempo de resposta para as transações designadas ou casos de negócio sob condições variantes de carga de trabalho.
+
+      Técnica:
+        Use testes desenvolvidos para o Teste do Ciclo de Negócio ou Função.
+        Modifique os arquivos de dados para aumentar o número de transações ou os testes para aumentar o número de vezes que cada transação ocorre.
+
+      Critério de Finalização:
+        Múltiplas transações ou usuários:
+          finalização bem sucedida dos testes sem qualquer falha e dentro da alocação de tempo aceitável.
+
+      Considerações Especiais:
+        O teste de carga deve ser executado em uma máquina dedicada ou em um tempo dedicado. Isso permite o controle total a e mensuração precisa.
+        As bases de dados usadas para os testes de carga devem ou ser do tamanho real ou igualmente dimensionadas.
+
+
+    Teste de Segurança e Controle de Acesso
+
+      Objetivo do Teste:
+        Segurança do Nível de Aplicação:
+          Verifique que um ator pode acessar apenas aquelas funções ou dados para os quais o seu tipo de usuário tem permissão.
+        Segurança do Nível de Sistema:
+          Verifique que apenas aqueles atores com acesso ao sistema e aplicações têm permissão de acessá-los.
+
+      Técnica:
+        Segurança do Nível de Aplicação:
+          Identifique e liste cada tipo de usuário e as funções ou dados para os quais cada tipo tem permissão.
+          Crie testes para cada tipo de usuário e verifique cada permissão criando transações específicos para cada tipo de usuário.
+          Modifique o tipo de usuário e repita os testes para os mesmos usuários. Em cada caso, verifique que funções ou dados adicionais estão corretamente disponíveis ou negados.
+        Critério de Finalização:
+          Para cada tipo de ator conhecido as funções ou dados apropriados estão disponíveis, e todas as transações funcionam como esperado e rodam nos Testes de Função anteriores.
+
+      Considerações Especiais:
+        Nenhum.
+
+    Teste de Instalação
+
+      Objetivo do Teste:
+        Verificar se as configurações necessárias para instalarem o sistema nos servidores foi atendida.
+
+      Técnica:
+        Usar scripts de instalação para subir novas máquinas. Executar a instalação. Rodar scripts de teste necessários para verificar a instalação.
+
+      Critério de Finalização:
+        O sistema executa de forma bem sucedida, sem falha.
+
+      Considerações Especiais:
+        Nenhum.
 
 Referências:
 
@@ -100,137 +181,3 @@ Referências:
 
 
 
-Teste de Integridade de Dados e do Banco de Dados
-
-  Objetivo do teste:
-    Garantir que os métodos e processos de acesso ao banco de dados funcionam apropriadamente e sem corrupção dos dados.
-
-  Técnica:
-    Invocar cada método e processo de acesso ao banco de dados, alimentando cada um com dados ou requisições de dados válidos e inválidos. Inspecionar o banco de dados para garantir que os dados foram populados como pretendido e que todos os eventos do banco de dados ocorreram apropriadamente, ou revisar os dados retornados para garantir que os dados corretos foram recuperados pelas razões corretas.
-
-  Critério de finalização:
-    Todos os métodos e processos de acesso à base de dados funcionam como projetados e sem nenhuma corrupção de dados.
-
-  Considerações especiais:
-    O teste irá necessitar de um ambiente de teste para inserir ou modificar os dados diretamente nas base de dados. Processos devem ser invocados manualmente. Com bases de dados minimizadas.
-
-
-Teste de Função
-
-  Objetivo do Teste:
-    Garantir a funcionalidade apropriada do alvo do teste, incluindo navegação, entrada de dados, processamento, e recuperação.
-
-  Técnica:
-    Executar cada caso de uso, fluxo de caso de uso, usando dados válidos e inválidos, para verificar o seguinte:
-      Os resultados esperados ocorrem quando dados válidos são usados. As mensagens de erro ou aviso apropriadas são exibidas quando dados inválidos são usados. Cada regra de negócio é aplicada apropriadamente.
-
-  Critério de Finalização:
-    Todos os testes planejados foram executados. Todos os defeitos identificados foram tratados.
-
-  Considerações Especiais:
-    Nenhum.
-
-
-Teste da Interface do Usuário
-
-  Objetivo do Teste:
-    Verificar o seguinte:
-      A navegação através das telas de teste reflete as funções e os requisitos do negócio apropriadamente, incluindo janela-a-janela, campo-a-campo, e o uso de métodos de acesso (tecla tab, movimentos do mouse, teclas aceleradoras).
-      Objetos e características da janela, tais como menus, tamanho, posição, estado e foco conformam-se aos padrões.
-
-  Técnica:
-    Criar ou modificar os testes para cada janela para verificar a navegação e os estados de objeto apropriados para cada janela e objetos da aplicação.
-
-  Critério de Finalização:
-    É verificado que cada janela permanece consistente com a versão de comparação ou dentro de padrões aceitáveis.
-
-  Considerações Especiais:
-    Nenhum.
-
-
-Teste de Performance
-
-  Objetivo do Teste:
-    Verificar que os comportamentos de performance para as transações designadas ou funções de negócio sob as seguintes condições:
-      Carga de trabalho normal antecipada
-      Carga de trabalho no pior caso antecipada
-
-  Técnica:
-    Usar Procedimentos de Teste desenvolvidos para Teste da Função ou Ciclo de Negócio
-    Configurar
-    Modificar os arquivos de dados para aumentar o número de transações ou os scripts para aumentar o número de iterações que ocorre a cada transação.
-    Scripts devem ser rodados em uma máquina (melhor caso para comparar um único usuário, uma única transação) e ser repetidas com múltiplos clientes (virtual ou real, ver Considerações Especiais abaixo).
-
-  Critério de Finalização:
-    Único usuário ou transação:
-      finalização com sucesso dos scripts de testes sem nenhuma falha e dentro da alocação de tempo por transação esperada ou requisitada.
-    Múltiplas transações ou usuários:
-      finalização bem sucedida dos scripts de teste sem qualquer falha e dentro da alocação de tempo aceitável.
-
-  Considerações Especiais:
-    Um teste abrangente de performance inclui ter uma carga de trabalho no servidor.
-    Há vários métodos que podem ser usados para executar isso, incluindo:
-      “Direcionar transações” diretamente para o servidor, usualmente na forma de chamadas SQL.
-      Criar carga de usuário “virtual” para simular muitos clientes, normalmente várias centenas. Ferramentas de Emulação de Terminal Remoto (RTE) são usadas para atingir essa carga. Essa técnica também pode ser usada para carregar uma rede com “tráfego”.
-      Usar múltiplos clientes físicos, cada um rodando scripts de teste para gerar uma carga no sistema.
-      O teste de performance deve ser executado em uma máquina dedicada ou em um tempo dedicado. Isso permite controle total e mensuração precisa.
-      As bases de dados usadas para o Teste de Performance devem ser ou do tamanho real ou proporcionalmente iguais.
-
-
-Teste de Carga
-
-  Objetivo do Teste:
-    Verifique o tempo de resposta para as transações designadas ou casos de negócio sob condições variantes de carga de trabalho.
-
-  Técnica:
-    Use testes desenvolvidos para o Teste do Ciclo de Negócio ou Função.
-    Modifique os arquivos de dados para aumentar o número de transações ou os testes para aumentar o número de vezes que cada transação ocorre.
-
-  Critério de Finalização:
-    Múltiplas transações ou usuários: finalização bem sucedida dos testes sem qualquer falha e dentro da alocação de tempo aceitável.
-
-  Considerações Especiais:
-    O teste de carga deve ser executado em uma máquina dedicada ou em um tempo dedicado. Isso permite o controle total a e mensuração precisa.
-    As bases de dados usadas para os testes de carga devem ou ser do tamanho real ou igualmente dimensionadas.
-
-
-Teste de Segurança e Controle de Acesso
-
-  Objetivo do Teste:
-    Segurança do Nível de Aplicação:
-      Verifique que um ator pode acessar apenas aquelas funções ou dados para os quais o seu tipo de usuário tem permissão.
-    Segurança do Nível de Sistema:
-      Verifique que apenas aqueles atores com acesso ao sistema e aplicações têm permissão de acessá-los.
-
-  Técnica:
-    Segurança do Nível de Aplicação:
-      Identifique e liste cada tipo de usuário e as funções ou dados para os quais cada tipo tem permissão.
-      Crie testes para cada tipo de usuário e verifique cada permissão criando transações específicos para cada tipo de usuário.
-      Modifique o tipo de usuário e repita os testes para os mesmos usuários. Em cada caso, verifique que funções ou dados adicionais estão corretamente disponíveis ou negados.
-    Acesso de Nível de Sistema:
-      Ver Considerações Especiais abaixo.
-    Critério de Finalização:
-      Para cada tipo de ator conhecido as funções ou dados apropriados estão disponíveis, e todas as transações funcionam como esperado e rodam nos Testes de Função anteriores.
-
-  Considerações Especiais:
-    O Acesso ao sistema deve ser revisado ou discutido com o  administrador  de rede ou de sistema apropriado. Esse teste pode não ser necessário já que ele pode ser uma função da administração da rede ou sistema.
-
-
-Teste de Instalação
-
-  Objetivo do Teste:
-    Verifique que os alvos de teste instalam apropriadamente em cada configuração de hardware necessária sobre as seguintes condições:
-    Uma nova instalação, em um nova máquina, que nunca fora anteriormente instalada com o TIG.
-      atualização, numa máquina onde o TIG já fora previamente instalado, para a mesma versão
-      atualização, numa máquina que já disponha do TIG instalado, de uma versão mais velha
-
-  Técnica:
-    Manualmente ou desenvolva scripts automatizados, para validar a condição da máquina alvo – novo TIG nunca instalado; TIG na mesma versão ou versão mais velha já instalada.
-    Começar ou executar a instalação
-    Usando um subgrupo predeterminado de scripts de teste de funções, rode as transações.
-
-  Critério de Finalização:
-    As transações do TIG executam de forma bem sucedida, sem falha.
-
-  Considerações Especiais:
-    Quais transações do TIG devem ser selecionadas para abranger um teste de confiança de que a aplicação TIG foi instalada de forma bem sucedida e que nenhum componente importante de software está faltando?
