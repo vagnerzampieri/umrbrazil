@@ -106,13 +106,14 @@ Teste de Integridade de Dados e do Banco de Dados
     Garantir que os métodos e processos de acesso ao banco de dados funcionam apropriadamente e sem corrupção dos dados.
 
   Técnica:
-    Invocar cada método e processo de acesso ao banco de dados, alimentando cada um com dados ou requisições de dados válidos e inválidos. Inspecionar o banco de dados para garantir que os dados foram populados como pretendido, que todos os eventos do banco de dados ocorreram apropriadamente, ou revisar os dados retornados para garantir que os dados corretos foram recuperados pelas razões corretas.
+    Invocar cada método e processo de acesso ao banco de dados, alimentando cada um com dados ou requisições de dados válidos e inválidos. Inspecionar o banco de dados para garantir que os dados foram populados como pretendido e que todos os eventos do banco de dados ocorreram apropriadamente, ou revisar os dados retornados para garantir que os dados corretos foram recuperados pelas razões corretas.
 
   Critério de finalização:
     Todos os métodos e processos de acesso à base de dados funcionam como projetados e sem nenhuma corrupção de dados.
 
   Considerações especiais:
-    O teste pode necessitar de um ambiente de desenvolvimento ou drivers de SGBD para inserir ou modificar os dados diretamente nas base de dados. Processos devem ser invocados manualmente. Bases de dados pequenas ou minimizadas (número de registros limitados) devem ser usados para aumentar a visibilidade de eventos não-aceitáveis.
+    O teste irá necessitar de um ambiente de teste para inserir ou modificar os dados diretamente nas base de dados. Processos devem ser invocados manualmente. Com bases de dados minimizadas.
+
 
 Teste de Função
 
@@ -127,14 +128,14 @@ Teste de Função
     Todos os testes planejados foram executados. Todos os defeitos identificados foram tratados.
 
   Considerações Especiais:
-    Nenhum
+    Nenhum.
 
 
 Teste da Interface do Usuário
 
   Objetivo do Teste:
     Verificar o seguinte:
-      A navegação através dos alvos de teste reflete as funções e os requisitos do negócio apropriadamente, incluindo janela-a-janela, campo-a-campo, e o uso de métodos de acesso (tecla tab, movimentos do mouse, teclas aceleradoras)
+      A navegação através das telas de teste reflete as funções e os requisitos do negócio apropriadamente, incluindo janela-a-janela, campo-a-campo, e o uso de métodos de acesso (tecla tab, movimentos do mouse, teclas aceleradoras).
       Objetos e características da janela, tais como menus, tamanho, posição, estado e foco conformam-se aos padrões.
 
   Técnica:
@@ -144,7 +145,7 @@ Teste da Interface do Usuário
     É verificado que cada janela permanece consistente com a versão de comparação ou dentro de padrões aceitáveis.
 
   Considerações Especiais:
-    Nem todas as propriedades para objetos personalizados e terceirizados podem ser acessadas.
+    Nenhum.
 
 
 Teste de Performance
@@ -156,6 +157,7 @@ Teste de Performance
 
   Técnica:
     Usar Procedimentos de Teste desenvolvidos para Teste da Função ou Ciclo de Negócio
+    Configurar
     Modificar os arquivos de dados para aumentar o número de transações ou os scripts para aumentar o número de iterações que ocorre a cada transação.
     Scripts devem ser rodados em uma máquina (melhor caso para comparar um único usuário, uma única transação) e ser repetidas com múltiplos clientes (virtual ou real, ver Considerações Especiais abaixo).
 
