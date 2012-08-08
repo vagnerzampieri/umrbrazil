@@ -1,15 +1,11 @@
 Umrbrazil::Application.routes.draw do
-  resources :anamneses
-
-  resources :exams
-
-  resources :histories
-
-  resources :companies
-
   scope 'admin' do
-    resources :accounts
-    resources :users
+    resources :conta, controller: :accounts, as: :accounts, path_names: {new: 'adicionar', edit: 'editar'}
+    resources :usuarios, controller: :users, as: :users, path_names: {new: 'adicionar', edit: 'editar'}
+    resources :anamineses, controller: :anamneses, as: :anamneses, path_names: {new: 'adicionar', edit: 'editar'}
+    resources :exames, controller: :exams, as: :exams, path_names: {new: 'adicionar', edit: 'editar'}
+    resources :historicos, controller: :histories, as: :histories, path_names: {new: 'adicionar', edit: 'editar'}
+    resources :organizacoes, controller: :companies, as: :companies, path_names: {new: 'adicionar', edit: 'editar'}
   end
 
   root :to => 'home#index'
