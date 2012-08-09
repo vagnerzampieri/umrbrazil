@@ -25,3 +25,6 @@ db/seeds.rb
 # Ignore Simplecov
 coverage/*
 coverage/.*
+
+# Ignore Dragonfly folders
+public/system/

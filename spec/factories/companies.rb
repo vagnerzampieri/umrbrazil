@@ -14,7 +14,7 @@ FactoryGirl.define do
     state 'Rio de Janeiro'
     country 'Brasil'
     site 'unimed.com.br'
-    cover 'image/rails.png'
+    cover_image 'image/rails.png'
     association :account
   end
 end

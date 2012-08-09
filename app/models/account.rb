@@ -12,5 +12,5 @@ class Account < ActiveRecord::Base
   accepts_nested_attributes_for :telephones, allow_destroy: true
 
   validates :cep, :format => { :with => /^\d{2}\.?\d{3}\-?\d{3}$/ }, :unless => lambda {self.cep.blank?}
-
+  validates :cpf, cpf: true
 end

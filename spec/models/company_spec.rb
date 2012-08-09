@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Company do
+  subject {FactoryGirl.create(:company)}
+
   it {should respond_to(:name)}
   it {should respond_to(:brand_name)}
   it {should respond_to(:cnpj)}
@@ -17,4 +19,8 @@ describe Company do
   it {should respond_to(:site)}
   it {should respond_to(:cover_image)}
   it {should respond_to(:account_id)}
+
+  it {should have_many(:histories)}
+  it {should have_many(:telephones)}
+  it {should belong_to(:account)}
 end

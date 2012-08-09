@@ -1,25 +1,26 @@
+# encoding: UTF-8
 FactoryGirl.define do
   factory :account do
     name 'Homer Simpson'
-    user_id ''
-    cpf ''
-    rg ''
-    birth_certificate ''
-    ric ''
-    age ''
-    birth ''
-    mother_name ''
-    place_of_birth ''
-    civil_status ''
-    cep ''
-    address ''
-    number ''
-    complement ''
-    neighborhood ''
-    city ''
-    state ''
-    country ''
-    cover 'image/rails.png'
-    associations anamnesis
+    association user
+    cpf '91964848709'
+    rg '418757896'
+    birth_certificate '124323fr'
+    ric '0000000000-1'
+    age '25'
+    birth Time.now - 25.years
+    mother_name 'Mona Simpson'
+    place_of_birth 'Springfield'
+    civil_status 'Casado'
+    cep '21342322'
+    address 'Rua Babá das Couves'
+    number '1000'
+    complement 'apt 1000'
+    neighborhood 'Centro'
+    city 'Springfield'
+    state 'Ohio'
+    country 'EUA'
+    cover_image 'image/rails.png'
+    association anamnesis
   end
 end
