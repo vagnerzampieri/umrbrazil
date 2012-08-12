@@ -1,63 +1,24 @@
 require 'spec_helper'
 
 describe Telephone do
-  before do
-    @telephone = FactoryGirl.build(:telephone)
-  end
-
-  subject {@telephone}
+  subject {FactoryGirl.build(:telephone)}
 
   it {should respond_to(:ddd)}
   it {should respond_to(:tel)}
+  it {should respond_to(:branch_line)}
+  it {should respond_to(:published)}
+  it {should respond_to(:type_telephone_id)}
+  it {should respond_to(:account_id)}
+  it {should respond_to(:company_id)}
   it {should belong_to(:type_telephone)}
-  it {should have_many(:accounts)}
+  it {should belong_to(:account)}
+  it {should belong_to(:company)}
 
-  it "should have association accounts telephones" do
-    telephone = Telephone.reflect_on_association(:accounts_telephones)
-    telephone.macro.should == :has_many
-  end
+  it {should validate_presence_of(:ddd)}
+  it {should validate_presence_of(:tel)}
+  it {should validate_presence_of(:type_telephone)}
 
-  it "should not be created if the ddd is nil" do
-    @telephone.ddd = nil
-    @telephone.should_not be_valid
-  end
-
-  it "should not be created if the ddd is less 2" do
-    @telephone.ddd = "1"
-    @telephone.should_not be_valid
-  end
-
-  it "should not be created if the ddd is more 2" do
-    @telephone.ddd = "123"
-    @telephone.should_not be_valid
-  end
-
-  it "should not be created if the tel is nil" do
-    @telephone.tel = nil
-    @telephone.should_not be_valid
-  end
-
-  it "should not be created if the tel is less 8" do
-    @telephone.tel = "1234567"
-    @telephone.should_not be_valid
-  end
-
-  it "should not be created if the tel is more 8" do
-    @telephone.tel = "123456789"
-    @telephone.should_not be_valid
-  end
-
-  it "should not be created if the branch_line is less 4" do
-    @telephone.branch_line = "123"
-    @telephone.should_not be_valid
-  end
-
-  it "should not be created if the branch_line is more 4" do
-    @telephone.branch_line = "12345"
-    @telephone.should_not be_valid
-  end
-
-  it "should be created" do
-    @telephone.should be_valid
-  end
+  it {should ensure_length_of(:ddd).is_equal_to(2)}
+  it {should ensure_length_of(:tel).is_at_least(8).is_at_most(10)}
+  it {should ensure_length_of(:branch_line).is_at_least(0).is_at_most(4)}
 end

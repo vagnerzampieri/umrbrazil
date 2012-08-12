@@ -4,7 +4,7 @@ FactoryGirl.define do
     email "homer@simpsons.com"
     password "senha123"
     password_confirmation "senha123"
-    association :account
-    association :type_user
+    #account FactoryGirl.create(:account)
+    #type_user TypeUser.find(1)
   end
 end

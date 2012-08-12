@@ -14,7 +14,7 @@ FactoryGirl.define do
     state 'Rio de Janeiro'
     country 'Brasil'
     site 'unimed.com.br'
-    cover_image 'image/rails.png'
-    association :account
+    cover_image Rails.root.join('app', 'assets', 'images', 'rails.png')
+    #account Account.find(1)
   end
 end

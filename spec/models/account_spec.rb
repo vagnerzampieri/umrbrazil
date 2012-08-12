@@ -1,6 +1,6 @@
 require 'spec_helper'
 describe Account do
-  subject {FactoryGirl.create(:account)}
+  subject {create(:account)}
 
   it {should respond_to(:name)}
   it {should respond_to(:cpf)}

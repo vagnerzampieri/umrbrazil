@@ -1,8 +1,8 @@
 # encoding: UTF-8
+
 FactoryGirl.define do
   factory :account do
     name 'Homer Simpson'
-    association user
     cpf '91964848709'
     rg '418757896'
     birth_certificate '124323fr'
@@ -20,7 +20,8 @@ FactoryGirl.define do
     city 'Springfield'
     state 'Ohio'
     country 'EUA'
-    cover_image 'image/rails.png'
-    association anamnesis
+    cover_image Rails.root.join('app', 'assets', 'images', 'rails.png')
+    #user FactoryGirl.build(:user)
+    #anamnesis FactoryGirl.create(:anamnesis)
   end
 end

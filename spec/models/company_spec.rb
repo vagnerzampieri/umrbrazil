@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Company do
-  subject {FactoryGirl.create(:company)}
+  subject {create(:company)}
 
   it {should respond_to(:name)}
   it {should respond_to(:brand_name)}

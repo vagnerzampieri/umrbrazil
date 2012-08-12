@@ -6,7 +6,7 @@ class Telephone < ActiveRecord::Base
   belongs_to :company
 
   validates :ddd, presence: true, length: {is: 2}
-  validates :tel, presence: true, length: {is: 8}
-  validates :branch_line, length: {is: 4}, unless: lambda {self.branch_line.blank?}
+  validates :tel, presence: true, length: {within: 8..10}
+  validates :branch_line, length: {within: 0..4}, unless: lambda {self.branch_line.blank?}
   validates :type_telephone, presence: true
 end
