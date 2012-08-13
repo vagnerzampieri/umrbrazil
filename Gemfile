@@ -12,7 +12,6 @@ gem 'therubyrhino', '1.73.2'
 #gem 'zscaffold_admin', '0.0.3'
 gem 'zscaffold_admin', :path => "~/projects/rails/3++/gems/zscaffold_admin/"
 gem 'acts-as-taggable-on', '~> 2.3.1'
-gem "paperclip", "~> 3.0"
 gem 'will_paginate', '~> 3.0.0'
 gem 'brcpfcnpj'
 
@@ -24,9 +23,13 @@ gem 'cancan', '1.6.7'
 # i18n
 gem 'globalize3', '0.2.0'
 
+# Images, migration to carrierwave
 ##Dragonfly
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.12'
+gem "paperclip", "~> 3.0"
+
+gem 'carrierwave'
 
 # Gems used only for assets and not required
 # in production environments by default.
