@@ -12,7 +12,7 @@ describe Account do
   it {should respond_to(:city)}
   it {should respond_to(:state)}
   it {should respond_to(:country)}
-  it {should respond_to(:cover_image)}
+  #it {should respond_to(:cover_image)}
   it {should respond_to(:rg)}
   it {should respond_to(:birth_certificate)}
   it {should respond_to(:ric)}

@@ -17,7 +17,7 @@ describe Company do
   it {should respond_to(:state)}
   it {should respond_to(:country)}
   it {should respond_to(:site)}
-  it {should respond_to(:cover_image)}
+  #it {should respond_to(:cover_image)}
   it {should respond_to(:account_id)}
 
   it {should have_many(:histories)}
