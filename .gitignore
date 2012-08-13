@@ -28,3 +28,6 @@ coverage/.*
 
 # Ignore Dragonfly folders
 public/system/
+
+# Ignore uploads
+public/uploads/*
