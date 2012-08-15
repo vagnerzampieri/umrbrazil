@@ -11,11 +11,15 @@ Check RVM:
 rvm -v
 
 Install PostgreSQL:
-sudo apt-get install postgresql postgresql-9.1 postgresql-common postgresql-server-dev-9.1 postgresql-contrib-9.1 nodejs
+sudo apt-get install libpq-dev postgresql-9.1 postgresql-common postgresql-server-dev-9.1 postgresql-contrib-9.1 nodejs
 
 Check postgresql:
 
 sudo -u postgres psql
+
+Install pgadminIII
+
+sudo apt-get install pgadmin3
 
 Initialize:
 rvm install jruby-1.6.7
