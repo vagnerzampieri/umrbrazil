@@ -12,4 +12,8 @@ describe Exam do
   it {should belong_to(:history)}
   it {should belong_to(:account)}
   it {should belong_to(:company)}
+
+  it {should have_many(:attachments)}
+
+  it {should accept_nested_attributes_for(:attachments)}
 end
