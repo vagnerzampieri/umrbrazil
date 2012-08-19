@@ -8,5 +8,6 @@ FactoryGirl.define do
     sex 'Masculino'
     blood_pressure '120x80'
     smoking false
+    drugs 'Nicotine, Valium, Vicodin, marijuana, ecstasy and alcohol'
   end
 end

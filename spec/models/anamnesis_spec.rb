@@ -6,6 +6,7 @@ describe Anamnesis do
   it {should respond_to(:height)}
   it {should respond_to(:sex)}
   it {should respond_to(:blood_pressure)}
+  it {should respond_to(:drugs)}
   it {should respond_to(:smoking)}
   it {should respond_to(:account_id)}
 
