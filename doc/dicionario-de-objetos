@@ -1,179 +1,35 @@
-                                        Tabela Exams
-      Coluna      |            Tipo de dado             |                     Requerido
-------------------+-------------------------------------+--------------------------------------------------------
- id               | integer                             | sim
- user_id          | integer                             | sim
- title            | character varying(255)              | sim
- description      | text                                | não
- emission         | timestamp without time zone         | sim
- doctor           | character varying(255)              | sim
- crm              | character varying(255)              | sim
- pdf_file_name    | character varying(255)              | sim
- pdf_content_type | character varying(255)              | sim
- pdf_file_size    | integer                             | sim
- pdf_updated_at   | timestamp without time zone         | sim
- created_at       | timestamp without time zone         | sim
- updated_at       | timestamp without time zone         | sim
- history_id       | integer                             | sim
- account_id       | integer                             | sim
- company_id       | integer                             | sim
+classe: Exam, guarda os exames feitos por um paciente
+atributos: id, title, description, emission, doctor, crm, history_id, account_id, company_id, created_at, updated_at
+métodos: attr_accessible, has_many, accepts_nested_attributes_for, belongs_to, validates
 
-objeto: Guarda os exames feitos por um paciente
-nome: Exam
-tipo:
-acesso: leitura e escrita
+classe: Account, onde são preenchidos os dados da conta.
+atributos: id, name, user_id, cep, cpf, address, number, complement, neighborhood, city, state, country, anamnesis_id, rg, birth_certificate, ric, age, birth, mother_name, place_of_birth, civil_status, created_at, updated_at
+métodos: attr_accessible, belongs_to, has_many, accepts_nested_attributes_for, validates
 
+classe: Anamnesis, classe que guarda os dados de anaminese do paciente.
+atributos: id, blood_type, rh_factor, weight, height, sex, blood_pressure, smoking, drugs, account_id
+métodos: attr_accessible, belongs_to, validates
 
-                                         Tabela Accounts
-      Coluna       |            Tipo de dado             |                       Requerido
--------------------+-------------------------------------+-------------------------------------------------------
- id                | integer                             | sim
- cpf               | character varying(255)              | não
- address           | character varying(255)              | não
- number            | character varying(255)              | não
- complement        | character varying(255)              | não
- neighborhood      | character varying(255)              | não
- city              | character varying(255)              | não
- state             | character varying(255)              | não
- country           | character varying(255)              | não
- created_at        | timestamp without time zone         | sim
- updated_at        | timestamp without time zone         | sim
- rg                | character varying(255)              | não
- birth_certificate | character varying(255)              | não
- ric               | character varying(255)              | não
- age               | integer                             | não
- birth             | date                                | não
- mother_name       | character varying(255)              | não
- place_of_birth    | character varying(255)              | não
- civil_status      | character varying(255)              | não
- cover_image_uid   | character varying(255)              | não
- cover_image_name  | character varying(255)              | não
- anamnesis_id      | integer                             | sim
+class: Company, cadastra a oganização que irá adicionar os dados na base.
+atributos: id, name, brand_name, cnpj, state_inscription, municipal_inscription, cep, address, number, complement, neighborhood, city, state, country, site, account_id, published, published_at, enabled, deleted_at, created_at, updated_at
+métodos: attr_accessible, has_many, belongs_to, validates
 
+class: History, o histórico do paciente será armazenado na tabela histories.
+atributos: id, company_id, entry_date, exit_date, description, prescription_drugs, account_id, created_at, updated_at
+métodos: attr_accessible, has_many, belongs_to, validates
 
-                                    Tabela Accounts Companies
-   Coluna   |            Tipo de dado             |                          Requerido
-------------+-------------------------------------+--------------------------------------------------------------
- id         | integer                             | sim
- account_id | integer                             | sim
- company_id | integer                             | sim
- created_at | timestamp without time zone         | sim
- updated_at | timestamp without time zone         | sim
+class: Telephones, armazenamento de telefones das contas relacionadas.
+atributos: id, ddd, tel, type_telephone_id, branch_line, published, account_id, company_id, created_at, updated_at
+métodos: attr_accessible, belongs_to, validates
 
+class: Type Telephone, armazena o tipo de telefone que seram usados.
+atributos: id, ddd, tel, type_telephone_id, branch_line, published, account_id, company_id, created_at, updated_at
+métodos: attr_accessible, belongs_to, validates
 
-                                       Tabela Anamneses
-     Coluna     |            Tipo de dado             |                       Requerido
-----------------+-------------------------------------+----------------------------------------------------------
- id             | integer                             | sim
- blood_type     | character varying(255)              | não
- rh_factor      | character varying(255)              | não
- weight         | numeric                             | não
- height         | numeric                             | não
- sex            | character varying(255)              | sim
- blood_pressure | character varying(255)              | não
- smoking        | boolean                             | não
- created_at     | timestamp without time zone         | não
- updated_at     | timestamp without time zone         | não
- user_id        | integer                             | sim
+class: Type User, grava as regras dos tipos usuários.
+atributos: id, name, enabled, created_at, updated_at
+métodos: attr_accessible, has_many, validates
 
-
-                                           Tabela Companies
-        Coluna         |            Tipo de dado             |                       Requerido
------------------------+-------------------------------------+---------------------------------------------------
- id                    | integer                             | sim
- name                  | character varying(255)              | sim
- brand_name            | character varying(255)              | sim
- cnpj                  | character varying(255)              | sim
- state_inscription     | character varying(255)              | não
- municipal_inscription | character varying(255)              | não
- address               | character varying(255)              | sim
- number                | integer                             | sim
- complement            | character varying(255)              | não
- neighborhood          | character varying(255)              | sim
- city                  | character varying(255)              | sim
- state                 | character varying(255)              | sim
- country               | character varying(255)              | sim
- site                  | character varying(255)              | não
- published             | boolean                             | sim
- published_at          | timestamp without time zone         | não
- enabled               | boolean                             | sim
- deleted_at            | timestamp without time zone         | não
- created_at            | timestamp without time zone         | sim
- updated_at            | timestamp without time zone         | sim
- cover_image_uid       | character varying(255)              | não
- cover_image_name      | character varying(255)              | não
-
-
-                                         Tabela Histories
-       Coluna       |            Tipo de dado             |                       Requerido
---------------------+-------------------------------------+------------------------------------------------------
- id                 | integer                             | sim
- company_id         | integer                             | sim
- user_id            | integer                             | sim
- entry_date         | timestamp without time zone         | sim
- exit_date          | timestamp without time zone         | não
- description        | text                                | não
- prescription_drugs | text                                | não
- created_at         | timestamp without time zone         | sim
- updated_at         | timestamp without time zone         | sim
-
-
-                                         Tabela Telephones
-      Coluna       |            Tipo de dado             |                        Requerido
--------------------+-------------------------------------+--------------------------------------------------------
- id                | integer                             | sim
- ddd               | character varying(255)              | sim
- tel               | character varying(255)              | sim
- type_telephone_id | integer                             | sim
- branch_line       | character varying(255)              | não
- published         | boolean                             | sim
- enabled           | boolean                             | sim
- published_at      | timestamp without time zone         | não
- deleted_at        | timestamp without time zone         | não
- created_at        | timestamp without time zone         | sim
- updated_at        | timestamp without time zone         | sim
- account_id        | integer                             | não
- company_id        | integer                             | não
-
-
-                                     Tabela Type Telephones
-   Coluna   |            Tipo de dado             |                          Requerido
-------------+-------------------------------------+--------------------------------------------------------------
- id         | integer                             | sim
- name       | character varying(255)              | sim
- enabled    | boolean                             | não
- created_at | timestamp without time zone         | sim
- updated_at | timestamp without time zone         | sim
-
-
-                                     Tabela Type Users
-   Coluna   |            Tipo de dado             |                        Requerido
-------------+-------------------------------------+---------------------------------------------------------
- id         | integer                             | sim
- name       | character varying(255)              | sim
- enabled    | boolean                             | sim
- created_at | timestamp without time zone         | sim
- updated_at | timestamp without time zone         | sim
-
-
-                                         Tabela Users
-       Coluna       |            Tipo de dado             |                     Requerido
---------------------+-------------------------------------+----------------------------------------------------
- id                 | integer                             | sim
- name               | character varying(255)              | sim
- login              | character varying(255)              | sim
- email              | character varying(255)              | sim
- crypted_password   | character varying(255)              | sim
- password_salt      | character varying(255)              | sim
- persistence_token  | character varying(255)              | sim
- login_count        | integer                             | não
- failed_login_count | integer                             | não
- last_request_at    | timestamp without time zone         | não
- current_login_at   | timestamp without time zone         | não
- last_login_at      | timestamp without time zone         | não
- current_login_ip   | character varying(255)              | não
- last_login_ip      | character varying(255)              | não
- account_id         | integer                             | sim
- type_user_id       | integer                             | sim
- created_at         | timestamp without time zone         | sim
- updated_at         | timestamp without time zone         | sim
+class: User, armazenas os usuários cadastrados no sistema.
+atributos: id, name, login, email, crypted_password, password_salt, persistence_token, login_count, failed_login_countlast_request_at, current_login_at, last_login_at, current_login_ip, last_login_ip, account_id, type_user_id, created_at, updated_at
+métodos: attr_accessible, belongs_to, validates
