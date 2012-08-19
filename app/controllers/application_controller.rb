@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-=begin
   helper_method :current_user_session, :current_user
   before_filter :new_user_session
+
   private
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
@@ -25,6 +25,5 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     end
   end
-=end
 
 end

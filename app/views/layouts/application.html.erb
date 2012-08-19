@@ -19,40 +19,8 @@
   </head>
 
   <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="50">
-    <!-- Navbar
-      ================================================== -->
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-menu">
-          <%= link_to 'Login', '#brand-right', class: 'brand-right' %>
-          <div id="login_form">
-            <form>
-              Login:<br /><%= text_field :user, :login, size: 10 %><br>
-              Senha:<br /><%= password_field :user, :password, size: 10 %><br>
-              <p><%= check_box :user_session, :remember_me %> Lembre-me <span></span></p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
-
-      <%= yield %>
-
-      <!-- Le javascript
-      ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-      <%= javascript_include_tag "jquery-1.7.2.min.js", "bootstrap.min.js", "app.js", "bootswatch.js", "jquery.easing.1.3.js", "login.js" %>
-
-      <!-- Footer
-      ================================================== -->
-      <footer class="footer">
-        <center><p>UMRBrazil - 2012 - Trabalho de conclusão de curso</p></center>
-      </footer>
-
-    </div><!-- /container -->
+    <%= yield %>
 
   </body>
 </html>

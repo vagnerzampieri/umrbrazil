@@ -8,5 +8,10 @@ Umrbrazil::Application.routes.draw do
     resources :organizacoes, controller: :companies, as: :companies, path_names: {new: 'adicionar', edit: 'editar'}
   end
 
+    match 'logar'          => 'user_sessions#new',            as: :login
+    match 'deslogar'       => 'user_sessions#destroy',        as: :logout
+    match 'nao-autorizado' => 'user_sessions#not_authorized', as: :not_authorized
+    post 'sessao-usuario'  => 'user_sessions#create',         as: :user_sessions
+
   root :to => 'home#index'
 end
