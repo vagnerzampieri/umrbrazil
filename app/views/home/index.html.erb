@@ -4,7 +4,7 @@
   <div class="navbar-inner">
     <div class="container-menu">
       <% if current_user %>
-        <div class="brand-right"><%= current_user.email %> <%= link_to I18n.t(:logout), logout_path, class: 'btn' %></div>
+        <div class="brand-right"><%= current_user.email %> <%= link_to I18n.t(:logout), logout_path, class: 'btn btn-danger' %> <%= link_to I18n.t(:dashboard), dashboard_path, class: 'btn' %></div>
       <% else %>
         <%= link_to 'Login', '#brand-right', class: 'brand-right' %>
         <div id="login_form">
