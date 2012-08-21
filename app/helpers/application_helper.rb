@@ -2,7 +2,8 @@
 module ApplicationHelper
   def menu
     html = selected_menu('Site', root_path)
-    html << selected_menu('Usuários', users_path, 'users')
+    html << selected_menu(I18n.t(:dashboard), dashboard_path, 'dashboard')
+    html << selected_menu(I18n.t(:users), users_path, 'users')
     raw html
   end
 
