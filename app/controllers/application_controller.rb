@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
   def new_user_session
     @new_user_session = UserSession.new
   end
+
   rescue_from CanCan::AccessDenied do |exception|
     flash[:notice] = "Access denied!"
     if current_user

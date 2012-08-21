@@ -24,7 +24,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to 'Login', '#', class: 'brand-right' %>
+          <div class="brand-right"><%= current_user.email %> <%= link_to I18n.t(:logout), logout_path, class: 'btn' %></div>
         </div>
       </div>
     </div>

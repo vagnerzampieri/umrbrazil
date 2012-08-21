@@ -5,8 +5,13 @@
   update: "Atualizar"
   clear: "Limpar"
 
-  # admin/user
+  # admin/painel-principal
+  dashboard: 'Painel principal'
 
+  # admin/usuarios
+
+  users: "Usuários"
+  user: "Usuário"
   name: "Nome"
   login: "Login"
   email: "Email"
@@ -19,6 +24,7 @@
   editing_user: "Editando usuário"
   previous: "Anterior"
   next: "Próximo"
+  logout: "Deslogar"
   user_created: "Criando usuário com sucesso"
   user_updated: "Atualizando usuário com sucesso"
 

@@ -3,14 +3,18 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-menu">
-      <%= link_to 'Login', '#brand-right', class: 'brand-right' %>
-      <div id="login_form">
-        <%= form_for @user_session do |f| %>
-          Login:<br /><%= f.text_field :login, size: 10 %><br>
-          Senha:<br /><%= f.password_field :password, size: 10 %><br>
-          <p><%= check_box :user_session, :remember_me %> Lembre-me <span><%= f.submit 'login' %></span></p>
-        <% end %>
-      </div>
+      <% if current_user %>
+        <div class="brand-right"><%= current_user.email %></div>
+      <% else %>
+        <%= link_to 'Login', '#brand-right', class: 'brand-right' %>
+        <div id="login_form">
+          <%= form_for @user_session do |f| %>
+            Login:<br /><%= f.text_field :login, size: 10 %><br>
+            Senha:<br /><%= f.password_field :password, size: 10 %><br>
+            <p><%= check_box :user_session, :remember_me %> Lembre-me <span><%= f.submit 'login' %></span></p>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

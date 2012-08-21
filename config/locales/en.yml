@@ -5,8 +5,13 @@ en:
   update: "Update"
   clear: "Limpar"
 
-  # admin/user
+  # admin/painel-principal
+  dashboard: 'Dashboard'
 
+  # admin/usuarios
+
+  users: "Users"
+  user: "User"
   name: "Name"
   login: "Login"
   email: "Email"
@@ -19,6 +24,7 @@ en:
   editing_user: "Editing user"
   previous: "Previous"
   next: "Next"
+  logout: "Logout"
   user_created: "User created successfully"
   user_updated: "User updated successfully"
 

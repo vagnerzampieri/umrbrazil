@@ -6,6 +6,7 @@ Umrbrazil::Application.routes.draw do
     resources :exames, controller: :exams, as: :exams, path_names: {new: 'adicionar', edit: 'editar'}
     resources :historicos, controller: :histories, as: :histories, path_names: {new: 'adicionar', edit: 'editar'}
     resources :organizacoes, controller: :companies, as: :companies, path_names: {new: 'adicionar', edit: 'editar'}
+    get 'painel-principal' => 'dashboard#index', as: :dashboard
   end
 
     match 'logar'          => 'user_sessions#new',            as: :login
