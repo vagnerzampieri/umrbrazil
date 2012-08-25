@@ -1,4 +1,8 @@
-<div class="page-header">
-  <h2><%= t :editing_user %></h2>
+<div class='row'>
+  <div class='span7 offset1'>
+    <div class="page-header">
+      <h2><%= I18n.t :editing_user %></h2>
+    </div>
+    <%= render 'form' %>
+  </div>
 </div>
-<%= render 'form' %>
