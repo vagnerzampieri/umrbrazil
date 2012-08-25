@@ -1,0 +1,18 @@
+Textos da página principal:
+  Montar os textos que ficaram na home.
+
+Layout Login:
+  Dependendo do tamanho do monitor a caixa de login não fica no local correto. Existe no layout um CSS que coloca exatamente embaixo é só ver no layout em http://bootswatch.com/cerulean/.
+
+Usuário:
+
+
+Painel principal(deixar para depois):
+  Montar o layout do painel principal de acordo com o tipo de usuário logado, deverá conter informações importantes para aquele usuário.
+  Admin:
+  Médico:
+  Paciente: Terá uma lista com as últimas alterações em seu histórico em ordem descendente.
+  Enfermeiro:
+  Recepcionista:
+  Organização:
+  Técnico:
