@@ -2,7 +2,7 @@
 namespace :create do
   desc "Create type user"
   task :type_user => :environment do
-    %w[Admin Médico Paciente Enfermeiro Recepcionista Organização Técnico].each do |type|
+    ['Admin UMRBrazil', 'Admin', 'Médico', 'Paciente', 'Enfermeiro', 'Recepcionista', 'Organização', 'Técnico'].each do |type|
       TypeUser.create(:name => type, :enabled => true)
     end
   end
