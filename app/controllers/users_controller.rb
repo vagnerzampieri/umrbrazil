@@ -16,12 +16,15 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @type_users = TypeUser.available
 
     respond_with @user
   end
 
   def edit
     @user = get_register(params[:id])
+    @type_users = TypeUser.available
+
     respond_with @user
   end
 

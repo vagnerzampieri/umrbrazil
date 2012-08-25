@@ -25,6 +25,8 @@
   previous: "Anterior"
   next: "Próximo"
   logout: "Deslogar"
+  type_user: "Tipo de usuário"
+  select_type_user: "Selecione o tipo de usuário"
   user_created: "Criando usuário com sucesso"
   user_updated: "Atualizando usuário com sucesso"
 

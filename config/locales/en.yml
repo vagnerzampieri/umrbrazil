@@ -25,6 +25,8 @@ en:
   previous: "Previous"
   next: "Next"
   logout: "Logout"
+  type_user: "Type user"
+  select_type_user: "Select type user"
   user_created: "User created successfully"
   user_updated: "User updated successfully"
 
