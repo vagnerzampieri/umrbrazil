@@ -14,16 +14,6 @@ Layout de emails:
   É preciso fazer uma página para envio de link para criação da conta por dentro do sistema.
   Uma para o envio de dados do usuário criado.
 
-Usuário:
-  Pelo site:
-    Os usuários com o tipo UMRBrazil criarão os usuários do seguinte modo, irão colocar o email em um campo e clicarão em "criar", uma rota com um token será enviado para aquele email adicionado, o usuário irá clicar para terminar de cadastro, se for uma organização acessará uma área específica, se for também terminará de preencher a sua conta e criação do usuário.
-
-  Por API:
-    Os dados da conta serão enviados para o site que gerará o usuário no sistema.
-    Obs.: O login será a prefixo do email, ou o número dele no UMRBrazil. O password será a data de aniversário se houver, senão será o número dele no UMRBrazil..
-
-Obs.: O usuário se tiver email receberá um email de confirmação da conta criada.
-
 Exame:
   Um exame está diretamente ligado com o paciente, o médico e a organização que fez o exame, esse exame pode estar diretamente ligado com alguma entrada no histórico ou não.
   Uma coisa é a organização que fez(terá um campo para ela), outra é a organização que enviou o documento(company_id), pode não ser a mesma.
@@ -37,6 +27,16 @@ Histórico:
   Uma entrada no histórico está associada diretamente a um paciente e médico, podendo conter um ou mais exames associados a ele.
   Deve ser colocado a especialidade, como tag.
   Passando o crm do médico consigo achar ele e associar no histórico.
+
+Usuário:
+  Pelo site:
+    Os usuários com o tipo UMRBrazil criarão os usuários do seguinte modo, irão colocar o email em um campo e clicarão em "criar", uma rota com um token será enviado para aquele email adicionado, o usuário irá clicar para terminar de cadastro, se for uma organização acessará uma área específica, se for também terminará de preencher a sua conta e criação do usuário.
+
+  Por API:
+    Os dados da conta serão enviados para o site que gerará o usuário no sistema.
+    Obs.: O login será a prefixo do email, ou o número dele no UMRBrazil. O password será a data de aniversário se houver, senão será o número dele no UMRBrazil..
+
+Obs.: O usuário se tiver email receberá um email de confirmação da conta criada.
 
 Painel principal(deixar para depois):
   Montar o layout do painel principal de acordo com o tipo de usuário logado, deverá conter informações importantes para aquele usuário.
