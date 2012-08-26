@@ -24,6 +24,20 @@ Usuário:
 
 Obs.: O usuário se tiver email receberá um email de confirmação da conta criada.
 
+Exame:
+  Um exame está diretamente ligado com o paciente, o médico e a organização que fez o exame, esse exame pode estar diretamente ligado com alguma entrada no histórico ou não.
+  Uma coisa é a organização que fez(terá um campo para ela), outra é a organização que enviou o documento(company_id), pode não ser a mesma.
+  Passando o crm do médico consigo achar ele e associar no histórico.
+
+Anaminese:
+  Uma anaminese estámdiretamente ligada ao paciente e serve para ver dados importantes de um paciente.
+  Doenças, alergias, cirurgias e drogas devem ser feitos por tags, é a melhor maneira para poder fazer uma estatíscas no futuro.
+
+Histórico:
+  Uma entrada no histórico está associada diretamente a um paciente e médico, podendo conter um ou mais exames associados a ele.
+  Deve ser colocado a especialidade, como tag.
+  Passando o crm do médico consigo achar ele e associar no histórico.
+
 Painel principal(deixar para depois):
   Montar o layout do painel principal de acordo com o tipo de usuário logado, deverá conter informações importantes para aquele usuário.
   Admin UMRBrazil:
