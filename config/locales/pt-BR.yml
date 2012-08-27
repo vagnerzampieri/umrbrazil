@@ -30,6 +30,16 @@
   user_created: "Criando usuário com sucesso"
   user_updated: "Atualizando usuário com sucesso"
 
+  # admin/anaminese
+
+  blood_type: 'Tipo sanguíneo'
+  weight: 'Peso'
+  height: 'Altura'
+  sex: 'Sexo'
+  blood_pressure: 'Pressão sanguínea'
+  smoking: 'Fumante'
+  showing_anamnesi: 'Visualizando anaminese do paciente'
+
   # formatos de data e hora
   date:
     formats:

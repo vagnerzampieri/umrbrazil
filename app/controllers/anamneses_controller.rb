@@ -11,6 +11,7 @@ class AnamnesesController < ApplicationController
 
   def show
     @anamnesis = get_register(params[:id])
+    @name = @anamnesis.try(:account).try(:name)
     respond_with @anamnesis
   end
 

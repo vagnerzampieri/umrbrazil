@@ -4,5 +4,5 @@ class Anamnesis < ActiveRecord::Base
   acts_as_taggable_on :diseases, :drugs, :allergies, :surgeries
   has_many :taggings, :as => :taggable, :dependent => :destroy, :include => :tag, :class_name => "ActsAsTaggableOn::Tagging"
 
-  belongs_to :account
+  has_one :account
 end

@@ -1,45 +1,37 @@
-  <%= outgoing_menssage %>
-  <article class="module width_full">
-    <header><h3><%= t :showing %></h3></header>
-    <div class="tab_container">
-      <div id="tab1" class="tab_content">
-        <table class="tablesorter" cellspacing="0">
-          <tr>
-            <td><b><%= t :blood_type %></b></td>
-            <td><%= @anamnesis.blood_type %></td>
-	  </tr>
-          <tr>
-            <td><b><%= t :rh_factor %></b></td>
-            <td><%= @anamnesis.rh_factor %></td>
-	  </tr>
-          <tr>
-            <td><b><%= t :weight %></b></td>
-            <td><%= @anamnesis.weight %></td>
-	  </tr>
-          <tr>
-            <td><b><%= t :height %></b></td>
-            <td><%= @anamnesis.height %></td>
-	  </tr>
-          <tr>
-            <td><b><%= t :sex %></b></td>
-            <td><%= @anamnesis.sex %></td>
-	  </tr>
-          <tr>
-            <td><b><%= t :blood_pressure %></b></td>
-            <td><%= @anamnesis.blood_pressure %></td>
-	  </tr>
-          <tr>
-            <td><b><%= t :smoking %></b></td>
-            <td><%= @anamnesis.smoking %></td>
-	  </tr>
-        </table>
-      </div>
+<div class='row'>
+  <div class='span7 offset1'>
+    <%= outgoing_menssage %>
+    <div class="page-header">
+      <h2><%= I18n.t :showing_anamnesi %>: <i><%= @name %></i></h2>
     </div>
+    <table class="table table-bordered table-striped">
+      <tr>
+        <td><b><%= I18n.t :blood_type %></b></td>
+        <td><%= @anamnesis.blood_type %><%= @anamnesis.rh_factor %></td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :weight %></b></td>
+        <td><%= @anamnesis.weight %> Kg</td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :height %></b></td>
+        <td><%= @anamnesis.height %> cm</td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :sex %></b></td>
+        <td><%= @anamnesis.sex %></td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :blood_pressure %></b></td>
+        <td><%= @anamnesis.blood_pressure %></td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :smoking %></b></td>
+        <td><%= @anamnesis.smoking %></td>
+      </tr>
+    </table>
 
-    <footer>
-      <div class="submit_link">
-        <%= link_to image_tag("icn_edit_article.png", alt: t(:edit), title: t(:edit)), edit_anamnesis_path(@anamnesis) %>
-        <%= link_to image_tag("icn_jump_back.png", alt: t(:back), title: t(:back)), anamneses_path %>
-      </div>
-    </footer>
-  </article>
+    <%= link_to arrow_left, :back %>
+    <%= link_to I18n.t(:edit), edit_anamnese_path(@anamnesis), class: 'btn btn-primary' %>
+  </div>
+</div>
