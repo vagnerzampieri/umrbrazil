@@ -9,7 +9,11 @@ module ApplicationHelper
 
   def outgoing_menssage
     if notice
-      raw "<h4 class='alert_success'>#{notice}</h4>"
+      html = "<div class='span4'><div class='alert alert-sucess'>"
+      html << "<a class='close'>x</a>"
+      html << notice
+      html << "</div></div>"
+      raw html
     end
   end
 
@@ -19,6 +23,11 @@ module ApplicationHelper
 
   def arrow_right
     image_tag('icons/116768-matte-blue-and-white-square-icon-arrows-arrow-thick-right.png', height: '50px', width: '50px')
+  end
+
+  def show_icon(object)
+    val = (object) ? true : false
+    image_tag "#{val}.png"
   end
 
   def submit_link(form)
