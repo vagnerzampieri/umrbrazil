@@ -20,7 +20,7 @@ Exame:
   Passando o crm do médico consigo achar ele e associar no histórico.
 
 Anaminese:
-  Uma anaminese estámdiretamente ligada ao paciente e serve para ver dados importantes de um paciente.
+  Uma anaminese está diretamente ligada ao paciente e serve para ver dados importantes de um paciente.
   Doenças, alergias, cirurgias e drogas devem ser feitos por tags, é a melhor maneira para poder fazer uma estatíscas no futuro.
 
 Histórico:
