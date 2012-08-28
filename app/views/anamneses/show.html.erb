@@ -2,36 +2,36 @@
   <div class='span7 offset1'>
     <%= outgoing_menssage %>
     <div class="page-header">
-      <h2><%= I18n.t :showing_anamnesi %>: <i><%= @name %></i></h2>
+      <h2><%= I18n.t :showing_anamnese %>: <i><%= @name %></i></h2>
     </div>
     <table class="table table-bordered table-striped">
       <tr>
         <td><b><%= I18n.t :blood_type %></b></td>
-        <td><%= @anamnesis.blood_type %><%= @anamnesis.rh_factor %></td>
+        <td><%= @anamnese.blood_type %><%= @anamnese.rh_factor %></td>
       </tr>
       <tr>
         <td><b><%= I18n.t :weight %></b></td>
-        <td><%= @anamnesis.weight %> Kg</td>
+        <td><%= @anamnese.weight %> Kg</td>
       </tr>
       <tr>
         <td><b><%= I18n.t :height %></b></td>
-        <td><%= @anamnesis.height %> cm</td>
+        <td><%= @anamnese.height %> cm</td>
       </tr>
       <tr>
         <td><b><%= I18n.t :sex %></b></td>
-        <td><%= @anamnesis.sex %></td>
+        <td><%= @anamnese.sex %></td>
       </tr>
       <tr>
         <td><b><%= I18n.t :blood_pressure %></b></td>
-        <td><%= @anamnesis.blood_pressure %></td>
+        <td><%= @anamnese.blood_pressure %></td>
       </tr>
       <tr>
         <td><b><%= I18n.t :smoking %></b></td>
-        <td><%= show_icon(@anamnesis.smoking) %></td>
+        <td><%= show_icon(@anamnese.smoking) %></td>
       </tr>
     </table>
 
     <%= link_to arrow_left, :back %>
-    <%= link_to I18n.t(:edit), edit_anamnese_path(@anamnesis), class: 'btn btn-primary' %>
+    <%= link_to I18n.t(:edit), edit_anamnese_path(@anamnese), class: 'btn btn-primary' %>
   </div>
 </div>

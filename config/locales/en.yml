@@ -38,7 +38,7 @@ en:
   sex: 'sex'
   blood_pressure: 'blood_pressure'
   smoking: 'smoking'
-  showing_anamnesi: 'Showing anaminese'
+  showing_anamnese: 'Showing anaminese'
 
   date:
     formats:

@@ -38,7 +38,7 @@
   sex: 'Sexo'
   blood_pressure: 'Pressão sanguínea'
   smoking: 'Fumante'
-  showing_anamnesi: 'Visualizando anaminese do paciente'
+  showing_anamnese: 'Visualizando anaminese do paciente'
 
   # formatos de data e hora
   date:

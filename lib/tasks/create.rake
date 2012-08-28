@@ -17,7 +17,7 @@ namespace :create do
   desc "3 - Create user"
   task :user => :environment do
     type_user = TypeUser.where(name: 'Admin UMRBrazil').first
-    account = Account.new
+    account = Account.new(name: 'Homer Simpson')
 
     user = account.create_user(:login => "adminumrbrazil",
       :email => "admin@umrbrazil.com",

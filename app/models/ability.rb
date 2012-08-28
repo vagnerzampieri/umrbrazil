@@ -4,7 +4,7 @@ class Ability < ActiveRecord::Base
   def initialize(user)
     user ||= User.new
 
-    if user.type_user.name == 'Admin'
+    if user.try(:type_user).try(:name) == 'Admin UMRBrazil'
       can :manage, :all
     #elsif user.type_user.name == 'Médico'
     #elsif user.type_user.name == 'Paciente'

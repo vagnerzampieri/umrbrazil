@@ -5,13 +5,13 @@ namespace :create do
     puts "Populate ..."
     type_user = TypeUser.where(name: 'Paciente').first
     account = Account.new
-    anamnesis = account.create_anamnesis(
+    anamnese = account.create_anamnese(
       blood_type: 'O',
       rh_factor: '+',
       weight: 120.0,
       height: 180.0,
       sex: 'Masculino',
-      blood_pressure: '120x180',
+      blood_pressure: '120x80',
       smoking: false,
       drug_list: 'alcohol',
       allergy_list: 'trabalho, fazer qualquer coisa'
@@ -23,7 +23,7 @@ namespace :create do
       password_confirmation: 'simpsons',
       type_user_id: type_user.id
     )
-    account.anamnesis_id = anamnesis.id
+    account.anamnese_id = anamnese.id
     account.user_id = user.id
     account.save
 
