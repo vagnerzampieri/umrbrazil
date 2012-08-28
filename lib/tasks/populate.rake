@@ -11,6 +11,7 @@ namespace :create do
       weight: 120.0,
       height: 180.0,
       sex: 'Masculino',
+      blood_pressure: '120x180',
       smoking: false,
       drug_list: 'alcohol',
       allergy_list: 'trabalho, fazer qualquer coisa'
