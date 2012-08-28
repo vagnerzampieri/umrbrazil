@@ -35,4 +35,9 @@ jruby -S rake db:migrate
 jruby -S rake create:type_user
 jruby -S rake create:type_telephone
 jruby -S rake create:user
+jruby -S rake create:populate
 jruby -S rails s
+
+Inline:
+
+jruby -S rake db:drop && jruby -S rake db:create && jruby -S rake db:migrate && jruby -S rake create:type_user && jruby -S rake create:type_telephone && jruby -S rake create:user && jruby -S rake create:populate
