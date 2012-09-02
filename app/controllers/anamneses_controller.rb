@@ -1,5 +1,5 @@
 class AnamnesesController < ApplicationController
-  load_and_authorize_resource
+  #load_and_authorize_resource
   layout 'admin'
   respond_to :html, :json, :js
 
