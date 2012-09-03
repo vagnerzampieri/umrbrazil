@@ -20,8 +20,5 @@ FactoryGirl.define do
     city 'Springfield'
     state 'Ohio'
     country 'EUA'
-    #cover_image Rails.root.join('app', 'assets', 'images', 'rails.png')
-    #user FactoryGirl.build(:user)
-    #anamnesis FactoryGirl.create(:anamnesis)
   end
 end

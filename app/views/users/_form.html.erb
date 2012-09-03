@@ -1,5 +1,5 @@
-<%= form_for(@user) do |f| %>
-  <div class="module_content">
+<%= form_for(@user, html: {class: 'form-horizontal well'}) do |f| %>
+  <fieldset>
     <% if @user.errors.any? %>
       <div id="error_explanation">
         <h4 class='alert_error'><%= pluralize(@user.errors.count, "error") %> prohibited this category from being saved:</h4>
@@ -11,17 +11,40 @@
       </div>
     <% end %>
 
-    <div class='field'>
-      <label><b><%= t :login %></b></label>
-      <%= f.text_field :login %>
+    <div class='control-group'>
+      <div class='controls'>
+        <%= f.collection_select :type_user_id, @type_users, :id, :name, {prompt: I18n.t(:select_type_user)}, {id: 'select01'} %>
+      </div>
     </div>
-    <div class='field'>
-      <label><b><%= t :email %></b></label>
-      <%= f.email_field :email %>
+    <div class='control-group'>
+      <label class='control-label'><%= t :login %></label>
+      <div class='controls'>
+        <%= f.text_field :login, class: 'input-xlarge focused' %>
+      </div>
     </div>
-  </div>
-  <%= link_to arrow_left, users_path %>
-  <%= submit_link(f) %>
-  <%= submit_tag(I18n.t(:clear), class: 'btn btn-inverse', type: "reset" ) %>
-  <%= link_to(I18n.t(:show), @user, class: 'btn') if params[:action] == 'edit' %>
+    <div class='control-group'>
+      <label class='control-label'><%= t :email %></label>
+      <div class='controls'>
+        <%= f.email_field :email, class: 'input-xlarge focused' %>
+      </div>
+    </div>
+    <div class='control-group'>
+      <label class='control-label'><%= t :password %></label>
+      <div class='controls'>
+        <%= f.password_field :password, class: 'input-xlarge focused' %>
+      </div>
+    </div>
+    <div class='control-group'>
+      <label class='control-label'><%= t :password_confirmation %></label>
+      <div class='controls'>
+        <%= f.password_field :password_confirmation, class: 'input-xlarge focused' %>
+      </div>
+    </div>
+    <div class='form-actions'
+      <%= link_to arrow_left, users_path %>
+      <%= submit_link(f) %>
+      <%= submit_tag(I18n.t(:clear), class: 'btn btn-inverse', type: "reset" ) %>
+      <%= link_to(I18n.t(:show), @user, class: 'btn') if params[:action] == 'edit' %>
+    </div>
+  </fieldset>
 <% end %>

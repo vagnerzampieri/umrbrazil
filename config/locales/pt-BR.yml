@@ -25,8 +25,20 @@
   previous: "Anterior"
   next: "Próximo"
   logout: "Deslogar"
+  type_user: "Tipo de usuário"
+  select_type_user: "Selecione o tipo de usuário"
   user_created: "Criando usuário com sucesso"
   user_updated: "Atualizando usuário com sucesso"
+
+  # admin/anaminese
+
+  blood_type: 'Tipo sanguíneo'
+  weight: 'Peso'
+  height: 'Altura'
+  sex: 'Sexo'
+  blood_pressure: 'Pressão sanguínea'
+  smoking: 'Fumante'
+  showing_anamnese: 'Visualizando anaminese do paciente'
 
   # formatos de data e hora
   date:

@@ -29,7 +29,7 @@ gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.12'
 gem "paperclip", "~> 3.0"
 
-gem 'carrierwave'
+#gem 'carrierwave'
 #gem 'rmagick'
 
 # Gems used only for assets and not required

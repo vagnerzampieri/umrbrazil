@@ -22,10 +22,10 @@ describe Account do
   it {should respond_to(:place_of_birth)}
   it {should respond_to(:civil_status)}
   it {should respond_to(:user_id)}
-  it {should respond_to(:anamnesis_id)}
+  it {should respond_to(:anamnese_id)}
 
   it {should belong_to(:user)}
-  it {should belong_to(:anamnesis)}
+  it {should belong_to(:anamnese)}
 
   it {should have_many(:telephones)}
   it {should have_many(:histories)}

@@ -25,8 +25,20 @@ en:
   previous: "Previous"
   next: "Next"
   logout: "Logout"
+  type_user: "Type user"
+  select_type_user: "Select type user"
   user_created: "User created successfully"
   user_updated: "User updated successfully"
+
+  # admin/anaminese
+
+  blood_type: 'Blood type'
+  weight: 'weight'
+  height: 'height'
+  sex: 'sex'
+  blood_pressure: 'blood_pressure'
+  smoking: 'smoking'
+  showing_anamnese: 'Showing anaminese'
 
   date:
     formats:

@@ -1,4 +1,4 @@
-class AddingUserIdToAnaminesis < ActiveRecord::Migration
+class AddingUserIdToAnaminese < ActiveRecord::Migration
   def up
     add_column :anamneses, :user_id, :integer
     add_index :anamneses, :user_id

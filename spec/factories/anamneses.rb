@@ -1,6 +1,6 @@
 # encoding: UTF-8
 FactoryGirl.define do
-  factory :anamnesis do
+  factory :anamnese do
     blood_type 'O'
     rh_factor '+'
     weight 76.0

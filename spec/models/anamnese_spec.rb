@@ -1,5 +1,5 @@
 require 'spec_helper'
-describe Anamnesis do
+describe Anamnese do
   it {should respond_to(:blood_type)}
   it {should respond_to(:rh_factor)}
   it {should respond_to(:weight)}

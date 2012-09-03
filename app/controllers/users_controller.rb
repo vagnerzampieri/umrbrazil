@@ -16,17 +16,21 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @type_users = TypeUser.available
 
     respond_with @user
   end
 
   def edit
     @user = get_register(params[:id])
+    @type_users = TypeUser.available
+
     respond_with @user
   end
 
   def create
     @user = User.new params[:user]
+    @type_users = TypeUser.available
 
     flash[:notice] = I18n.t :user_created if @user.save
     respond_with @user
@@ -34,6 +38,7 @@ class UsersController < ApplicationController
 
   def update
     @user = get_register(params[:id])
+    @type_users = TypeUser.available
 
     flash[:notice] = I18n.t :user_updated if @user.update_attributes params[:user]
     respond_with @user

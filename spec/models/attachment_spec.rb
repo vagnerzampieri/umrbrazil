@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'carrierwave/test/matchers'
+#require 'carrierwave/test/matchers'
 
 describe Attachment do
-  include CarrierWave::Test::Matchers
+#  include CarrierWave::Test::Matchers
 
   it {should respond_to(:exam_id)}
   it {should respond_to(:attachment_file_name)}
@@ -12,7 +12,7 @@ describe Attachment do
   it {should respond_to(:attachment)}
 
   it {should belong_to(:exam)}
-
+=begin
   before do
     AttachmentUploader.enable_processing = true
     @attachment = AttachmentUploader.new(FactoryGirl.build(:exam), :attachment)
@@ -30,4 +30,5 @@ describe Attachment do
     end
 
   end
+=end
 end

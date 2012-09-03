@@ -1,10 +1,10 @@
 class Account < ActiveRecord::Base
-  #image_accessor :cover_image
+  image_accessor :cover_image
 
-  attr_accessible :name, :user_id, :cep, :cpf, :address, :number, :complement, :neighborhood, :city, :state, :country, :anamnesis_id, :rg, :birth_certificate, :ric, :age, :birth, :mother_name, :place_of_birth, :civil_status, :telephones_attributes#, :cover_image
+  attr_accessible :name, :user_id, :cep, :cpf, :address, :number, :complement, :neighborhood, :city, :state, :country, :anamnesis_id, :rg, :birth_certificate, :ric, :age, :birth, :mother_name, :place_of_birth, :civil_status, :telephones_attributes, :cover_image
 
-  belongs_to :user
-  belongs_to :anamnesis
+  has_one :user
+  has_one :anamnese
 
   has_many :companies
   has_many :histories
