@@ -3,7 +3,7 @@ class Attachment < ActiveRecord::Base
 
   belongs_to :exam
 
-  mount_uploader :attachment, AttachmentUploader
+#  mount_uploader :attachment, AttachmentUploader
 
   before_save :update_appendix_attributes
   before_update :update_time

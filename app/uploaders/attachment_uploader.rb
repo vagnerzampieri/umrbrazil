@@ -1,5 +1,5 @@
 # encoding: utf-8
-
+=begin
 class AttachmentUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
@@ -53,3 +53,4 @@ class AttachmentUploader < CarrierWave::Uploader::Base
   # end
 
 end
+=end
