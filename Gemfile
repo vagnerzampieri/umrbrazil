@@ -53,12 +53,18 @@ end
 group :development, :test do
   # generates UML diagrams
   gem 'railroady', '1.0.7'
+
   # tests
   gem 'rspec-rails', '2.9.0'
-  gem 'autotest', '4.4.6'
   gem 'shoulda-matchers', '1.0.0'
   gem 'factory_girl_rails', '3.2.0'
   gem 'launchy', '2.1.0'
   gem 'simplecov', '0.6.1'
-  gem 'webrat', '0.7.3'
+  gem 'capybara', '1.1.2'
+  gem 'test_notifier', '1.0.0'
+  gem 'database_cleaner', '0.8.0'
+
+  # debugger
+  gem 'pry', '0.9.10'
+  gem 'pry-rails', '0.2.1'
 end
