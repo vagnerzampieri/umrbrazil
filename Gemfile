@@ -2,17 +2,26 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.2'
 
+# database
 gem 'activerecord-jdbcpostgresql-adapter', '1.2.2'
 gem 'pg', '0.13.2'
+gem 'postgres_ext'
+
 gem 'jruby-openssl', '0.7.6.1'
+
 gem 'jquery-rails', '2.0.2'
 gem 'json', '1.6.6'
 gem 'execjs', '1.3.0'
 gem 'therubyrhino', '1.73.2'
 #gem 'zscaffold_admin', '0.0.3'
 gem 'zscaffold_admin', :path => "~/projects/rails/3++/gems/zscaffold_admin/"
+
+# tags
 gem 'acts-as-taggable-on', '~> 2.3.1'
+
+# pagination
 gem 'will_paginate', '~> 3.0.0'
+
 gem 'brcpfcnpj'
 
 # Login and auth
