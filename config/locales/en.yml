@@ -39,6 +39,12 @@ en:
   blood_pressure: 'blood_pressure'
   smoking: 'smoking'
   showing_anamnese: 'Showing anaminese'
+  diseases: 'Diseases'
+  drugs: 'Drugs'
+  allergies: 'Allergies'
+  surgeries: 'Surgeries'
+  anamnese_created: "Anamnese created successfully"
+  anamnese_updated: "Anamnese updated successfully"
 
   date:
     formats:

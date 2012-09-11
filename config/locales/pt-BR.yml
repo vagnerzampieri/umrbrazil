@@ -39,6 +39,12 @@
   blood_pressure: 'Pressão sanguínea'
   smoking: 'Fumante'
   showing_anamnese: 'Visualizando anaminese do paciente'
+  diseases: 'Doenças'
+  drugs: 'Drogas'
+  allergies: 'Alergias'
+  surgeries: 'Cirurgias'
+  anamnese_created: "Criando anaminese com sucesso"
+  anamnese_updated: "Atualizando anaminese com sucesso"
 
   # formatos de data e hora
   date:

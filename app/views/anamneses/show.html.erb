@@ -1,6 +1,6 @@
+<%= outgoing_menssage %>
 <div class='row'>
   <div class='span7 offset1'>
-    <%= outgoing_menssage %>
     <div class="page-header">
       <h2><%= I18n.t :showing_anamnese %>: <i><%= @name %></i></h2>
     </div>
@@ -28,6 +28,22 @@
       <tr>
         <td><b><%= I18n.t :smoking %></b></td>
         <td><%= show_icon(@anamnese.smoking) %></td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :diseases %></b></td>
+        <td><%= @anamnese.disease_list %></td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :drugs %></b></td>
+        <td><%= @anamnese.drug_list %></td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :allergies %></b></td>
+        <td><%= @anamnese.allergy_list %></td>
+      </tr>
+      <tr>
+        <td><b><%= I18n.t :surgeries %></b></td>
+        <td><%= @anamnese.surgery_list %></td>
       </tr>
     </table>
 
