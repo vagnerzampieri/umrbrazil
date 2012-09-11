@@ -16,7 +16,7 @@ Layout de emails:
 
 Exame:
   Um exame está diretamente ligado com o paciente, o médico e a organização que fez o exame, esse exame pode estar diretamente ligado com alguma entrada no histórico ou não.
-  Uma coisa é a organização que fez(terá um campo para ela), outra é a organização que enviou o documento(company_id), pode não ser a mesma.
+  Uma coisa é a organização que fez o exame(terá um campo para ela), outra é a organização que enviou o documento(company_id), pode não ser a mesma.
   Passando o crm do médico consigo achar ele e associar no histórico.
 
 Anaminese:
