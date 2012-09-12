@@ -5,7 +5,9 @@ gem 'rails', '3.2.2'
 # database
 gem 'activerecord-jdbcpostgresql-adapter', '1.2.2'
 gem 'pg', '0.13.2'
-gem 'postgres_ext'
+
+# not working with jruby
+#gem 'postgres_ext'
 
 gem 'jruby-openssl', '0.7.6.1'
 
@@ -38,6 +40,7 @@ gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.12'
 gem "paperclip", "~> 3.0"
 
+# not working with jruby, rmagick compatible with rmagick
 #gem 'carrierwave'
 #gem 'rmagick'
 
