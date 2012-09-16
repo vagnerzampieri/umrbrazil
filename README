@@ -11,7 +11,7 @@ Check RVM:
 rvm -v
 
 Install PostgreSQL:
-sudo apt-get install libpq-dev postgresql-9.1 postgresql-common postgresql-server-dev-9.1 postgresql-contrib-9.1 nodejs
+sudo apt-get install postgresql-9.1 postgresql-server-dev-9.1 postgresql-contrib-9.1 postgresql-client-9.1 postgresql-common libpq-dev
 
 Check postgresql:
 
@@ -20,6 +20,10 @@ sudo -u postgres psql
 Install pgadminIII
 
 sudo apt-get install pgadmin3
+
+Intalando Java:
+sudo add-apt-repository ppa:webupd8team/java && sudo apt-get update
+sudo apt-get install oracle-jdk7-installer
 
 Initialize:
 rvm install jruby-1.6.7
